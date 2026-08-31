@@ -1,0 +1,417 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "bomd:nether_gauntlet",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "properties": {
+        "bomd:gauntlet_animation_state": {
+          "type": "int",
+          "range": [
+            0,
+            9
+          ],
+          "default": 8,
+          "client_sync": true
+        },
+        "bomd:gauntlet_energy": {
+          "type": "int",
+          "range": [
+            0,
+            2
+          ],
+          "default": 0,
+          "client_sync": true
+        },
+        "bomd:gauntlet_hurt": {
+          "type": "int",
+          "range": [
+            0,
+            1
+          ],
+          "default": 0,
+          "client_sync": true
+        },
+        "bomd:gauntlet_eye_open": {
+          "type": "bool",
+          "default": false,
+          "client_sync": true
+        },
+        "bomd:gauntlet_hand_closed": {
+          "type": "bool",
+          "default": false,
+          "client_sync": true
+        }
+      }
+    },
+    "component_groups": {
+      "bomd:open_hand": {
+        "minecraft:collision_box": {
+          "width": 2.0,
+          "height": 4.0
+        }
+      },
+      "bomd:closed_fist": {
+        "minecraft:collision_box": {
+          "width": 2.0,
+          "height": 2.0
+        }
+      },
+      "bomd:scale_1": {
+        "minecraft:health": {
+          "value": 250,
+          "max": 250
+        }
+      },
+      "bomd:scale_2": {
+        "minecraft:health": {
+          "value": 388,
+          "max": 388
+        }
+      },
+      "bomd:scale_3": {
+        "minecraft:health": {
+          "value": 525,
+          "max": 525
+        }
+      },
+      "bomd:scale_4": {
+        "minecraft:health": {
+          "value": 663,
+          "max": 663
+        }
+      },
+      "bomd:scale_5": {
+        "minecraft:health": {
+          "value": 800,
+          "max": 800
+        }
+      },
+      "bomd:scale_6": {
+        "minecraft:health": {
+          "value": 938,
+          "max": 938
+        }
+      },
+      "bomd:scale_7": {
+        "minecraft:health": {
+          "value": 1075,
+          "max": 1075
+        }
+      },
+      "bomd:scale_8": {
+        "minecraft:health": {
+          "value": 1213,
+          "max": 1213
+        }
+      },
+      "bomd:scripted_dash": {
+        "minecraft:physics": {
+          "has_gravity": false,
+          "has_collision": false
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "nether_gauntlet",
+          "bomd_nether_gauntlet",
+          "monster",
+          "mob"
+        ]
+      },
+      "minecraft:health": {
+        "value": 250,
+        "max": 250
+      },
+      "minecraft:boss": {
+        "name": "Nether Gauntlet",
+        "hud_range": 48,
+        "should_darken_sky": false
+      },
+      "minecraft:collision_box": {
+        "width": 2.0,
+        "height": 4.0
+      },
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "wither",
+            "deals_damage": "no"
+          }
+        ]
+      },
+      "minecraft:fire_immune": {},
+      "minecraft:persistent": {},
+      "minecraft:experience_reward": {
+        "on_death": 0
+      }
+    },
+    "events": {
+      "bomd:open_hand": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": [
+                "bomd:closed_fist"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "bomd:open_hand"
+              ]
+            }
+          }
+        ]
+      },
+      "bomd:close_fist": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": [
+                "bomd:open_hand"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "bomd:closed_fist"
+              ]
+            }
+          }
+        ]
+      },
+      "bomd:scale_1": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": [
+                "bomd:scale_1",
+                "bomd:scale_2",
+                "bomd:scale_3",
+                "bomd:scale_4",
+                "bomd:scale_5",
+                "bomd:scale_6",
+                "bomd:scale_7",
+                "bomd:scale_8"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "bomd:scale_1"
+              ]
+            }
+          }
+        ]
+      },
+      "bomd:scale_2": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": [
+                "bomd:scale_1",
+                "bomd:scale_2",
+                "bomd:scale_3",
+                "bomd:scale_4",
+                "bomd:scale_5",
+                "bomd:scale_6",
+                "bomd:scale_7",
+                "bomd:scale_8"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "bomd:scale_2"
+              ]
+            }
+          }
+        ]
+      },
+      "bomd:scale_3": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": [
+                "bomd:scale_1",
+                "bomd:scale_2",
+                "bomd:scale_3",
+                "bomd:scale_4",
+                "bomd:scale_5",
+                "bomd:scale_6",
+                "bomd:scale_7",
+                "bomd:scale_8"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "bomd:scale_3"
+              ]
+            }
+          }
+        ]
+      },
+      "bomd:scale_4": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": [
+                "bomd:scale_1",
+                "bomd:scale_2",
+                "bomd:scale_3",
+                "bomd:scale_4",
+                "bomd:scale_5",
+                "bomd:scale_6",
+                "bomd:scale_7",
+                "bomd:scale_8"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "bomd:scale_4"
+              ]
+            }
+          }
+        ]
+      },
+      "bomd:scale_5": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": [
+                "bomd:scale_1",
+                "bomd:scale_2",
+                "bomd:scale_3",
+                "bomd:scale_4",
+                "bomd:scale_5",
+                "bomd:scale_6",
+                "bomd:scale_7",
+                "bomd:scale_8"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "bomd:scale_5"
+              ]
+            }
+          }
+        ]
+      },
+      "bomd:scale_6": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": [
+                "bomd:scale_1",
+                "bomd:scale_2",
+                "bomd:scale_3",
+                "bomd:scale_4",
+                "bomd:scale_5",
+                "bomd:scale_6",
+                "bomd:scale_7",
+                "bomd:scale_8"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "bomd:scale_6"
+              ]
+            }
+          }
+        ]
+      },
+      "bomd:scale_7": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": [
+                "bomd:scale_1",
+                "bomd:scale_2",
+                "bomd:scale_3",
+                "bomd:scale_4",
+                "bomd:scale_5",
+                "bomd:scale_6",
+                "bomd:scale_7",
+                "bomd:scale_8"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "bomd:scale_7"
+              ]
+            }
+          }
+        ]
+      },
+      "bomd:scale_8": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": [
+                "bomd:scale_1",
+                "bomd:scale_2",
+                "bomd:scale_3",
+                "bomd:scale_4",
+                "bomd:scale_5",
+                "bomd:scale_6",
+                "bomd:scale_7",
+                "bomd:scale_8"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "bomd:scale_8"
+              ]
+            }
+          }
+        ]
+      },
+      "bomd:begin_scripted_dash": {
+        "add": {
+          "component_groups": [
+            "bomd:scripted_dash"
+          ]
+        }
+      },
+      "bomd:end_scripted_dash": {
+        "remove": {
+          "component_groups": [
+            "bomd:scripted_dash"
+          ]
+        }
+      }
+    }
+  }
+}

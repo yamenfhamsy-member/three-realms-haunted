@@ -1,0 +1,51 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "BOMD Bedrock 1.0 - Resources",
+    "description": "A unofficial port",
+    "uuid": "5e6d8ae1-2eca-463b-94d0-b39a219d01d4",
+    "version": [
+      2,
+      1,
+      28
+    ],
+    "min_engine_version": [
+      1,
+      26,
+      40
+    ],
+    "pack_scope": "world"
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "45e0e4c9-3976-4193-ad53-bbd4da699c91",
+      "version": [
+        2,
+        1,
+        28
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "ba9a866b-f98a-4de6-985b-c2ffbadbd4fa",
+      "version": [
+        2,
+        1,
+        28
+      ]
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Rossetti",
+      "Barribob (original BOMD assets)"
+    ],
+    "license": "MIT AND LGPL-3.0-only",
+    "product_type": "addon"
+  },
+  "capabilities": [
+    "pbr"
+  ]
+}

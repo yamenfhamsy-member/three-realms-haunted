@@ -1,0 +1,76 @@
+{
+	"format_version": "1.21.120",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "lc:dt_rpg_rocket",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:arrow"
+		},
+		"component_groups": {
+			"minecraft:exploding": {
+				"minecraft:explode": {
+					"fuseLength": 0,
+					"fuseLit": true,
+					"power": 6.0,
+					"destroy_affected_by_griefing": true
+				}
+			},
+			"despawning": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": ["rocket", "projectile"]
+			},
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.25
+			},
+			"minecraft:projectile": {
+				"onHit": {
+					"definition_event": {
+						"affectProjectile": true,
+						"eventTrigger": {
+							"event": "minecraft:explode",
+							"target": "self"
+						}
+					}
+				},
+				"hit_sound": "gun.hit",
+				"power": 1.0,
+				"gravity": 0.0,
+				"inertia": 1.0,
+				"uncertaintyBase": 3,
+				"uncertaintyMultiplier": 2,
+				"anchor": 1,
+				"offset": [0, 0, 0],
+				"reflectOnHurt": false,
+				"catch_fire": true
+			},
+			"minecraft:physics": {},
+			"minecraft:timer": {
+				"looping": false,
+				"time": 3,
+				"time_down_event": {
+					"event": "minecraft:explode"
+				}
+			},
+			"minecraft:conditional_bandwidth_optimization": {}
+		},
+		"events": {
+			"minecraft:explode": {
+				"add": {
+					"component_groups": ["minecraft:exploding"]
+				}
+			},
+			"minecraft:start_despawn": {
+				"add": {
+					"component_groups": ["despawning"]
+				}
+			}
+		}
+	}
+}

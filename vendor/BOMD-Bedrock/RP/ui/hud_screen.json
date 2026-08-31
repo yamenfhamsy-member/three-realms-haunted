@@ -1,0 +1,594 @@
+{
+  "namespace": "hud",
+
+  "bomd_lich_boss_node": {
+    "type": "image",
+    "size": [7, 7],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "texture": "textures/ui/bomd/lich_boss_bar_dividers",
+    "uv_size": [7, 7],
+    "bilinear": false,
+    "layer": 4
+  },
+
+  "bomd_lich_boss_node_active@hud.bomd_lich_boss_node": {
+    "uv": [45, 0],
+    "visible": false,
+    "layer": 5,
+    "$node_visible_binding|default": "(#progress_percentage > 0.25 or #progress_percentage = 0.25)",
+    "bindings": [
+      {
+        "binding_name": "$node_visible_binding",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars",
+        "binding_condition": "always"
+      }
+    ]
+  },
+
+  "bomd_lich_boss_node_inactive@hud.bomd_lich_boss_node": {
+    "uv": [45, 7]
+  },
+
+  "bomd_lich_boss_bar": {
+    "type": "panel",
+    "size": [182, 5],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 10],
+    "layer": 3,
+    "bindings": [
+      {
+        "binding_name": "(#bossName = 'Night Lich')",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars",
+        "binding_condition": "always"
+      }
+    ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "size": [182, 5],
+          "texture": "textures/ui/empty_progress_bar",
+          "color": [0.05, 0.06, 0.13],
+          "layer": 3
+        }
+      },
+      {
+        "blue_progress": {
+          "type": "image",
+          "size": [182, 5],
+          "texture": "textures/ui/filled_progress_bar",
+          "color": [0.3333, 0.3333, 1.0],
+          "clip_direction": "left",
+          "clip_pixelperfect": false,
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      },
+      {
+        "phase_25_inactive@hud.bomd_lich_boss_node_inactive": {
+          "offset": [42, -1]
+        }
+      },
+      {
+        "phase_25_active@hud.bomd_lich_boss_node_active": {
+          "offset": [42, -1],
+          "$node_visible_binding": "(#progress_percentage > 0.25 or #progress_percentage = 0.25)"
+        }
+      },
+      {
+        "phase_50_inactive@hud.bomd_lich_boss_node_inactive": {
+          "offset": [88, -1]
+        }
+      },
+      {
+        "phase_50_active@hud.bomd_lich_boss_node_active": {
+          "offset": [88, -1],
+          "$node_visible_binding": "(#progress_percentage > 0.5 or #progress_percentage = 0.5)"
+        }
+      },
+      {
+        "phase_75_inactive@hud.bomd_lich_boss_node_inactive": {
+          "offset": [134, -1]
+        }
+      },
+      {
+        "phase_75_active@hud.bomd_lich_boss_node_active": {
+          "offset": [134, -1],
+          "$node_visible_binding": "(#progress_percentage > 0.75 or #progress_percentage = 0.75)"
+        }
+      }
+    ]
+  },
+
+  "bomd_gauntlet_boss_notch": {
+    "type": "image",
+    "size": [1, 7],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "texture": "textures/ui/bomd/gauntlet_boss_notch",
+    "bilinear": false,
+    "layer": 5
+  },
+
+  "bomd_gauntlet_boss_bar": {
+    "type": "panel",
+    "size": [182, 5],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 10],
+    "layer": 3,
+    "bindings": [
+      {
+        "binding_name": "(#bossName = 'Nether Gauntlet')",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars",
+        "binding_condition": "always"
+      }
+    ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "size": [182, 5],
+          "texture": "textures/ui/empty_progress_bar",
+          "color": [0.13, 0.035, 0.02],
+          "layer": 3
+        }
+      },
+      {
+        "red_progress": {
+          "type": "image",
+          "size": [182, 5],
+          "texture": "textures/ui/filled_progress_bar",
+          "color": [0.82, 0.055, 0.025],
+          "clip_direction": "left",
+          "clip_pixelperfect": false,
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      },
+      {
+        "notch_1@hud.bomd_gauntlet_boss_notch": {
+          "offset": [30, -1]
+        }
+      },
+      {
+        "notch_2@hud.bomd_gauntlet_boss_notch": {
+          "offset": [60, -1]
+        }
+      },
+      {
+        "notch_3@hud.bomd_gauntlet_boss_notch": {
+          "offset": [90, -1]
+        }
+      },
+      {
+        "notch_4@hud.bomd_gauntlet_boss_notch": {
+          "offset": [120, -1]
+        }
+      },
+      {
+        "notch_5@hud.bomd_gauntlet_boss_notch": {
+          "offset": [150, -1]
+        }
+      }
+    ]
+  },
+
+  "bomd_void_boss_notch": {
+    "type": "image",
+    "size": [1, 7],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "texture": "textures/ui/bomd/void_boss_notch",
+    "bilinear": false,
+    "layer": 5
+  },
+
+  "bomd_void_node": {
+    "type": "image",
+    "size": [7, 7],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "texture": "textures/ui/bomd/void_blossom_boss_bar_dividers",
+    "uv_size": [7, 7],
+    "bilinear": false,
+    "layer": 6
+  },
+
+  "bomd_void_node_active@hud.bomd_void_node": {
+    "uv": [45, 0],
+    "visible": false,
+    "$node_visible_binding|default": "(#progress_percentage > 0.25 or #progress_percentage = 0.25)",
+    "bindings": [
+      {
+        "binding_name": "$node_visible_binding",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars",
+        "binding_condition": "always"
+      }
+    ]
+  },
+
+  "bomd_void_node_inactive@hud.bomd_void_node": {
+    "uv": [45, 7]
+  },
+
+  "bomd_void_blossom_boss_bar": {
+    "type": "panel",
+    "size": [182, 5],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 10],
+    "layer": 3,
+    "bindings": [
+      {
+        "binding_name": "(#bossName = 'Void Blossom')",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars",
+        "binding_condition": "always"
+      }
+    ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "size": [182, 5],
+          "texture": "textures/ui/empty_progress_bar",
+          "color": [0.025, 0.11, 0.045],
+          "layer": 3
+        }
+      },
+      {
+        "green_progress": {
+          "type": "image",
+          "size": [
+            182,
+            5
+          ],
+          "texture": "textures/ui/filled_progress_bar",
+          "color": [
+            0.18,
+            0.74,
+            0.28
+          ],
+          "clip_direction": "left",
+          "clip_pixelperfect": false,
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      },
+      {
+        "notch_1@hud.bomd_void_boss_notch": {
+          "offset": [
+            15,
+            -1
+          ]
+        }
+      },
+      {
+        "notch_2@hud.bomd_void_boss_notch": {
+          "offset": [
+            30,
+            -1
+          ]
+        }
+      },
+      {
+        "notch_3@hud.bomd_void_boss_notch": {
+          "offset": [
+            46,
+            -1
+          ]
+        }
+      },
+      {
+        "notch_4@hud.bomd_void_boss_notch": {
+          "offset": [
+            61,
+            -1
+          ]
+        }
+      },
+      {
+        "notch_5@hud.bomd_void_boss_notch": {
+          "offset": [
+            76,
+            -1
+          ]
+        }
+      },
+      {
+        "notch_6@hud.bomd_void_boss_notch": {
+          "offset": [
+            91,
+            -1
+          ]
+        }
+      },
+      {
+        "notch_7@hud.bomd_void_boss_notch": {
+          "offset": [
+            106,
+            -1
+          ]
+        }
+      },
+      {
+        "notch_8@hud.bomd_void_boss_notch": {
+          "offset": [
+            121,
+            -1
+          ]
+        }
+      },
+      {
+        "notch_9@hud.bomd_void_boss_notch": {
+          "offset": [
+            137,
+            -1
+          ]
+        }
+      },
+      {
+        "notch_10@hud.bomd_void_boss_notch": {
+          "offset": [
+            152,
+            -1
+          ]
+        }
+      },
+      {
+        "notch_11@hud.bomd_void_boss_notch": {
+          "offset": [
+            167,
+            -1
+          ]
+        }
+      },
+      {
+        "phase_25_inactive@hud.bomd_void_node_inactive": {
+          "offset": [
+            42,
+            -1
+          ]
+        }
+      },
+      {
+        "phase_25_active@hud.bomd_void_node_active": {
+          "offset": [
+            42,
+            -1
+          ],
+          "$node_visible_binding": "(#progress_percentage > 0.25 or #progress_percentage = 0.25)"
+        }
+      },
+      {
+        "phase_50_inactive@hud.bomd_void_node_inactive": {
+          "offset": [
+            88,
+            -1
+          ]
+        }
+      },
+      {
+        "phase_50_active@hud.bomd_void_node_active": {
+          "offset": [
+            88,
+            -1
+          ],
+          "$node_visible_binding": "(#progress_percentage > 0.5 or #progress_percentage = 0.5)"
+        }
+      },
+      {
+        "phase_75_inactive@hud.bomd_void_node_inactive": {
+          "offset": [
+            134,
+            -1
+          ]
+        }
+      },
+      {
+        "phase_75_active@hud.bomd_void_node_active": {
+          "offset": [
+            134,
+            -1
+          ],
+          "$node_visible_binding": "(#progress_percentage > 0.75 or #progress_percentage = 0.75)"
+        }
+      }
+    ]
+  },
+
+
+  "bomd_obsidilith_boss_notch": {
+    "type": "image",
+    "size": [1, 7],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "texture": "textures/ui/filled_progress_bar",
+    "color": [0.82, 0.55, 1.0],
+    "bilinear": false,
+    "layer": 5
+  },
+
+  "bomd_obsidilith_node": {
+    "type": "image",
+    "size": [7, 7],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "texture": "textures/ui/bomd/obsidilith_boss_bar_dividers",
+    "uv_size": [7, 7],
+    "bilinear": false,
+    "layer": 6
+  },
+
+  "bomd_obsidilith_node_active@hud.bomd_obsidilith_node": {
+    "uv": [45, 0],
+    "visible": false,
+    "layer": 7,
+    "$node_visible_binding|default": "(#progress_percentage > 0.25 or #progress_percentage = 0.25)",
+    "bindings": [
+      {
+        "binding_name": "$node_visible_binding",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars",
+        "binding_condition": "always"
+      }
+    ]
+  },
+
+  "bomd_obsidilith_node_inactive@hud.bomd_obsidilith_node": {
+    "uv": [45, 7]
+  },
+
+  "bomd_obsidilith_boss_bar": {
+    "type": "panel",
+    "size": [182, 5],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [0, 10],
+    "layer": 3,
+    "bindings": [
+      {
+        "binding_name": "(#bossName = 'Obsidilith')",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "boss_bars",
+        "binding_condition": "always"
+      }
+    ],
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "size": [182, 5],
+          "texture": "textures/ui/empty_progress_bar",
+          "color": [0.075, 0.025, 0.12],
+          "layer": 3
+        }
+      },
+      {
+        "violet_progress": {
+          "type": "image",
+          "size": [182, 5],
+          "texture": "textures/ui/filled_progress_bar",
+          "color": [0.56, 0.18, 0.94],
+          "clip_direction": "left",
+          "clip_pixelperfect": false,
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#progress_percentage",
+              "binding_name_override": "#clip_ratio",
+              "binding_type": "collection",
+              "binding_collection_name": "boss_bars",
+              "binding_condition": "always"
+            }
+          ]
+        }
+      },
+      { "notch_1@hud.bomd_obsidilith_boss_notch": { "offset": [15, -1] } },
+      { "notch_2@hud.bomd_obsidilith_boss_notch": { "offset": [30, -1] } },
+      { "notch_3@hud.bomd_obsidilith_boss_notch": { "offset": [46, -1] } },
+      { "notch_4@hud.bomd_obsidilith_boss_notch": { "offset": [61, -1] } },
+      { "notch_5@hud.bomd_obsidilith_boss_notch": { "offset": [76, -1] } },
+      { "notch_6@hud.bomd_obsidilith_boss_notch": { "offset": [91, -1] } },
+      { "notch_7@hud.bomd_obsidilith_boss_notch": { "offset": [106, -1] } },
+      { "notch_8@hud.bomd_obsidilith_boss_notch": { "offset": [121, -1] } },
+      { "notch_9@hud.bomd_obsidilith_boss_notch": { "offset": [137, -1] } },
+      { "notch_10@hud.bomd_obsidilith_boss_notch": { "offset": [152, -1] } },
+      { "notch_11@hud.bomd_obsidilith_boss_notch": { "offset": [167, -1] } },
+      {
+        "phase_25_inactive@hud.bomd_obsidilith_node_inactive": {
+          "offset": [42, -1]
+        }
+      },
+      {
+        "phase_25_active@hud.bomd_obsidilith_node_active": {
+          "offset": [42, -1],
+          "$node_visible_binding": "(#progress_percentage > 0.25 or #progress_percentage = 0.25)"
+        }
+      },
+      {
+        "phase_50_inactive@hud.bomd_obsidilith_node_inactive": {
+          "offset": [88, -1]
+        }
+      },
+      {
+        "phase_50_active@hud.bomd_obsidilith_node_active": {
+          "offset": [88, -1],
+          "$node_visible_binding": "(#progress_percentage > 0.5 or #progress_percentage = 0.5)"
+        }
+      },
+      {
+        "phase_75_inactive@hud.bomd_obsidilith_node_inactive": {
+          "offset": [134, -1]
+        }
+      },
+      {
+        "phase_75_active@hud.bomd_obsidilith_node_active": {
+          "offset": [134, -1],
+          "$node_visible_binding": "(#progress_percentage > 0.75 or #progress_percentage = 0.75)"
+        }
+      }
+    ]
+  },
+
+  "boss_health_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "bomd_lich_boss_bar@hud.bomd_lich_boss_bar": {}
+          },
+          {
+            "bomd_gauntlet_boss_bar@hud.bomd_gauntlet_boss_bar": {}
+          },
+          {
+            "bomd_void_blossom_boss_bar@hud.bomd_void_blossom_boss_bar": {}
+          },
+          {
+            "bomd_obsidilith_boss_bar@hud.bomd_obsidilith_boss_bar": {}
+          }
+        ]
+      }
+    ]
+  }
+}

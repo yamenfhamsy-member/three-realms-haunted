@@ -1,0 +1,39 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "bomd:levitation_block"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " A ",
+      "GHG",
+      "CCC"
+    ],
+    "key": {
+      "A": {
+        "item": "bomd:ancient_anima"
+      },
+      "G": {
+        "item": "minecraft:gold_ingot"
+      },
+      "H": {
+        "item": "bomd:blazing_eye"
+      },
+      "C": {
+        "item": "minecraft:obsidian"
+      }
+    },
+    "unlock": [
+      {
+        "item": "bomd:blazing_eye"
+      }
+    ],
+    "result": {
+      "item": "bomd:levitation_block",
+      "count": 1
+    }
+  }
+}
