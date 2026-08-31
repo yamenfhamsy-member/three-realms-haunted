@@ -1,0 +1,18 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:block": {
+    "description": {
+      "identifier": "three_realms:cursed_gate_core"
+    },
+    "components": {
+      "minecraft:display_name": "tile.three_realms.cursed_gate_core.name",
+      "minecraft:collision_box": false,
+      "minecraft:selection_box": false,
+      "minecraft:destructible_by_mining": { "seconds_to_destroy": 0 },
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "*": { "texture": "cursed_gate_core", "render_method": "blend" }
+      }
+    }
+  }
+}

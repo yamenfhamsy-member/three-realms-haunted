@@ -1,0 +1,38 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "THREE REALMS: Haunted Gate",
+    "description": "Physical Haunted Gate portal for the Haunted Realm.",
+    "pack_scope": "any",
+    "pack_icon": "pack_icon",
+    "uuid": "4c0d08a1-6d2e-4d09-8ea2-9c719e0e2f31",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 26, 40]
+  },
+  "modules": [
+    {
+      "description": "Haunted Gate data",
+      "type": "data",
+      "uuid": "a6427e56-f7bd-4d5f-bec4-c0a66f36cc81",
+      "version": [1, 0, 0]
+    },
+    {
+      "description": "Haunted Gate Script API logic",
+      "language": "javascript",
+      "type": "script",
+      "uuid": "932a8f09-0a16-4f0a-b5b2-7d8c3b1e4617",
+      "version": [1, 0, 0],
+      "entry": "scripts/main.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.9.0"
+    },
+    {
+      "uuid": "c8ea6a4f-7a21-4ff4-8a3f-7e36e4c9a6b1",
+      "version": [1, 0, 0]
+    }
+  ]
+}

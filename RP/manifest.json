@@ -1,0 +1,20 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "THREE REALMS: Haunted Gate Resources",
+    "description": "Haunted Gate textures, sounds, and client resources.",
+    "pack_scope": "any",
+    "pack_icon": "pack_icon",
+    "uuid": "c8ea6a4f-7a21-4ff4-8a3f-7e36e4c9a6b1",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 26, 40]
+  },
+  "modules": [
+    {
+      "description": "Haunted Gate resource assets",
+      "type": "resources",
+      "uuid": "e5bfbcc4-4be5-45ed-90d2-f8b20c55a733",
+      "version": [1, 0, 0]
+    }
+  ]
+}

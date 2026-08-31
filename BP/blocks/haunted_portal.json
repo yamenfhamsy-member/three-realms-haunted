@@ -1,0 +1,17 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:block": {
+    "description": {
+      "identifier": "three_realms:haunted_portal"
+    },
+    "components": {
+      "minecraft:display_name": "tile.three_realms.haunted_portal.name",
+      "minecraft:destructible_by_mining": { "seconds_to_destroy": 2.5 },
+      "minecraft:destructible_by_explosion": { "explosion_resistance": 12 },
+      "minecraft:geometry": "geometry.three_realms.haunted_gate",
+      "minecraft:material_instances": {
+        "*": { "texture": "haunted_gate_frame", "render_method": "opaque" }
+      }
+    }
+  }
+}

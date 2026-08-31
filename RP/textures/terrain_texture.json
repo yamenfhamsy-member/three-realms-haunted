@@ -1,0 +1,8 @@
+{
+  "resource_pack_name": "three_realms_haunted",
+  "texture_name": "atlas.terrain",
+  "texture_data": {
+    "haunted_gate_frame": { "textures": ["textures/blocks/haunted_gate_frame"] },
+    "cursed_gate_core": { "textures": ["textures/blocks/cursed_gate_core"] }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.three_realms.haunted_gate",
+        "texture_width": 16,
+        "texture_height": 16,
+        "visible_bounds_width": 7,
+        "visible_bounds_height": 8,
+        "visible_bounds_offset": [0, 2, 0]
+      },
+      "bones": [
+        {
+          "name": "frame_left",
+          "pivot": [0, 0, 0],
+          "cubes": [
+            { "origin": [-2.5, 0, -0.5], "size": [1, 6, 1], "uv": [0, 0] }
+          ]
+        },
+        {
+          "name": "frame_right",
+          "pivot": [0, 0, 0],
+          "cubes": [
+            { "origin": [1.5, 0, -0.5], "size": [1, 6, 1], "uv": [0, 0] }
+          ]
+        },
+        {
+          "name": "frame_top_left",
+          "pivot": [0, 6, 0],
+          "rotation": [0, 0, -5],
+          "cubes": [
+            { "origin": [-2.5, 5, -0.5], "size": [2.2, 1, 1], "uv": [0, 0] }
+          ]
+        },
+        {
+          "name": "frame_top_right",
+          "pivot": [2, 6, 0],
+          "rotation": [0, 0, 6],
+          "cubes": [
+            { "origin": [0.8, 5, -0.5], "size": [2.2, 1, 1], "uv": [0, 0] }
+          ]
+        },
+        {
+          "name": "frame_top_center",
+          "pivot": [2, 6, 0],
+          "rotation": [0, 0, 2],
+          "cubes": [
+            { "origin": [-0.4, 5, -0.5], "size": [1.4, 1, 1], "uv": [0, 0] }
+          ]
+        },
+        {
+          "name": "threshold",
+          "pivot": [0, 0, 0],
+          "cubes": [
+            { "origin": [-2.5, -0.15, -0.7], "size": [5, 0.3, 1.4], "uv": [0, 0] }
+          ]
+        },
+        {
+          "name": "cursed_core",
+          "pivot": [0, 0, 0],
+          "cubes": [
+            { "origin": [-1.5, 1, -0.08], "size": [3, 4, 0.12], "uv": [0, 0] }
+          ]
+        }
+      ]
+    }
+  ]
+}

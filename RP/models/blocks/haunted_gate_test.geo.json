@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.haunted_gate_test",
+        "texture_width": 16,
+        "texture_height": 16,
+        "visible_bounds_width": 6,
+        "visible_bounds_height": 8,
+        "visible_bounds_offset": [0, 3, 0]
+      },
+      "bones": [
+        {
+          "name": "haunted_gate",
+          "pivot": [0, 0, 0],
+          "cubes": [
+            { "origin": [-2, 0, -1], "size": [1, 6, 2], "uv": [0, 0] },
+            { "origin": [1, 0, -1], "size": [1, 6, 2], "uv": [0, 0] },
+            { "origin": [-2, 5, -1], "size": [4, 1, 2], "uv": [0, 0] }
+          ]
+        }
+      ]
+    }
+  ]
+}

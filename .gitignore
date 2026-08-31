@@ -1,0 +1,6 @@
+backups/
+build/
+out/
+*.mcaddon
+TOOLCHAIN.md
+TOOLCHAIN_COMMANDS.md
