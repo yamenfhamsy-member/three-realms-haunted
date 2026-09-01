@@ -1,0 +1,109 @@
+{
+  "implementation": "deterministic static foundation function; not procedural worldgen",
+  "origin": "execute at realm foundation origin",
+  "connectivity": [
+    "Abandoned Outskirts",
+    "Dead Forest",
+    "Cemetery District",
+    "Abandoned Hospital",
+    "Cursed Village",
+    "Old Laboratory",
+    "Crypt Depths",
+    "Nightmare Zone"
+  ],
+  "regions": {
+    "Abandoned Outskirts": {
+      "anchor_relative_x": 0,
+      "block_palette": [
+        "coarse_dirt",
+        "gravel",
+        "deepslate_bricks"
+      ],
+      "structure": "haunted_house_build",
+      "mob_intent": "three_realms:haunted_watcher",
+      "identity": "transition zone with ruined road, debris, and distant encounter sightlines"
+    },
+    "Dead Forest": {
+      "anchor_relative_x": 48,
+      "block_palette": [
+        "podzol",
+        "dark_oak_log",
+        "deepslate_tiles"
+      ],
+      "structure": null,
+      "mob_intent": "three_realms:scp939",
+      "identity": "sparse silhouettes, dark path, isolated clearing, and stalking sightlines"
+    },
+    "Cemetery District": {
+      "anchor_relative_x": 96,
+      "block_palette": [
+        "coarse_dirt",
+        "stone_bricks",
+        "deepslate_bricks"
+      ],
+      "structure": "cemetery_complex_build",
+      "mob_intent": "three_realms:scp106",
+      "identity": "grave fields, paths, fences, mausoleum route, and crypt connection"
+    },
+    "Abandoned Hospital": {
+      "anchor_relative_x": 144,
+      "block_palette": [
+        "polished_deepslate",
+        "gravel",
+        "deepslate_bricks"
+      ],
+      "structure": "abandoned_hospital_build",
+      "mob_intent": "three_realms:scp939",
+      "identity": "existing hospital anchor and exterior decay/service transition; hospital is not rebuilt here"
+    },
+    "Cursed Village": {
+      "anchor_relative_x": 192,
+      "block_palette": [
+        "coarse_dirt",
+        "dark_oak_planks",
+        "cobblestone"
+      ],
+      "structure": "cursed_mansion_build",
+      "mob_intent": "three_realms:scp966",
+      "identity": "ruined street, empty homes, concealed path, and uncertain space"
+    },
+    "Old Laboratory": {
+      "anchor_relative_x": 240,
+      "block_palette": [
+        "polished_deepslate",
+        "iron_block",
+        "deepslate_tiles"
+      ],
+      "structure": "abandoned_laboratory_build",
+      "mob_intent": "three_realms:scp191",
+      "identity": "facility approach, service route, restricted boundary, and hospital connection"
+    },
+    "Crypt Depths": {
+      "anchor_relative_x": 288,
+      "block_palette": [
+        "deepslate_bricks",
+        "bone_block",
+        "polished_blackstone"
+      ],
+      "structure": "crypt_build",
+      "mob_intent": "three_realms:scp439",
+      "identity": "descending burial route, claustrophobic chamber, and controlled encounter space"
+    },
+    "Nightmare Zone": {
+      "anchor_relative_x": 336,
+      "block_palette": [
+        "crying_obsidian",
+        "purpur_block",
+        "obsidian"
+      ],
+      "structure": "nightmare_mansion_build",
+      "mob_intent": "three_realms:scp096",
+      "identity": "distorted route, isolated landmark, and future boss location without boss implementation"
+    }
+  },
+  "worldgen": "NOT IMPLEMENTED \u2014 no proven runtime pipeline",
+  "runtime": "NOT TESTED \u2014 ENVIRONMENT LIMITATION",
+  "bosses_started": false,
+  "new_mobs_started": false,
+  "new_items_or_blocks_started": false
+}
