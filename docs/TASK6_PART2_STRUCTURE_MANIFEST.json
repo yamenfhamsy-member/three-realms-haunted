@@ -1,0 +1,81 @@
+{
+  "implementation": "deterministic Bedrock mcfunction builders",
+  "structures": {
+    "haunted_house_build": {
+      "region": "Abandoned Outskirts",
+      "anchor": "A1",
+      "mob_refs": [
+        "three_realms:haunted_watcher"
+      ],
+      "loot_refs": [
+        "loot_tables/entities/scpdt/scp131",
+        "loot_tables/entities/scpdt/scp939"
+      ]
+    },
+    "cemetery_complex_build": {
+      "region": "Cemetery District",
+      "anchor": "C1",
+      "mob_refs": [
+        "three_realms:scp106"
+      ],
+      "loot_refs": [
+        "loot_tables/entities/scpdt/scp939"
+      ]
+    },
+    "ruined_church_build": {
+      "region": "Cemetery District",
+      "anchor": "C2",
+      "mob_refs": [
+        "three_realms:scp049"
+      ],
+      "loot_refs": [
+        "loot_tables/entities/scpdt/scp131"
+      ]
+    },
+    "cursed_mansion_build": {
+      "region": "Cursed Village",
+      "anchor": "V1",
+      "mob_refs": [
+        "three_realms:scp966"
+      ],
+      "loot_refs": [
+        "loot_tables/entities/scpdt/scp939"
+      ]
+    },
+    "abandoned_laboratory_build": {
+      "region": "Old Laboratory",
+      "anchor": "L1",
+      "mob_refs": [
+        "three_realms:scp191"
+      ],
+      "loot_refs": [
+        "loot_tables/entities/scpdt/scp131"
+      ]
+    },
+    "crypt_build": {
+      "region": "Crypt Depths",
+      "anchor": "K1",
+      "mob_refs": [
+        "three_realms:scp439"
+      ],
+      "loot_refs": []
+    },
+    "nightmare_mansion_build": {
+      "region": "Nightmare Zone",
+      "anchor": "N1",
+      "mob_refs": [
+        "three_realms:scp096"
+      ],
+      "loot_refs": [
+        "loot_tables/entities/scpdt/scp131"
+      ]
+    }
+  },
+  "blocked_or_deferred": [
+    "bosses",
+    "new mobs",
+    "automatic worldgen",
+    "dimensions",
+    "feature rules"
+  ]
+}
