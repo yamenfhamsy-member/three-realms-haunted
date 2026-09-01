@@ -10,3 +10,20 @@ item.three_realms:obsidian_heart.name=Obsidian Heart
 tile.three_realms:void_blossom_healer.name=Healing Void Blossom
 tile.three_realms:vine_wall.name=Vine Wall
 tile.three_realms:obsidilith_rune.name=Obsidilith Rune
+#
+# Task 16 — item display names (Issue #5 + #8)
+item.three_realms.arcane_blade=Arcane Blade
+item.three_realms.fire_blade=Fire Blade
+item.three_realms.frost_blade=Frost Blade
+item.three_realms.hexblade=Hexblade
+item.three_realms.imposter_totem=Imposter Totem
+item.three_realms.mystery_syringe=Mystery Syringe
+item.three_realms.scp058_body_scrap=SCP-058 Body Scrap
+item.three_realms.scp096_bag=SCP-096 Bag
+item.three_realms.scp1023_arc=SCP-1023-ARC
+item.three_realms.scp3199_egg_item=SCP-3199 Egg
+item.three_realms.scp5167_knife=SCP-5167 Knife
+item.three_realms.scp939_flesh=SCP-939 Flesh
+item.three_realms.scp939_tooth=SCP-939 Tooth
+item.three_realms.soul_igniter=Soul Igniter
+dt.nameslot.scp3199_egg=SCP-3199 Egg

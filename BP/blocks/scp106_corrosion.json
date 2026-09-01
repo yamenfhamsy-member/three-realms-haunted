@@ -51,7 +51,7 @@
         ]
       },
       "minecraft:loot": "loot_tables/empty.json",
-      "minecraft:geometry": "geometry.three_realms.dt_scp106_corrosion",
+      "minecraft:geometry": "geometry.dt_scp106_corrosion",
       "minecraft:destructible_by_mining": {
         "seconds_to_destroy": 0.7
       }

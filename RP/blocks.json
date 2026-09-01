@@ -1,5 +1,27 @@
 {
   "format_version": "1.21.0",
-  "three_realms:haunted_portal": { "sound": "stone" },
-  "three_realms:cursed_gate_core": { "sound": "glass" }
+  "three_realms:haunted_portal": {
+    "sound": "stone"
+  },
+  "three_realms:cursed_gate_core": {
+    "sound": "glass"
+  },
+  "three_realms:vine_wall": {
+    "sound": "grass"
+  },
+  "three_realms:void_blossom_healer": {
+    "sound": "grass"
+  },
+  "three_realms:gauntlet_blackstone": {
+    "sound": "stone"
+  },
+  "three_realms:sealed_blackstone": {
+    "sound": "stone"
+  },
+  "three_realms:scp106_corrosion": {
+    "sound": "slime"
+  },
+  "three_realms:obsidilith_rune": {
+    "sound": "stone"
+  }
 }
