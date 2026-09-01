@@ -1,0 +1,120 @@
+{
+  "source": "/home/ubuntu/three_realms_workspace/armor_weapons/forg-cleannrooster-assets",
+  "target": "Minecraft Bedrock 1.26.x only",
+  "audit_only_before_staging": true,
+  "selected_candidates": [
+    "armor/spellblade/runeblaze_layer_1.png",
+    "armor/spellblade/runeblaze_layer_2.png",
+    "armor/spellblade/runefrost_layer_1.png",
+    "armor/spellblade/runefrost_layer_2.png",
+    "armor/spellblade/runegleam_layer_1.png",
+    "armor/spellblade/runegleam_layer_2.png",
+    "item/spellblade/arcane_blade.png",
+    "item/spellblade/fire_blade.png",
+    "item/spellblade/frost_blade.png",
+    "item/spellblade/hexblade.png",
+    "item/spellblade/rifle.png"
+  ],
+  "armor_layers": [
+    "armor/spellblade/runeblaze_layer_1.png",
+    "armor/spellblade/runeblaze_layer_2.png",
+    "armor/spellblade/runefrost_layer_1.png",
+    "armor/spellblade/runefrost_layer_2.png",
+    "armor/spellblade/runegleam_layer_1.png",
+    "armor/spellblade/runegleam_layer_2.png"
+  ],
+  "blade_assets": [
+    "item/spellblade/arcane_blade.png",
+    "item/spellblade/fire_blade.png",
+    "item/spellblade/frost_blade.png",
+    "item/spellblade/hexblade.png"
+  ],
+  "rifle_asset": [
+    "item/spellblade/rifle.png"
+  ],
+  "staged_gameplay_items": [
+    "three_realms:arcane_blade",
+    "three_realms:fire_blade",
+    "three_realms:frost_blade",
+    "three_realms:hexblade"
+  ],
+  "armor_status": "BLOCKED \u2014 VISUAL LAYERS ONLY; no complete Bedrock armor item/attachable/geometry package in source",
+  "blade_status": "READY-FOR-STAGING \u2014 conservative icon-based Bedrock melee items; custom held geometry unavailable and not fabricated",
+  "rifle_status": "BLOCKED \u2014 NO COMPLETE BEDROCK RIFLE IMPLEMENTATION; icon and Blockbench source models exist, but item behavior/projectile/render conversion is absent",
+  "files_created": [
+    "BP/items/arcane_blade.json",
+    "BP/items/fire_blade.json",
+    "BP/items/frost_blade.json",
+    "BP/items/hexblade.json",
+    "RP/textures/item_texture.json",
+    "docs/task5_part2_namespace_mapping.json"
+  ],
+  "files_converted": [
+    "four blade source icons copied to Bedrock texture paths without binary changes"
+  ],
+  "files_unchanged": [
+    "six armor PNG layers",
+    "rifle.png",
+    "bb/rifle.geo.bbmodel",
+    "bb/rifle_dwarven.geo.bbmodel"
+  ],
+  "binary_fidelity": {
+    "armor/spellblade/runeblaze_layer_1.png": [
+      "eebe5c23ea98adb8661da24868001f4ff935f4da976bfdc4a137e84178ec140e",
+      "eebe5c23ea98adb8661da24868001f4ff935f4da976bfdc4a137e84178ec140e"
+    ],
+    "armor/spellblade/runeblaze_layer_2.png": [
+      "d7dad1b350c0189fcef1d11bf7bfd0370667fea5fe79073bec0ca678830dec7d",
+      "d7dad1b350c0189fcef1d11bf7bfd0370667fea5fe79073bec0ca678830dec7d"
+    ],
+    "armor/spellblade/runefrost_layer_1.png": [
+      "063364dde1b6412335c2a22e5193191c9862b3f721d8bee32165f174eb0dbcf5",
+      "063364dde1b6412335c2a22e5193191c9862b3f721d8bee32165f174eb0dbcf5"
+    ],
+    "armor/spellblade/runefrost_layer_2.png": [
+      "19b1d0b6856a391385beb8187f24d456d3095f20f69138d2a2e32ede764821bb",
+      "19b1d0b6856a391385beb8187f24d456d3095f20f69138d2a2e32ede764821bb"
+    ],
+    "armor/spellblade/runegleam_layer_1.png": [
+      "ee1475b255aa520801e952bcea6cfcc64e9053077ab5d671e2942cecc9b6b4a5",
+      "ee1475b255aa520801e952bcea6cfcc64e9053077ab5d671e2942cecc9b6b4a5"
+    ],
+    "armor/spellblade/runegleam_layer_2.png": [
+      "4062af0eee450fd6ce9bd38f6cb58fcb4f06ac35f1735efb8a5acf9d2a0c1776",
+      "4062af0eee450fd6ce9bd38f6cb58fcb4f06ac35f1735efb8a5acf9d2a0c1776"
+    ],
+    "item/spellblade/arcane_blade.png": [
+      "519bbcc845e0f7cb20c9f0f5e783c204cb589c3783b2bea7b24e6e8f428c5cc5",
+      "519bbcc845e0f7cb20c9f0f5e783c204cb589c3783b2bea7b24e6e8f428c5cc5"
+    ],
+    "item/spellblade/fire_blade.png": [
+      "ffdeac9cbb7437c25bbfd0051066945bb39b42183095adfe62ffc52653b7352f",
+      "ffdeac9cbb7437c25bbfd0051066945bb39b42183095adfe62ffc52653b7352f"
+    ],
+    "item/spellblade/frost_blade.png": [
+      "34979bef7b4258108e229f5daa8ee5aaea2f84fcba9eb868f2858176b798386d",
+      "34979bef7b4258108e229f5daa8ee5aaea2f84fcba9eb868f2858176b798386d"
+    ],
+    "item/spellblade/hexblade.png": [
+      "78dc6d640617c281ab2c0907a1e321fe92d2792a3193c92ea4d6190ebcc2a188",
+      "78dc6d640617c281ab2c0907a1e321fe92d2792a3193c92ea4d6190ebcc2a188"
+    ],
+    "item/spellblade/rifle.png": [
+      "abe4eda6c9f18f2e11e3c473f02132553d7e99fbead96f37e0d313f23cc3e771",
+      "abe4eda6c9f18f2e11e3c473f02132553d7e99fbead96f37e0d313f23cc3e771"
+    ],
+    "bb/rifle.geo.bbmodel": [
+      "62a7130937c5054f24d6c451ed4cb56c42d912c322b5454075fd14ac9b4790de",
+      "62a7130937c5054f24d6c451ed4cb56c42d912c322b5454075fd14ac9b4790de"
+    ],
+    "bb/rifle_dwarven.geo.bbmodel": [
+      "3134bcc61a21c6b4b0e6a34d843245b7149e21ae376770acb6dbd1a82565df47",
+      "3134bcc61a21c6b4b0e6a34d843245b7149e21ae376770acb6dbd1a82565df47"
+    ]
+  },
+  "no_attachables_created": true,
+  "no_custom_geometry_created": true,
+  "no_source_modified": true,
+  "no_production_modified": true,
+  "no_build_performed": true
+}

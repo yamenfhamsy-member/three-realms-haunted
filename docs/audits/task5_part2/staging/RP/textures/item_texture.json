@@ -1,0 +1,51 @@
+{
+  "resource_pack_name": "three_realms_haunted",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "soul_igniter": {
+      "textures": [
+        "textures/items/soul_igniter"
+      ]
+    },
+    "three_realms:void_thorn": {
+      "textures": [
+        "textures/bomd/items/void_thorn"
+      ]
+    },
+    "three_realms:blazing_eye": {
+      "textures": [
+        "textures/bomd/nether_gauntlet/items/blazing_eye"
+      ]
+    },
+    "three_realms:obsidian_heart": {
+      "textures": [
+        "textures/bomd/items/obsidian_heart"
+      ]
+    },
+    "three_realms:ancient_anima": {
+      "textures": [
+        "textures/bomd/night_lich/items/ancient_anima"
+      ]
+    },
+    "three_realms:arcane_blade": {
+      "textures": [
+        "textures/three_realms/armor_weapons/arcane_blade"
+      ]
+    },
+    "three_realms:fire_blade": {
+      "textures": [
+        "textures/three_realms/armor_weapons/fire_blade"
+      ]
+    },
+    "three_realms:frost_blade": {
+      "textures": [
+        "textures/three_realms/armor_weapons/frost_blade"
+      ]
+    },
+    "three_realms:hexblade": {
+      "textures": [
+        "textures/three_realms/armor_weapons/hexblade"
+      ]
+    }
+  }
+}

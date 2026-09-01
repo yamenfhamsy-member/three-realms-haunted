@@ -1,0 +1,45 @@
+{
+  "armor_visual_layers": {
+    "armor/spellblade/runeblaze_layer_1.png": "visual_assets/armor/runeblaze_layer_1.png",
+    "armor/spellblade/runeblaze_layer_2.png": "visual_assets/armor/runeblaze_layer_2.png",
+    "armor/spellblade/runefrost_layer_1.png": "visual_assets/armor/runefrost_layer_1.png",
+    "armor/spellblade/runefrost_layer_2.png": "visual_assets/armor/runefrost_layer_2.png",
+    "armor/spellblade/runegleam_layer_1.png": "visual_assets/armor/runegleam_layer_1.png",
+    "armor/spellblade/runegleam_layer_2.png": "visual_assets/armor/runegleam_layer_2.png"
+  },
+  "blades": {
+    "item/spellblade/arcane_blade.png": {
+      "id": "three_realms:arcane_blade",
+      "texture_key": "three_realms:arcane_blade",
+      "texture_path": "textures/three_realms/armor_weapons/arcane_blade",
+      "definition": "BP/items/arcane_blade.json"
+    },
+    "item/spellblade/fire_blade.png": {
+      "id": "three_realms:fire_blade",
+      "texture_key": "three_realms:fire_blade",
+      "texture_path": "textures/three_realms/armor_weapons/fire_blade",
+      "definition": "BP/items/fire_blade.json"
+    },
+    "item/spellblade/frost_blade.png": {
+      "id": "three_realms:frost_blade",
+      "texture_key": "three_realms:frost_blade",
+      "texture_path": "textures/three_realms/armor_weapons/frost_blade",
+      "definition": "BP/items/frost_blade.json"
+    },
+    "item/spellblade/hexblade.png": {
+      "id": "three_realms:hexblade",
+      "texture_key": "three_realms:hexblade",
+      "texture_path": "textures/three_realms/armor_weapons/hexblade",
+      "definition": "BP/items/hexblade.json"
+    }
+  },
+  "rifle": {
+    "source": "item/spellblade/rifle.png",
+    "staged_as": "visual_assets/weapons/rifle.png",
+    "status": "BLOCKED \u2014 NO COMPLETE BEDROCK RIFLE IMPLEMENTATION; icon and Blockbench sources only",
+    "model_sources": [
+      "bb/rifle.geo.bbmodel",
+      "bb/rifle_dwarven.geo.bbmodel"
+    ]
+  }
+}
