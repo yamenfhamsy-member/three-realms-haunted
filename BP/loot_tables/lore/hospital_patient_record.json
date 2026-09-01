@@ -1,0 +1,23 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "set_book_contents",
+              "title": "Patient Record 07",
+              "author": "St. Maud's Ward C",
+              "pages": [
+                "Patient Record 07\nWard C — Long Stay\n\nAdmitted after the incident at the old dig site. Refuses to sleep. Keeps drawing the same door.\n\nWhen asked what is behind it, he only says: \"It was opened. Not by us.\"\n\nRecommended: transfer to isolation.\n\nNote from Dr. Hale: two more staff missing this week. Do not staff Ward C alone."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

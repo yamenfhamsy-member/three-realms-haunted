@@ -28,6 +28,7 @@ fill ~-8 ~1 ~-16 ~-3 ~1 ~-10 minecraft:deepslate_bricks
 fill ~-7 ~2 ~-16 ~-4 ~2 ~-16 minecraft:iron_bars
 setblock ~-6 ~2 ~-14 minecraft:chest
 loot insert ~-6 ~2 ~-14 slot.container 0 loot "loot_tables/entities/scpdt/scp131"
+loot insert ~-6 ~2 ~-14 slot.container 1 loot "loot_tables/lore/hospital_patient_record"
 
 # Patient corridor with room thresholds and blocked routes.
 fill ~-2 ~1 ~-16 ~2 ~1 ~16 minecraft:cracked_deepslate_bricks
@@ -76,6 +77,7 @@ fill ~-8 ~-2 ~12 ~-4 ~-2 ~14 minecraft:air
 fill ~-8 ~-1 ~12 ~-4 ~-1 ~14 minecraft:air
 setblock ~-6 ~-1 ~13 minecraft:chest
 loot insert ~-6 ~-1 ~13 slot.container 0 loot "loot_tables/entities/scpdt/scp939"
+loot insert ~-6 ~-1 ~13 slot.container 1 loot "loot_tables/lore/hospital_patient_record"
 fill ~3 ~-4 ~10 ~11 ~-1 ~16 minecraft:deepslate_bricks
 fill ~4 ~-3 ~11 ~10 ~-3 ~15 minecraft:air
 fill ~5 ~-2 ~12 ~9 ~-2 ~14 minecraft:air

@@ -1,0 +1,24 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "set_book_contents",
+              "title": "Ritual — The Seam",
+              "author": "Hand unknown",
+              "pages": [
+                "Ritual — The Seam\n(handwriting unstable)\n\nThey buried it wrong on purpose. The crypt was never a tomb. It is a seal, and the seal has a lock, and the lock has a key, and we were the key.\n\nNine of us stood where the lantern burns. We read what should not be read.\n\nIt did not break. It was already broken. We only showed it where the light comes in.",
+                "The dead below are not dead. They are holding the seam shut with their hands.\n\nDo not take the lantern from this place. Do not count the graves. If the count is wrong, the seal opens from the inside.\n\nOne of us is already gone below. One of us was always below."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

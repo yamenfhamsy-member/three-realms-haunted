@@ -1,0 +1,24 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "set_book_contents",
+              "title": "The Last Page",
+              "author": "Unknown",
+              "pages": [
+                "The Last Page\n\nYou have come far enough to know the truth, so I will not dress it up.\n\nThe hospital lost patients. The laboratory lost control. The crypt lost its seal. But none of those were the wound — they were the first bandages.\n\nWhat opened here is not of this realm. It leans against the wall of this world from the other side, and the wall is thinner than anywhere else.",
+                "You have seen the number three in the lab notes. Three bands. Three signals.\n\nThis haunted place is only the first of three realms that will hear the knock.\n\nWhen you leave — if you leave — do not say it was quiet. Say it was listening.\n\nAnd whatever you do, do not open the door on your side. It has learned where the doors are."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

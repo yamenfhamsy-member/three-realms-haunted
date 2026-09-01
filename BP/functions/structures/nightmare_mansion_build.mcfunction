@@ -30,4 +30,5 @@ setblock ~-10 ~2 ~9 three_realms:scp106_corrosion
 setblock ~10 ~2 ~-9 three_realms:scp106_corrosion
 setblock ~0 ~2 ~10 minecraft:chest
 loot insert ~0 ~2 ~10 slot.container 0 loot "loot_tables/entities/scpdt/scp131"
+loot insert ~0 ~2 ~10 slot.container 1 loot "loot_tables/lore/nightmare_final_note"
 summon three_realms:scp096 ~8 ~2 ~8

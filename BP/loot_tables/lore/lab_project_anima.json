@@ -1,0 +1,24 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "set_book_contents",
+              "title": "Lab Notes — Project ANIMA",
+              "author": "Dr. E. Hale",
+              "pages": [
+                "Lab Notes — Project ANIMA\nDr. E. Hale\n\nDay 14. The resonance from the dig site artifact is not decay. It responds. We mapped the frequency and got a structured reply.\n\nSomething on the other side is answering on purpose.\n\nDay 19. Dr. Voss says stop the experiment. I say we are close. The signal now names us.",
+                "Day 23. We opened a window, not a door. A small one. It should have been enough.\n\nIt was not a window. It was a seam.\n\nIf anyone reads this: we did not open the world. We only proved it was already open.\n\nThe readings continue on three bands. Three. Remember the number three."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
