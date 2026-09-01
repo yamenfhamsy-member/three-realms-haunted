@@ -1,0 +1,28 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "three_realms:sealed_blackstone"
+    },
+    "components": {
+      "minecraft:display_name": "tile.three_realms:sealed_blackstone.name",
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 3600
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 3600000
+      },
+      "minecraft:friction": 0.6,
+      "minecraft:map_color": "#201B1D",
+      "minecraft:geometry": {
+        "identifier": "minecraft:geometry.full_block"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "polished_blackstone_bricks",
+          "render_method": "opaque"
+        }
+      }
+    }
+  }
+}

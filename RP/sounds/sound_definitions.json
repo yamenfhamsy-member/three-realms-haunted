@@ -4,13 +4,49 @@
     "three_realms.haunted_activate": {
       "category": "ambient",
       "sounds": [
-        { "name": "sounds/haunted_activate", "volume": 0.8 }
+        {
+          "name": "sounds/haunted_activate",
+          "volume": 0.8
+        }
       ]
     },
     "three_realms.haunted_teleport": {
       "category": "ambient",
       "sounds": [
-        { "name": "sounds/haunted_teleport", "volume": 0.75 }
+        {
+          "name": "sounds/haunted_teleport",
+          "volume": 0.75
+        }
+      ]
+    },
+    "three_realms.scpdt.door1.close": {
+      "category": "neutral",
+      "max_distance": 9.0,
+      "sounds": [
+        {
+          "name": "sounds/doors/door1_close1"
+        },
+        {
+          "name": "sounds/doors/door1_close2"
+        },
+        {
+          "name": "sounds/doors/door1_close3"
+        }
+      ]
+    },
+    "three_realms.scpdt.door1.open": {
+      "category": "neutral",
+      "max_distance": 9.0,
+      "sounds": [
+        {
+          "name": "sounds/doors/door1_open1"
+        },
+        {
+          "name": "sounds/doors/door1_open2"
+        },
+        {
+          "name": "sounds/doors/door1_open3"
+        }
       ]
     }
   }

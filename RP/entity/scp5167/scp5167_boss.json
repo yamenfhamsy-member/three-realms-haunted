@@ -1,0 +1,41 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "three_realms:scp5167_boss",
+      "materials": {
+        "default": "npc"
+      },
+      "textures": {
+        "default": "textures/entity/dt_scp5167_boss"
+      },
+      "geometry": {
+        "default": "geometry.three_realms.dt_scp5167_boss"
+      },
+      "animations": {
+        "general": "animation.three_realms.dt_scp5167_boss.general",
+        "move": "animation.three_realms.dt_scp5167_boss.walking",
+        "running": "animation.three_realms.dt_scp5167_boss.running",
+        "anim_cont": "controller.animation.three_realms.dt_scp5167_boss.anim_cont",
+        "look_at_target": "animation.three_realms.common.look_at_target"
+      },
+      "scripts": {
+        "animate": [
+          "anim_cont",
+          "look_at_target"
+        ],
+        "pre_animation": [
+          "variable.walking = (query.modified_move_speed && !query.is_sheared);",
+          "variable.running = query.modified_move_speed;"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.three_realms.scp_dystopia"
+      ],
+      "spawn_egg": {
+        "base_color": "#990000",
+        "overlay_color": "#BFDAD9"
+      }
+    }
+  }
+}

@@ -3,7 +3,29 @@
   "texture_name": "atlas.items",
   "texture_data": {
     "soul_igniter": {
-      "textures": ["textures/items/soul_igniter"]
+      "textures": [
+        "textures/items/soul_igniter"
+      ]
+    },
+    "three_realms:void_thorn": {
+      "textures": [
+        "textures/bomd/items/void_thorn"
+      ]
+    },
+    "three_realms:blazing_eye": {
+      "textures": [
+        "textures/bomd/nether_gauntlet/items/blazing_eye"
+      ]
+    },
+    "three_realms:obsidian_heart": {
+      "textures": [
+        "textures/bomd/items/obsidian_heart"
+      ]
+    },
+    "three_realms:ancient_anima": {
+      "textures": [
+        "textures/bomd/night_lich/items/ancient_anima"
+      ]
     }
   }
 }

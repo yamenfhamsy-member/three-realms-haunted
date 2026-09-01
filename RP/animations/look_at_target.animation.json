@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.three_realms.common.look_at_target": {
+      "loop": true,
+      "bones": {
+        "head": {
+          "relative_to": {
+            "rotation": "entity"
+          },
+          "rotation": [
+            "query.target_x_rotation - this",
+            "query.target_y_rotation - this",
+            0.0
+          ]
+        }
+      }
+    }
+  }
+}

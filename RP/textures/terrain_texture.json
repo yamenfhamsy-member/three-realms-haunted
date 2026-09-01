@@ -2,7 +2,35 @@
   "resource_pack_name": "three_realms_haunted",
   "texture_name": "atlas.terrain",
   "texture_data": {
-    "haunted_gate_frame": { "textures": ["textures/blocks/haunted_gate_frame"] },
-    "cursed_gate_core": { "textures": ["textures/blocks/cursed_gate_core"] }
+    "haunted_gate_frame": {
+      "textures": [
+        "textures/blocks/haunted_gate_frame"
+      ]
+    },
+    "cursed_gate_core": {
+      "textures": [
+        "textures/blocks/cursed_gate_core"
+      ]
+    },
+    "bomd_void_healer": {
+      "textures": [
+        "textures/bomd/void_blossom/void_blossom_healer"
+      ]
+    },
+    "bomd_gauntlet_blackstone": {
+      "textures": [
+        "textures/bomd/nether_gauntlet/blocks/gauntlet_blackstone"
+      ]
+    },
+    "bomd_vine_wall": {
+      "textures": [
+        "textures/bomd/blocks/vine_wall"
+      ]
+    },
+    "bomd_obsidilith_rune": {
+      "textures": [
+        "textures/bomd/obsidilith/blocks/obsidilith_rune"
+      ]
+    }
   }
 }

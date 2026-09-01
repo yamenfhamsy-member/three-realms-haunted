@@ -1,0 +1,33 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "three_realms:obsidilith_rune"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " O ",
+      "OHO",
+      " O "
+    ],
+    "key": {
+      "O": {
+        "item": "minecraft:obsidian"
+      },
+      "H": {
+        "item": "three_realms:obsidian_heart"
+      }
+    },
+    "unlock": [
+      {
+        "item": "three_realms:obsidian_heart"
+      }
+    ],
+    "result": {
+      "item": "three_realms:obsidilith_rune",
+      "count": 1
+    }
+  }
+}

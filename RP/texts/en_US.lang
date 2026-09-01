@@ -1,3 +1,12 @@
 tile.three_realms.haunted_portal.name=Haunted Gate
 tile.three_realms.cursed_gate_core.name=Cursed Gate Core
 item.three_realms.soul_igniter.name=Soul Igniter
+item.three_realms:ancient_anima.name=Ancient Anima
+item.three_realms:blazing_eye.name=Blazing Eye
+tile.three_realms:gauntlet_blackstone.name=Gauntlet Blackstone
+tile.three_realms:sealed_blackstone.name=Sealed Blackstone
+item.three_realms:void_thorn.name=Void Thorn
+item.three_realms:obsidian_heart.name=Obsidian Heart
+tile.three_realms:void_blossom_healer.name=Healing Void Blossom
+tile.three_realms:vine_wall.name=Vine Wall
+tile.three_realms:obsidilith_rune.name=Obsidilith Rune

@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "three_realms:mp5a3_bullet",
+      "materials": {
+        "default": "arrow"
+      },
+      "textures": {
+        "default": "textures/entity/bullet"
+      },
+      "geometry": {
+        "default": "geometry.three_realms.dt_bullet"
+      },
+      "animations": {
+        "particle": "controller.animation.three_realms.dt_flame.anim_cont"
+      },
+      "particle_effects": {
+        "charged_flames": "three_realms:muzzleflash_emitter"
+      },
+      "scripts": {
+        "animate": [
+          "particle"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.three_realms.scp_dystopia"
+      ]
+    }
+  }
+}

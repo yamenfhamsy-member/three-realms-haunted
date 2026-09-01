@@ -1,0 +1,35 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "three_realms:scp457",
+      "materials": {
+        "default": "npc"
+      },
+      "textures": {
+        "default": "textures/entity/dt_scp457"
+      },
+      "geometry": {
+        "default": "geometry.three_realms.dt_scp457"
+      },
+      "animations": {
+        "general": "animation.three_realms.dt_scp457.general",
+        "anim_cont": "controller.animation.three_realms.dt_scp457.anim_cont",
+        "look_at_target": "animation.three_realms.common.look_at_target"
+      },
+      "scripts": {
+        "animate": [
+          "anim_cont",
+          "look_at_target"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.three_realms.scp_dystopia"
+      ],
+      "spawn_egg": {
+        "base_color": "#F57239",
+        "overlay_color": "#F4280F"
+      }
+    }
+  }
+}
