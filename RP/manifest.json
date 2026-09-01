@@ -7,7 +7,7 @@
     "pack_icon": "pack_icon",
     "uuid": "c8ea6a4f-7a21-4ff4-8a3f-7e36e4c9a6b1",
     "version": [1, 0, 0],
-    "min_engine_version": [1, 26, 40]
+    "min_engine_version": [1, 26, 0]
   },
   "dependencies": [
     {
