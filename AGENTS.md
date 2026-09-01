@@ -1,903 +1,356 @@
-# AGENTS.md
-# THREE REALMS — HAUNTED REALM
-# Minecraft Bedrock Mobile 1.26.x
-# Agent operating rules, workspace policy, research policy,
-# asset acquisition policy, implementation workflow, and QA rules
+THREE REALMS
+MASTER LONG-FORM HANDOFF + GOVERNED EXECUTION PLAN
+STARTING FROM TASK 10
+CONTINUE TO FINAL RELEASE
 
----
+====================================================================
+A. PROJECT IDENTITY
+====================================================================
 
-# 0. PROJECT IDENTITY
-
-Project name:
-
+Project:
 THREE REALMS
 
-Current world:
-
+Current Realm:
 HAUNTED / NIGHTMARE REALM
 
-Namespace:
+Primary target:
+Minecraft Bedrock Edition 1.26.x ONLY
 
-three_realms
+Java Edition:
+NOT SUPPORTED
 
-Target platform:
+Current working copy:
+~/three_realms_task10/
 
-Minecraft Bedrock Edition Mobile
-Android / iOS
+Protected reference copy:
+~/three_realms/
 
-Target version family:
-
-Minecraft Bedrock 1.26.x
-
-Do NOT target Minecraft 1.21.x.
-
-The project is a Minecraft Bedrock Add-On.
-
-The project consists primarily of:
-
-- Behavior Pack
-- Resource Pack
-- Bedrock-compatible scripts when required
-- Supporting tools
-- Supporting source assets
-- Documentation
-- Tests
-- Build/package artifacts
-
----
-
-# 1. PRIMARY PROJECT REPOSITORY
-
-The user's current project repository is:
-
-https://github.com/yamensyfham-cmyk/minecraft-addon-hor
-
-Current baseline release:
-
-v1.0
-
-Release URL:
-
-https://github.com/yamensyfham-cmyk/minecraft-addon-hor/releases/tag/v1.0
-
-Current saved artifact:
-
-three_realms_haunted.mcaddon
+Temporary workspace:
+~/three_realms_workspace/
 
 IMPORTANT:
+~/three_realms_task10/ is the ACTIVE WORKING COPY for all continued
+development from TASK 10 onward.
 
-This repository/release is the user's current baseline.
+~/three_realms/ is a protected historical/reference copy.
 
-Do NOT assume the repository is disposable.
+Do NOT overwrite or destroy the protected reference copy.
 
-Do NOT overwrite the original baseline.
+====================================================================
+B. PROJECT DEVELOPMENT PHILOSOPHY
+====================================================================
 
-Do NOT destroy the existing implementation.
+This project is NOT a one-shot generated Minecraft pack.
 
-Create a working copy before making significant changes.
+It is being developed like a real software/content product:
 
-The current release is a starting point, not something to rebuild
-from zero.
+TASK
+→ inspect
+→ implement
+→ validate
+→ render/visual inspect when applicable
+→ build
+→ package
+→ package extraction/inspection
+→ regression
+→ performance review
+→ evidence report
+→ Git checkpoint
+→ gate
+→ next task
 
----
+Core rules:
 
-# 2. WORKSPACE LOCATION RULE
+FILE EXISTS != FEATURE COMPLETE
 
-The permanent working project MUST live under HOME.
+JSON VALID != FEATURE VALID
 
-Preferred location:
+STATIC VALIDATION PASS != RUNTIME PASS
 
-~/three_realms
+BUILD PASS != RUNTIME PASS
 
-The project may contain:
+PACKAGE PASS != GAMEPLAY PASS
 
-~/three_realms/
-    BP/
-    RP/
-    scripts/
-    tools/
-    tests/
-    docs/
-    assets/
-    reference/
-    build/
-    backups/
-    AGENTS.md
+RENDER PASS != RUNTIME PASS
 
-Use the actual project structure when one already exists.
+Every claim must be supported by evidence appropriate to that claim.
 
-Do not unnecessarily reorganize a working project.
+Use exactly these classifications where applicable:
 
----
+PASS
+PARTIAL
+FAIL
+BLOCKED
+SCOPE-LIMITED
+NOT TESTED
+NOT TESTED — ENVIRONMENT LIMITATION
 
-# 3. ABSOLUTE DOWNLOAD DIRECTORY RULE
+Never convert a static result into a runtime result.
 
-THIS RULE IS MANDATORY.
+====================================================================
+C. ABSOLUTE ASSET POLICY
+====================================================================
 
-EVERYTHING DOWNLOADED FROM THE INTERNET MUST FIRST BE DOWNLOADED
-UNDER /tmp.
+READY-MADE HIGH-QUALITY ASSETS ARE PREFERRED.
 
-This includes:
+When an original asset already exists and is good:
 
-- Git repositories cloned for inspection
-- GitHub archives
-- GitHub release assets
-- .zip files
-- .tar.gz files
-- .mcaddon files
-- .mcpack files
-- .mcworld files
-- texture packs
-- image files
-- PNG assets
-- model files
-- OBJ
-- FBX
-- glTF
-- GLB
-- WAV
-- OGG
-- MP3
-- sound libraries
-- sample projects
-- documentation exports
-- installer packages
-- executable installers
-- MCT downloads
-- Blockbench downloads
-- Blender downloads
-- scripts downloaded from external sources
-- reference repositories
-- external Add-Ons
-- third-party libraries downloaded as archives
-- test fixtures downloaded from the internet
+PRESERVE IT.
 
-NEVER clone or download an external repository directly into:
+Do NOT:
 
-~/three_realms/
+- regenerate
+- repaint
+- recolor
+- redesign
+- remake
+- replace
+- AI-generate a replacement
+- crop unnecessarily
+- resize unnecessarily
+- upscale unnecessarily
+- downscale unnecessarily
+- pixelate
+- simplify without a technical reason
 
-Instead:
+Allowed:
 
-1. Download/clone into /tmp.
-2. Inspect it there.
-3. Verify provenance/license there.
-4. Extract/process it there.
-5. Only copy the required files into the permanent project
-   when they are approved for use.
+- Bedrock format conversion
+- technical UV adaptation
+- technical bone/pivot adaptation
+- animation/controller wiring
+- render-controller wiring
+- namespace changes
+- UUID changes
+- path corrections
+- JSON compatibility
+- manifest/dependency fixes
+- API compatibility
+- version compatibility
+- technical performance fixes that do not unnecessarily damage quality
 
-Example:
+Technical integration is permitted.
 
-GOOD:
+Artistic redesign is NOT permitted unless explicitly requested.
 
-/tmp/three_realms_downloads/
-/tmp/reference_bomd/
-/tmp/official_bedrock_samples/
-/tmp/texture_sources/
-/tmp/sound_sources/
+====================================================================
+D. RUNTIME LIMITATION
+====================================================================
 
-then copy approved files to:
+Historically, the development environment does NOT contain a verified
+Minecraft Bedrock runtime.
 
-~/three_realms/
+There is no proven:
 
-BAD:
+- Minecraft Bedrock Android client
+- Minecraft Bedrock iOS client
+- Bedrock desktop runtime
+- BDS runtime
 
-~/three_realms/bomd/
-~/three_realms/downloads/
-~/three_realms/random_texture.zip
+Therefore all runtime-dependent features must remain explicitly:
 
----
+NOT TESTED — ENVIRONMENT LIMITATION
 
-# 4. TEMPORARY DOWNLOAD STRUCTURE
+unless an actual runtime is introduced and tested.
 
-Use a dedicated temporary workspace.
+This applies to:
 
-Preferred:
+- portal activation
+- portal teleport
+- custom dimension runtime
+- mob spawning
+- mob AI
+- combat
+- animation playback
+- actual rendering in Minecraft
+- actual sound playback
+- particles
+- structure traversal
+- world generation
+- multiplayer
+- save/reload
+- mobile FPS
+- memory behavior
 
-/tmp/three_realms_workspace/
+IMPORTANT:
+MCT rendering output is visual inspection evidence.
+It is NOT equivalent to Minecraft runtime evidence.
 
-Inside:
+====================================================================
+E. APPROVED EXTERNAL SOURCES
+====================================================================
 
-/tmp/three_realms_workspace/
-    downloads/
-    git/
-    archives/
-    extracted/
-    installers/
-    tools/
-    textures/
-    models/
-    sounds/
-    docs/
-    inspection/
-    logs/
-    staging/
+ONLY these already-approved sources exist for the project.
 
-You may create more folders when useful.
+--------------------------------------------------
+SOURCE 1 — HORROR MOBS
+--------------------------------------------------
 
-All external downloads must remain under this temporary tree
-until they are approved and copied into the permanent project.
+Local:
 
----
+/tmp/three_realms_workspace/horror_mobs/scp-dystopia/
 
-# 5. TOOL DOWNLOAD POLICY
+Repository:
 
-When installing tools:
+https://github.com/lc-studios-mc/scp-dystopia
 
-The installer/archive/download MUST first exist under:
+Previously verified:
 
-/tmp/three_realms_workspace/installers/
+License:
+CC BY-SA 4.0
 
-or:
+Creator:
+LuckedCoronet
 
-/tmp/three_realms_workspace/tools/
+Repository contains:
 
-Examples:
+- entities
+- client entities
+- geometry
+- textures
+- animations
+- animation controllers
+- render controllers
+- particles
+- sounds
+- loot
+- structures
+- other Bedrock assets
 
-/tmp/three_realms_workspace/installers/tool.zip
-/tmp/three_realms_workspace/tools/blockbench/
- /tmp/three_realms_workspace/tools/reference-tool/
+Inventory found:
 
-Do not download installers into:
+147 Behavior identifiers
+138 Client identifiers
+38 independent SCP creature candidates
 
-~/Downloads
-~/Desktop
-~/three_realms
+Known SCP entities include:
 
-Use /tmp first.
+SCP-096
+SCP-106
+SCP-173
+SCP-280
+SCP-3199
+SCP-457
+SCP-610
+SCP-682
+SCP-939
+SCP-966
 
-If a tool can be installed through an existing package manager,
-prefer the package manager, but configure download/cache directories
-under /tmp whenever the package manager safely supports that.
+Known SCP identity is explicitly ACCEPTED.
 
-Do not copy random downloaded binaries directly into the project.
+Do NOT reject an asset because it is a recognizable SCP.
 
-Only actual project-related source/configuration files belong
-inside ~/three_realms.
+SCP-173 remains BLOCKED because its dependency chain requires:
 
----
+lc:dt_broom
 
-# 6. PACKAGE CACHE POLICY
+and no valid definition exists in the source.
 
-When possible, use temporary caches under:
+Do NOT fabricate a replacement.
 
-/tmp/three_realms_workspace/cache/
+Final Task 3 usable creature count:
+37 integrated
 
-for:
+--------------------------------------------------
+SOURCE 2 — BLOCKS + ITEMS
+--------------------------------------------------
 
-- npm
-- pip
-- package downloads
-- archive extraction
-- model conversion
-- image processing
-- other temporary package artifacts
+Local:
 
-Do not unnecessarily pollute the project with dependency caches.
+/tmp/three_realms_workspace/blocks_items/BOMD-Bedrock/
 
-Do not commit:
-
-- node_modules
-- Python virtual environments
-- package caches
-- downloaded installers
-- temporary archives
-- build scratch files
-
-unless explicitly required by the project.
-
----
-
-# 7. WHAT IS PERMANENT
-
-Only approved project materials should remain in:
-
-~/three_realms/
-
-Permanent materials include:
-
-- source code
-- Behavior Pack
-- Resource Pack
-- approved asset files
-- approved textures
-- approved models
-- approved sounds
-- scripts
-- project configs
-- documentation
-- tests
-- build scripts
-- reproducible asset metadata
-- license/attribution records
-- final package when intentionally stored
-
-Temporary internet downloads should NOT remain unless they
-have been intentionally promoted to approved project assets.
-
----
-
-# 8. USER'S BASELINE MUST BE PRESERVED
-
-Before significant modifications:
-
-Create a backup in:
-
-~/three_realms/backups/
-
-The baseline should include at minimum:
-
-- current project source
-- current manifests
-- current BP
-- current RP
-- current scripts
-- current docs
-
-Create a timestamped backup.
-
-Example:
-
-~/three_realms/backups/baseline_YYYY-MM-DD_HH-MM-SS/
-
-Do NOT rely only on GitHub.
-
-Do NOT delete the user's current baseline.
-
----
-
-# 9. GIT RULES
-
-The working project should remain under Git.
-
-Before substantial work:
-
-git status
-
-Record the current branch and commit.
-
-Never perform destructive Git commands such as:
-
-- git reset --hard
-- git clean -fd
-- force push
-- deleting branches
-
-unless explicitly instructed by the user.
-
-Prefer:
-
-- new branch
-- normal commit
-- small commits
-- reversible changes
-
-Suggested branch naming:
-
-feature/haunted-portal
-feature/watcher
-feature/crawler
-feature/wailer
-feature/morgue-warden
-
----
-
-# 10. EXTERNAL PROJECT REFERENCE POLICY
-
-Technical references may be used.
-
-Potential reference sources include:
-
-1. Official Mojang/Microsoft Bedrock Samples
-2. Official Minecraft Creator documentation
-3. BOMD-Bedrock
-4. Other legitimate open-source Bedrock projects
-
-Official samples:
-
-https://github.com/Mojang/bedrock-samples
-
-BOMD-Bedrock:
+Repository:
 
 https://github.com/vandaaniels/BOMD-Bedrock
 
-IMPORTANT:
+Previously identified:
 
-The current BOMD-Bedrock repository states that its current version
-targets Minecraft Bedrock 1.26.40+ and Script API @minecraft/server
-2.9.0.
+GPL-3.0-or-later
 
-DO NOT assume BOMD is compatible with every 1.26.x version.
+Target:
 
-Verify the actual target version first.
+Bedrock 1.26.40+
 
----
+Used for:
 
-# 11. REFERENCE PROJECT DOWNLOAD RULE
-
-When downloading BOMD or another reference:
-
-FIRST:
-
-download/clone into:
-
-/tmp/three_realms_workspace/git/
-
-Example:
-
-/tmp/three_realms_workspace/git/BOMD-Bedrock/
-
-DO NOT clone directly into:
-
-~/three_realms/
-
-Inspect first.
-
-Only after approval should relevant technical material be
-copied/adapted into the working project.
-
-Do not destroy the original reference.
-
----
-
-# 12. REFERENCE PROJECT PURPOSE
-
-A reference project is used to learn:
-
-- Bedrock architecture
-- Behavior Pack organization
-- Resource Pack organization
-- entity architecture
-- scripts
-- boss systems
-- animation systems
-- particles
-- sounds
-- structures
-- recipes
-- loot
-- build workflows
-- testing workflows
-- performance patterns
-
-Do NOT blindly copy its content.
-
-Do NOT assume its APIs are current.
-
-Do NOT assume its assets are free to redistribute.
-
----
-
-# 13. OFFICIAL DOCUMENTATION FIRST
-
-For Minecraft Bedrock technical questions:
-
-The primary authority is current official Microsoft/Minecraft
-Creator documentation.
-
-Use:
-
-https://learn.microsoft.com/en-us/minecraft/creator/
-
-Also inspect:
-
-https://github.com/Mojang/bedrock-samples
-
-when official examples are useful.
-
-Before implementing:
-
-- entities
 - blocks
 - items
-- scripts
-- dimensions
-- animations
-- controllers
-- particles
-- render controllers
-- custom geometry
-- manifest changes
-- API changes
+- models
+- animations/controllers
+- related assets/dependencies
 
-read the relevant current documentation first.
+Original visual assets were preserved.
 
----
+--------------------------------------------------
+SOURCE 3 — ARMOR + WEAPONS
+--------------------------------------------------
 
-# 14. CUSTOM DIMENSION RULE
+Local:
 
-The Haunted Realm is intended to be a separate realm.
+/tmp/three_realms_workspace/armor_weapons/forg-cleannrooster-assets/
 
-Investigate the CURRENT official Custom Dimension implementation.
+Repository:
 
-Relevant official concepts may include:
+https://github.com/cleannrooster/forg-cleannrooster-assets
 
-- DimensionRegistry
-- registerCustomDimension
-- startup registration
-- dimension definitions
-- generation
-- teleportation
+Previously identified:
 
-Do not rely on an old tutorial.
+MIT
 
-The official current Custom Dimension workflow must be checked
-against the actual target 1.26.x environment.
+Inventory previously inspected:
 
-If Custom Dimensions are supported:
+543 files
 
-implement them correctly.
+Findings:
 
-If they require an experimental/Beta API:
+3 Spellblade armor color groups
+6 armor visual layers
+5 weapon-like visual assets
+1 rifle icon
 
-document it clearly.
+6 armor layers:
+BLOCKED — VISUAL LAYERS ONLY
 
-If they are unavailable or unsafe in the target configuration:
+Rifle:
+BLOCKED — VISUAL ICON ONLY
 
-do not fake a custom dimension.
+Integrated weapons:
 
-Use the strongest supported alternative and document it.
+three_realms:arcane_blade
+three_realms:fire_blade
+three_realms:frost_blade
+three_realms:hexblade
 
----
+==================================================
+F. CANCELLED ASSET
+==================================================
 
-# 15. TARGET VERSION POLICY
-
-Supported target family:
-
-Minecraft Bedrock 1.26.x
-
-Do NOT support 1.21.x.
-
-Do NOT silently raise the minimum version above the intended target.
-
-Do NOT use APIs from a later Bedrock release without verification.
-
-Create:
-
-docs/BEDROCK_126_COMPATIBILITY.md
-
-Track:
-
-- exact target version
-- tested version
-- API version
-- experimental requirements
-- unsupported features
-- known differences between 1.26.x releases
-
----
-
-# 16. VERSION MINIMUM RULE
-
-Choose the lowest practical 1.26.x version that supports
-the actual implementation.
-
-Do not use:
-
-min_engine_version
-
-or a Script API version
-
-higher than necessary.
-
-Do not claim all 1.26.x versions work without evidence.
-
-Separate:
-
-CONFIRMED TESTED
-DOCUMENTATION VERIFIED
-NOT TESTED
-UNSUPPORTED
-
----
-
-# 17. CURRENT BASELINE PROJECT
-
-Before any modification:
-
-Inspect the user's existing repository/release.
-
-Current repository:
-
-https://github.com/yamensyfham-cmyk/minecraft-addon-hor
-
-Current release:
-
-v1.0
-
-Do NOT assume the current source state is identical to the
-.mcaddon artifact.
-
-Compare if both are available.
-
-Determine:
-
-- BP structure
-- RP structure
-- scripts
-- manifests
-- UUIDs
-- current portal
-- current assets
-- current animations
-- current particles
-- current sounds
-- current structures
-
-Create:
-
-docs/BASELINE_AUDIT.md
-
----
-
-# 18. DO NOT REBUILD FROM SCRATCH
-
-The existing project is the starting point.
-
-Preserve working systems.
-
-Prefer:
-
-AUDIT
-→
-ADAPT
-→
-EXTEND
-→
-VALIDATE
-
-instead of:
-
-DELETE
-→
-REBUILD
-
-Only rewrite a system if there is a clear technical reason.
-
----
-
-# 19. ASSET POLICY
-
-For this project:
-
-READY-MADE ASSETS ARE PREFERRED.
-
-Use ready-made:
-
-- textures
-- 3D models
-- sounds
-
-when appropriate and legally usable.
-
-DO NOT unnecessarily regenerate good assets.
-
-DO NOT modify good assets simply because an AI could generate
-something else.
-
-The goal is to preserve:
-
-- quality
-- detail
-- resolution
-- visual fidelity
-
----
-
-# 20. TEXTURE POLICY
-
-Use ready-made textures where suitable.
+Skinny Monster 2 is CANCELLED.
 
 DO NOT:
 
-- repaint
-- recolor
-- pixelate
-- crop
-- resize
-- upscale
-- downscale
-- sharpen
-- blur
-- denoise
-- alter transparency
-- alter colors
+- download it
+- search for it
+- integrate it
+- use Sketchfab for the Watcher
+- replace SCP creatures with it
 
-unless a purely technical format conversion is absolutely required.
+The project uses SCP-Dystopia as the official horror-mob source.
 
-Preferred:
+====================================================================
+G. COMPLETE PROJECT HISTORY
+TASK 1 → TASK 9
+====================================================================
 
-KEEP ORIGINAL
-→
-PLACE CORRECTLY
-→
-REFERENCE CORRECTLY
-→
-ADAPT UV IF NEEDED
-→
-VALIDATE
+The following is the EXACT development history you inherit.
 
-Do not modify the artwork itself.
+Do not discard it.
 
----
+====================================================================
+TASK 1 — PORTAL
+====================================================================
 
-# 21. MODEL POLICY
-
-Use ready-made 3D models where suitable.
-
-Preferred formats:
-
-- Bedrock geometry
-- Blockbench-compatible models
-- legally convertible 3D formats
-
-When conversion is necessary:
-
-perform ONLY the technical conversion needed to make it
-compatible with Bedrock.
-
-Preserve whenever possible:
-
-- geometry
-- silhouette
-- proportions
-- bones
-- pivots
-- UV
-- animation structure
-- texture mapping
-
-Do not artistically redesign an existing model.
-
----
-
-# 22. SOUND POLICY
-
-Use ready-made sound assets where suitable.
-
-Preferred sources include:
-
-- Pixabay
-- Freesound
-- OpenGameArt
-- other clearly licensed sound libraries
-
-Before using any external sound:
-
-record:
-
-- source
-- author
-- license
-- original filename
-- final filename
-- usage
-
-Create:
-
-docs/SOUND_SOURCES.md
-
-Do not use:
-
-- ripped movie audio
-- ripped game audio
-- copyrighted franchise sounds
-- copyrighted character voices
-- copyrighted soundtrack material
-
----
-
-# 23. TEXTURE SOURCE RECORD
-
-For each external texture create/maintain:
-
-docs/TEXTURE_SOURCES.md
-
-Record:
-
-- filename
-- source URL
-- author
-- license
-- original resolution
-- where used
-- whether modified
-- whether only technical conversion was performed
-
----
-
-# 24. MODEL SOURCE RECORD
-
-Create:
-
-docs/MODEL_SOURCES.md
-
-Record:
-
-- filename
-- source URL
-- author
-- license
-- original format
-- converted format
-- conversion performed
-- where used
-
----
-
-# 25. ASSET PROVENANCE
-
-Create:
-
-docs/ASSET_PROVENANCE.md
-
-Classify assets:
-
-OFFICIAL
-OPEN_SOURCE
-CC0
-CC-BY
-OTHER_CLEAR_LICENSE
-USER_CREATED
-DERIVED
-UNKNOWN
-DO_NOT_USE
-
-Never silently use UNKNOWN assets in the final build.
-
-If an asset's origin cannot be verified:
-
-do not integrate it into the production build.
-
----
-
-# 26. IMAGE GENERATION POLICY
-
-Image-generation tools may be used for:
-
-- concept references
-- temporary design exploration
-- missing visual references
-
-But because the project prefers ready-made assets:
-
-Do NOT regenerate an existing high-quality production texture.
-
-Only use image generation when:
-
-- an approved asset does not exist
-- the user explicitly wants a new asset
-- or a concept image is needed
-
-When creating final production artwork through image generation,
-document the generation source/tool.
-
-Do not use Python to create the final artistic texture.
-
----
-
-# 27. MOBILE-FIRST ART POLICY
-
-The game runs on mobile.
-
-Textures, models and sounds must remain practical for Android/iOS.
-
-Prefer:
-
-- efficient texture sizes
-- low-poly geometry
-- controlled particles
-- short/efficient sound assets
-- efficient animation controllers
-
-Do not sacrifice visual quality unnecessarily.
-
----
-
-# 28. PORTAL IMPLEMENTATION
-
-The Haunted Portal is the first major system.
-
-Identifier:
+Portal ID:
 
 three_realms:haunted_portal
 
@@ -909,615 +362,1034 @@ Activation item:
 
 three_realms:soul_igniter
 
-Physical frame:
+Dimensions:
 
-5 blocks wide
-6 blocks high
+Outer frame:
+5 wide
+6 high
 
 Inner opening:
+3 wide
+4 high
 
-3 blocks wide
-4 blocks high
+Activation:
+player uses Soul Igniter near a valid complete frame.
 
----
+Not dependent on:
 
-# 29. PORTAL ACCESS RULE
-
-The player MUST access Haunted through a physical portal.
-
-DO NOT unlock the realm through:
-
-- day progression
-- night progression
+- day/night
 - sleeping
-- time
-- timer
-- random teleport
-- coordinate-only trigger
-- automatic event
+- timers
+- coordinate-only unlocking
+- random automatic activation
 
-Required flow:
-
-OVERWORLD
-→
-PLAYER GETS PORTAL MATERIALS
-→
-PLAYER BUILDS PORTAL
-→
-PLAYER USES ACTIVATION ITEM
-→
-ACTIVATING
-→
-CHARGING
-→
-OPENING
-→
-ACTIVE
-→
-PLAYER ENTERS PHYSICALLY
-→
-HAUNTED
-
----
-
-# 30. PORTAL STATES
-
-Use:
+State sequence:
 
 INACTIVE
-ACTIVATING
-CHARGING
-OPENING
-ACTIVE
+→ ACTIVATING
+→ CHARGING
+→ OPENING
+→ ACTIVE
 
-Optional:
+ACTIVE portal opening:
 
-COOLDOWN
-DEACTIVATING
+3 x 4
 
-Do not add unnecessary state complexity.
+Filled with:
 
----
+three_realms:cursed_gate_core
 
-# 31. PORTAL SAFETY
+Gate core:
+non-colliding
 
-The portal must have:
+Teleport:
+requires actual physical player entry into the portal opening.
 
-- correct frame detection
-- invalid-frame rejection
-- activation protection
-- duplicate activation protection
-- per-player teleport cooldown
-- safe destination
-- return system
-- multiplayer safety
-- save/reload handling
+Cooldown:
+per-player cooldown prevents duplicate teleport.
 
----
+Static result:
+PASS
 
-# 32. RETURN LOCATION
+Package:
+PASS
 
-Prefer storing the player's previous safe Overworld position.
+Archive integrity:
+PASS
 
-The return location should ideally survive:
+Runtime:
+NOT TESTED — ENVIRONMENT LIMITATION
 
-- save
-- world reload
-- process restart
+IMPORTANT:
+Portal is the baseline and must remain protected.
 
-If the target version makes persistent player storage
-unreliable, use the safest supported alternative.
+====================================================================
+TASK 2 — PORTAL QUALITY / TOOLING BASELINE
+====================================================================
 
-Document the limitation.
+Verified historically:
 
----
+JavaScript syntax:
+PASS
 
-# 33. PORTAL VISUAL DESIGN
+JSON:
+PASS
 
-Visual concept:
+MCT isolated/platform validation:
+PASS where applicable
 
-An ancient damaged supernatural gate.
+MCT packaging:
+PASS
 
-Frame:
+Archive extraction:
+PASS
 
-- blackened stone
-- cracked surfaces
-- irregular construction
-- faint supernatural markings
+Historical issue:
 
-Portal interior:
+mct exportaddon
++
+main.ts
++
+esbuild-wasm
++
+Node.js 24
 
-- deep black
-- pale spectral energy
-- cold mist
-- subtle movement
-- restrained particles
+caused:
 
-Do NOT simply recolor a Nether portal.
+RangeError: Invalid array length
 
----
+Do NOT assume this is fixed unless actually re-tested.
 
-# 34. PORTAL AUDIO
+Historical mitigation:
+controlled staging/package process was used without redesigning working
+production code.
 
-Required:
+Custom Dimension research:
+documented against official Bedrock documentation.
 
-- activation
-- charge
-- opening
-- active ambience
-- teleport
-- deactivation where useful
+Custom Dimension runtime:
+NOT TESTED
 
-Source from legitimate SFX.
+====================================================================
+TASK 3 — SCP HORROR MOBS
+====================================================================
 
-Preserve source quality.
+Source:
 
-Only technically convert for Bedrock.
+/tmp/three_realms_workspace/horror_mobs/scp-dystopia/
 
----
+Inventory:
 
-# 35. PORTAL VALIDATION
+147 BP identifiers
+138 RP/client identifiers
+38 independent SCP creature candidates
 
-Validate:
+Integrated:
 
-- block identifiers
-- item identifiers
-- manifest dependencies
-- portal state logic
-- frame validation
-- activation
-- teleport
-- cooldown
-- return
-- particles
-- sounds
-- animations
-- texture references
+37 usable creatures
 
----
+Blocked:
 
-# 36. CREATURE-BY-CREATURE DEVELOPMENT
+SCP-173
 
-After the portal is stable:
+Blocker:
 
-BUILD ONE CREATURE AT A TIME.
+lc:dt_broom missing
 
-Do NOT generate all mobs at once.
+Important:
+Do NOT fabricate the dependency.
 
-Each creature is its own production task.
+Shared audio file:
 
-Required per creature:
+RP/sounds/sound_definitions.json
 
-1. concept verification
-2. technical design
-3. gameplay behavior
-4. model
-5. texture
-6. UV
-7. animation
-8. animation controller when needed
-9. sound
-10. particles when needed
-11. loot
-12. spawn rules
-13. validation
-14. test
-15. documentation
+was modified additively where creature sound definitions were required.
 
-Only after the creature passes should the next creature begin.
+Portal audio entries were preserved exactly.
 
----
+Task 3:
+PASS / validated static production state
 
-# 37. WATCHER
+Runtime:
+NOT TESTED — ENVIRONMENT LIMITATION
 
-Identifier:
+====================================================================
+TASK 4 — BLOCKS + ITEMS
+====================================================================
 
-three_realms:haunted_watcher
+Source:
 
-Visual:
+BOMD-Bedrock
 
-- extremely tall
-- extremely thin
-- narrow torso
-- long arms
-- long fingers
-- tiny head
-- hunched posture
-- almost featureless face
-- two tiny pale eyes
+Task 4:
+COMPLETED / VALIDATED
 
-Body:
+Integrated usable BOMD blocks and items.
 
-dark charcoal
+Original visual content preserved.
 
-Eyes:
+No artistic redesign.
 
-very pale
+Only technical compatibility/integration.
 
-Behavior:
+Runtime:
+NOT TESTED
 
-- distant observation
-- stalking
-- slow approach
-- controlled aggression
+====================================================================
+TASK 5 — ARMOR + WEAPONS
+====================================================================
 
-Animation:
+Audited 543 source files.
 
-- idle sway
-- head movement
-- slow walk
-- attack
-- hurt
-- death
+Armor:
 
----
+6 visual layers:
+BLOCKED — VISUAL LAYERS ONLY
 
-# 38. CRAWLER
+Rifle:
 
-Identifier:
+BLOCKED — VISUAL ICON ONLY
 
-three_realms:haunted_crawler
+Four blade weapons converted and integrated:
 
-Visual:
+three_realms:arcane_blade
+three_realms:fire_blade
+three_realms:frost_blade
+three_realms:hexblade
 
-- low four-limbed body
-- elongated torso
-- oversized hands
-- thin limbs
-- distorted head
-- unnaturally wide mouth
+Production additions:
 
-Behavior:
+4 BP item definitions
+4 original PNG assets
 
-- rapid crawling
-- ambush
-- lunge
+Modified:
 
-Animation:
+RP/textures/item_texture.json
 
-- crawl
-- twitch
-- lunge
-- hurt
-- death
+Only namespace/reference changes.
 
----
+MCT:
 
-# 39. WAILER
+main PASS
+currentplatform PASS
+all PASS
 
-Identifier:
+Build:
+PASS
 
-three_realms:haunted_wailer
+Package:
+PASS
 
-Visual:
+Package entries:
+494
 
-- floating spectral body
-- torn lower body
-- long arms
-- hollow face
-- open dark mouth
-- pale spectral body
+SCP regression:
+PASS
 
-Behavior:
+Portal regression:
+PASS
 
-- floating
-- ranged attack where supported
-- distant cry
-- retreats when damaged
+Task 5:
+PASS
 
-Animation:
+Runtime:
+NOT TESTED — ENVIRONMENT LIMITATION
 
-- float
-- idle
-- attack
-- hurt
-- death
+====================================================================
+TASK 6 — STRUCTURES
+====================================================================
 
----
+Total:
 
-# 40. MOURNER
+8 structures
 
-Visual:
+1. Haunted House
+2. Cemetery Complex
+3. Ruined Church
+4. Cursed Mansion
+5. Abandoned Laboratory
+6. Abandoned Hospital
+7. Crypt
+8. Nightmare Mansion
 
-- tall spectral silhouette
-- dark hair-like mass
-- long dress-like form
-- pale hands
-- hidden face
-- unnatural posture
+Abandoned Hospital was built first as the reference.
 
-Do NOT copy an existing famous horror character.
+Implementation:
 
----
+deterministic Bedrock functions
 
-# 41. HOLLOW CHILD
+because no proven automatic .mcstructure/worldgen pipeline existed in
+the environment.
 
-Visual:
+DO NOT claim procedural world generation.
 
-- small humanoid
-- oversized head
-- thin limbs
-- unnatural proportions
-- pale face
-- dark eyes
+Task 6:
+PASS
 
-Do NOT copy an existing horror character.
+Task 6 Part 2 commit:
+e1c8e9fca0e0605af856617b34a9b9e7b6138720
 
----
+MCT:
+main PASS
+currentplatform PASS
+all PASS
 
-# 42. BLOODLESS DOCTOR
+Build:
+PASS
 
-Visual:
+Package:
+PASS
 
-- old medical coat
-- elongated arms
-- obscured face
-- asymmetrical body
-- damaged clothing
-- medical-tool silhouette details
+Runtime:
+NOT TESTED
 
-Primary location:
+====================================================================
+TASK 7 — REGION FOUNDATION
+====================================================================
 
-Hospital
+Eight regions:
 
----
+1. Abandoned Outskirts
+2. Dead Forest
+3. Cemetery District
+4. Abandoned Hospital
+5. Cursed Village
+6. Old Laboratory
+7. Crypt Depths
+8. Nightmare Zone
 
-# 43. PATIENT
+Function:
 
-Visual:
+BP/functions/world/haunted_realm_foundation_build.mcfunction
 
-- hospital clothing
-- bandages
-- oversized hands
-- distorted posture
-- damaged face
+Implemented:
 
-Behavior:
+- deterministic connected path
+- transition markers
+- region identities
+- ruins
+- roads
+- restricted areas
+- structure relationships
 
-- slow approach
-- sudden burst
+Task 7:
+PASS — STATIC FOUNDATION
 
----
+MCT:
+main PASS
+currentplatform PASS
+all PASS
 
-# 44. GRAVE HAND
+Build:
+PASS
 
-Visual:
+Package:
+PASS
 
-Huge hand emerging from ground.
+Package entries:
+506
 
-Behavior:
+Runtime:
+NOT TESTED
 
-- ambush
-- attack
-- retreat
+====================================================================
+TASK 8 — MOB ENCOUNTERS
+====================================================================
 
-Use only supported mechanics.
+Actual entity inventory:
 
----
+55 entity definitions
 
-# 45. MIMIC
+Encounter system:
 
-Concept:
+8 functions
 
-An apparently harmless object/entity that becomes hostile.
+Mechanism:
 
-Do not invent unsupported disguise mechanics.
+- Bedrock .mcfunction
+- execute unless entity
+- 24-block radius
+- one entity maximum per encounter
+- no global tick loop
+- no global scan
 
-Use the strongest verified Bedrock implementation.
+Distribution:
 
----
+Abandoned Outskirts
+→ haunted_watcher
 
-# 46. HUSHER
+Dead Forest
+→ scp939
 
-Visual:
+Cemetery District
+→ scp106
 
-- tall hooded body
-- narrow silhouette
-- long sleeves
-- no visible face
+Abandoned Hospital
+→ scp939
 
-Behavior:
+Cursed Village
+→ scp966
 
-- stealth
-- stalking
-- close-range danger
+Old Laboratory
+→ scp035_scientist
 
----
+Crypt Depths
+→ scp439
 
-# 47. RAVENING SHADE
+Nightmare Zone
+→ scp096
 
-Visual:
+Task 8:
+PASS — STATIC ENCOUNTER FOUNDATION
 
-- floating shadow
-- fragmented body
-- long claws
+MCT:
+main PASS
+currentplatform PASS
+all PASS
 
-Behavior:
+Build:
+PASS
 
-- rare
-- fast
-- aggressive
+Package:
+PASS
 
----
+Package entries:
+515
 
-# 48. POSSESSED
+Runtime spawning:
+NOT TESTED
 
-Visual:
+====================================================================
+TASK 9 — AUDIO
+====================================================================
 
-- bent neck
-- asymmetrical limbs
-- distorted face
-- unnatural posture
+Audio inventory:
 
-Behavior:
+8 OGG files
+4 sound definitions
+0 duplicate matching sounds
+0 missing paths
 
-- unpredictable
-- aggressive
+New audio assets:
+0
 
----
+Encounter cues:
+5 guarded cues
 
-# 49. GRAVEDIGGER
+Existing sound:
 
-Visual:
+three_realms.scpdt.door1.close
 
-- huge body
-- heavy clothing
-- broad shoulders
-- shovel
-- damaged face
+No loops.
 
-Behavior:
+No tick loops.
 
-- cemetery guardian
-- slow
-- powerful
+No global scans.
 
----
+Intentionally sparse/silent:
 
-# 50. RED VEIL
+Dead Forest
+Crypt Depths
+Nightmare Zone
 
-Visual:
+Portal audio:
+preserved
 
-- humanoid silhouette
-- supernatural veil
-- hidden face
+Task 9:
+PASS — STATIC AUDIO FOUNDATION
 
-Role:
+MCT:
+main PASS
+currentplatform PASS
+all PASS
 
-Extremely rare encounter.
+Build:
+PASS
 
-Strong audio/VFX identity.
+Package:
+PASS
 
----
+Package entries:
+515
 
-# 51. PALE WARDEN
+Package size:
+12,638,969 bytes
 
-Visual:
+Audio size:
+148,173 bytes
 
-- tall spectral guardian
-- spectral armor
-- cracked mask
-- glowing core
-- long limbs
+Runtime:
+NOT TESTED
 
-Role:
+====================================================================
+H. MANDATORY PRE-TASK MASSIVE REGRESSION
+====================================================================
 
-Endgame elite.
+Before every new task, especially TASK 10 onward:
 
----
+Perform a HUGE REGRESSION of every previous completed task.
 
-# 52. BOSSES
+For TASK 10:
+verify TASK 1 → TASK 9.
 
-Create three original bosses.
+For TASK 11:
+verify TASK 1 → TASK 10.
 
-Do not create "normal mob + huge HP."
+For TASK 12:
+verify TASK 1 → TASK 11.
 
----
+And so on.
 
-# 53. BOSS 1 — MORGUE WARDEN
+This must be an actual inspection of current files.
+
+Do NOT merely cite old reports.
+
+Examples:
+
+Portal regression:
+verify actual IDs, files, references, logic.
+
+Mob regression:
+verify actual entity/client/geometry/texture/animation/controller chains.
+
+Weapon regression:
+verify actual BP/RP item references.
+
+Structure regression:
+verify actual structure functions.
+
+Audio regression:
+verify actual sound definitions and references.
+
+====================================================
+I. MCT REQUIREMENT
+====================================================
+
+Before using MCT for any task:
+
+1. Inspect the actual installed MCT binary/package/version.
+2. Determine the real commands/subcommands/options available.
+3. Do NOT assume a command exists.
+4. Do NOT invent syntax.
+5. Record the supported capability set.
+
+Create/update:
+
+~/three_realms_workspace/MCT_CAPABILITIES_CURRENT.md
+
+Document:
+
+- installed version
+- executable path
+- validation commands
+- build/export capabilities
+- model rendering capability
+- vanilla rendering capability
+- structure rendering capability
+- structure build/preview capability
+- batch rendering capability
+- world/deployment capability
+- test/deploy capability
+- MCP capability if available
+- supported flags
+- limitations
+
+If a capability is unavailable:
+record it as unavailable.
+
+====================================================
+J. MCT VALIDATION POLICY
+====================================================
+
+Where supported by the installed version, validate using relevant
+scopes such as:
+
+main
+currentplatform
+addon
+all
+default
+
+and any additional genuinely supported scope.
+
+Do NOT run blindly against directories containing:
+
+- backups
+- archived .mcaddon
+- archived packs
+- temporary staging
+- historical copies
+
+Prefer isolated production scope.
+
+If root/all validation recursively encounters known backups:
+
+classify as:
+
+SCOPE-LIMITED
+
+Do NOT delete backups merely to force a green result.
+
+====================================================
+K. RENDER / BATCH RENDER REQUIREMENT
+====================================================
+
+Rendering is mandatory for visual assets whenever the installed MCT
+supports it.
+
+Use the real installed commands.
+
+Examples, depending on actual installed syntax:
+
+CUSTOM MODEL:
+model/entity rendering
+
+VANILLA REFERENCE:
+vanilla rendering
+
+STRUCTURE:
+structure preview/build/render
+
+Do NOT blindly use these labels as commands.
+First inspect the installed CLI and use its actual syntax.
+
+For batches:
+
+Use batch rendering whenever supported by the installed version.
+
+Possible patterns include:
+
+identifier1,identifier2,identifier3
+
+or:
+
+@identifier-file.txt
+
+ONLY if the installed MCT actually supports them.
+
+Render outputs:
+
+~/three_realms_workspace/render_reports/
+
+Never put temporary render outputs inside production.
+
+Examples of useful batch render groups:
+
+batch 1:
+all current horror mobs
+
+batch 2:
+all four weapons
+
+batch 3:
+new boss models
+
+batch 4:
+important blocks
+
+batch 5:
+structures
+
+Render evidence must be recorded.
+
+A render result means:
+
+STATIC VISUAL INSPECTION PASS
+
+not:
+
+IN-GAME RUNTIME PASS
+
+====================================================
+L. GIT POLICY
+====================================================
+
+Before every task:
+
+git status
+git branch --show-current
+git log -1 --oneline
+git remote -v
+
+Before every commit:
+
+git status
+git diff --stat
+git diff --name-only
+
+Check for:
+
+- secrets
+- credentials
+- tokens
+- passwords
+- downloaded archives
+- staging files
+- workspace files
+- unrelated modifications
+
+NEVER commit secrets.
+
+Do not push automatically unless explicitly authorized.
+
+====================================================
+M. TASK 10 — MORGUE WARDEN
+====================================================
+
+Create:
+
+three_realms:morgue_warden
+
+Name:
+
+The Morgue Warden
 
 Location:
 
 Abandoned Hospital Morgue
 
-Visual:
+This is the first production boss benchmark.
 
-- extremely tall
+--------------------------------------------------
+VISUAL
+--------------------------------------------------
+
+Required:
+
+- extremely tall humanoid
 - oversized shoulders
 - very long arms
 - pale gray body
 - damaged medical clothing
-- rib-like details
+- rib-like anatomical details
 - tilted head
 - asymmetrical damage
-- hollow eyes
-- cold glow
+- hollow eye sockets
+- subtle cold glow
 - long claws
+- intimidating silhouette
 
-Phases:
+Avoid:
 
-PHASE 1
-- slow melee
-- sweeping attack
+- generic zombie
+- cute horror
+- cartoon styling
+- excessive neon
+- excessive red
+- random blood spam
 
-PHASE 2
-- faster
-- stronger
-- limited summons where supported
+--------------------------------------------------
+ASSET PROCESS
+--------------------------------------------------
 
-PHASE 3
-- enraged
-- strongest attack pattern
-- environmental effects
+First:
+
+search existing approved sources.
+
+Only if no suitable asset exists:
+search for a ready-made high-quality medical/horror humanoid asset.
+
+External source:
+
+download only into:
+
+~/three_realms_workspace/
+
+Before integration:
+
+record:
+
+source URL
+creator
+license
+attribution
+filename
+format
+texture
+resolution
+UV
+bones
+animations
+provenance
+
+Use:
+
+~/three_realms_workspace/staging/morgue_warden/
+
+for conversion.
+
+--------------------------------------------------
+MODEL
+--------------------------------------------------
+
+Convert technically to Bedrock.
+
+Create/verify:
+
+geometry
+texture references
+client entity
+render controller
+animations
+animation controller
+
+Preserve silhouette and original asset quality.
+
+--------------------------------------------------
+ANIMATIONS
+--------------------------------------------------
 
 Required:
 
-- custom geometry
-- texture
-- UV
-- animations
-- sounds
-- particles
-- AI
-- loot
-- arena
-- entrance
-- death
+idle
+breathing/sway
+head movement
+slow walk
+attack
+hurt
+death
 
----
+Optional:
 
-# 54. BOSS 2 — LADY OF THE CRYPT
+stalking
+enraged
+phase transition
+
+--------------------------------------------------
+ENTITY
+--------------------------------------------------
+
+Implement:
+
+three_realms:morgue_warden
+
+Verify:
+
+health
+collision
+scale
+movement
+navigation
+attack
+targeting
+damage
+knockback
+animation controllers
+render controller
+sound
+loot
+death behavior
+
+--------------------------------------------------
+SCALE
+--------------------------------------------------
+
+Boss must be larger than ordinary mobs.
+
+But not so large that:
+
+- corridors fail
+- doors become unusable
+- collision breaks
+- pathfinding fails
+
+Document scale.
+
+--------------------------------------------------
+PHASES
+--------------------------------------------------
+
+PHASE 1:
+slow melee
+
+PHASE 2:
+escalation
+
+PHASE 3:
+enraged
+
+Use real Bedrock-supported components/events/script mechanisms.
+
+Do not invent unsupported AI.
+
+--------------------------------------------------
+ARENA
+--------------------------------------------------
+
+Use existing Abandoned Hospital Morgue.
+
+Do NOT rebuild hospital.
+
+Modify only what is necessary.
+
+--------------------------------------------------
+SPAWN
+--------------------------------------------------
+
+Controlled deterministic encounter.
+
+Preferred:
+
+player reaches/activates morgue encounter
+→ boss spawns once
+→ encounter active
+→ duplicate spawn prevented
+
+No:
+
+- global boss spawn
+- global tick scan
+- unlimited loop
+
+--------------------------------------------------
+DEATH
+--------------------------------------------------
+
+Implement where technically supported:
+
+death animation
+death sound
+controlled loot
+completion state
+
+No automatic infinite respawn.
+
+--------------------------------------------------
+AUDIO
+--------------------------------------------------
+
+Prefer existing sounds.
+
+Concept:
+
+idle:
+subtle presence
+
+combat:
+heavy impact
+
+hurt:
+short reaction
+
+phase transition:
+brief escalation
+
+death:
+long breath/silence
+
+Protect portal sounds.
+
+Sound definition changes must be additive.
+
+--------------------------------------------------
+PARTICLES
+--------------------------------------------------
+
+Use existing validated particles where useful.
+
+Avoid particle spam.
+
+--------------------------------------------------
+TASK 10 TESTS
+--------------------------------------------------
+
+Mandatory:
+
+1. massive Task 1→9 regression
+2. MCT capability verification
+3. asset audit
+4. model render
+5. animation/static render where possible
+6. dependency validation
+7. BP/RP validation
+8. build
+9. package
+10. package extraction
+11. package inspection
+12. Task 1→10 huge regression
+13. mobile performance review
+14. Git diff review
+15. report
+
+Reports:
+
+~/three_realms_workspace/TASK10_PRE_AUDIT.md
+~/three_realms_workspace/TASK10_ASSET_AUDIT.md
+~/three_realms_workspace/TASK10_BOSS_DEPENDENCY_MANIFEST.md
+~/three_realms_workspace/TASK10_REGRESSION.md
+~/three_realms_workspace/TASK10_MORGUE_WARDEN_REPORT.md
+
+STOP if blocked.
+
+Do NOT start Task 11 in the same execution.
+
+====================================================
+N. TASK 11 — LADY OF THE CRYPT
+====================================================
+
+Only after Task 10 PASS.
+
+ID:
+
+three_realms:lady_of_the_crypt
 
 Location:
 
-Deep Crypt
+Crypt Depths / Crypt
 
 Visual:
 
 - tall spectral humanoid
 - floating lower body
-- very long arms
+- extremely long arms
 - pale fingers
-- featureless face
+- featureless pale face
 - black eyes
 - dark hair-like mass
-- spectral cloth
+- spectral cloth/ribbons
 
-Do NOT copy an existing famous horror character.
+Implement:
 
-Phases:
-
-PHASE 1
-- spectral attacks
-- area control
-
-PHASE 2
-- stronger attacks
-- limited summons
-
-PHASE 3
-- dangerous arena
-- strongest attacks
-
-Required:
-
-- custom model
+- model
 - texture
-- UV
+- geometry
+- client entity
+- render controller
 - animations
-- sounds
-- particles
 - AI
+- encounter
+- audio
+- particles
 - loot
-- arena
 
----
+Use exact same:
 
-# 55. BOSS 3 — THE NIGHTMARE
+asset audit
+→ render
+→ staging
+→ validation
+→ build
+→ package
+→ inspection
+→ Task 1→11 regression
+
+Do not rebuild Crypt.
+
+Do not implement other bosses.
+
+====================================================
+O. TASK 12 — THE NIGHTMARE
+====================================================
+
+Only after Task 11 PASS.
+
+ID:
+
+three_realms:the_nightmare
 
 Location:
 
-Nightmare Zone
+Nightmare Zone / Nightmare Mansion
 
 Visual:
 
@@ -1532,1515 +1404,884 @@ Visual:
 - unnatural posture
 - spectral fragments
 
-Phases:
+This must be the strongest boss visually.
 
-PHASE 1
-- stalking
-- melee
+Implement:
 
-PHASE 2
-- supernatural attacks
-- arena hazards
-
-PHASE 3
-- enraged
-- strongest attacks
-- limited summons
-
-Required:
-
-- unique 3D
-- texture
-- UV
-- animations
-- controller
-- AI
-- sounds
-- VFX
-- unique loot
-- entrance
-- death
-
----
-
-# 56. STRUCTURES
-
-Create approximately:
-
-1. Haunted House
-2. Abandoned Hospital
-3. Cemetery Complex
-4. Ruined Church
-5. Cursed Mansion
-6. Abandoned Laboratory
-7. Crypt
-8. Nightmare Mansion
-
-Every structure must contain:
-
-- purpose
-- rooms
-- enemies
-- loot
-- secrets
-- lore
-- progression value
-
-Do not create empty decorative buildings.
-
----
-
-# 57. WORLD REGIONS
-
-Create:
-
-1. Abandoned Outskirts
-2. Dead Forest
-3. Cemetery District
-4. Abandoned Hospital
-5. Cursed Village
-6. Old Laboratory
-7. Crypt Depths
-8. Nightmare Zone
-
-Each region must have actual representation.
-
-Do not merely document the names.
-
----
-
-# 58. ITEMS
-
-Target:
-
-approximately 15 meaningful items/materials.
-
-Examples:
-
-- Ectoplasm
-- Soul Fragment
-- Cursed Thread
-- Spectral Dust
-- Grave Iron
-- Haunted Crystal
-- Ritual Ash
-- Medical Key
-- Soul Shard
-- Phantom Essence
-- Cursed Metal
-- Nightmare Fragment
-- Spirit Residue
-- Ancient Relic
-- Boss Essence
-
----
-
-# 59. WEAPONS
-
-Target:
-
-approximately 10.
-
-Examples:
-
-- Spirit Blade
-- Gravekeeper Sword
-- Exorcist Staff
-- Cursed Axe
-- Spectral Crossbow
-- Soul Reaper
-- Phantom Spear
-- Wraith Blade
-- Nightmare Weapon
-- Boss Weapon
-
-Each must have a meaningful gameplay role.
-
----
-
-# 60. TOOLS
-
-Target:
-
-approximately 5.
-
-Examples:
-
-- Grave Pick
-- Spirit Miner
-- Ritual Tool
-- Haunted Excavator
-- Spectral Lantern Tool
-
----
-
-# 61. ARMOR
-
-Create:
-
-SURVIVOR GEAR
-EXORCIST GEAR
-NIGHTMARE ARMOR
-
-Each:
-
-- helmet
-- chestplate
-- leggings
-- boots
-
----
-
-# 62. BLOCKS
-
-Target:
-
-approximately 25 meaningful blocks.
-
-Categories:
-
-- rotten wood
-- plaster
-- concrete
-- rusted metal
-- hospital tile
-- grave stone
-- crypt stone
-- cursed stone
-- ritual stone
-- haunted glass
-- spectral materials
-- candles
-- altar materials
-- lab materials
-- nightmare materials
-
-Do not fill the count with trivial recolors.
-
----
-
-# 63. FUNCTIONAL OBJECTS / MACHINES
-
-Create approximately 5 useful functional objects.
-
-Examples:
-
-- Ritual Altar
-- Spirit Extractor
-- Soul Furnace
-- Paranormal Analyzer
-- Cursed Workshop
-
-They must actually do something.
-
----
-
-# 64. PLANTS / FOOD
-
-Create approximately 5 useful horror-themed plants/food.
-
-Examples:
-
-- Dead Root
-- Grave Mushroom
-- Cursed Herb
-- Spectral Fruit
-- Nightmare Fungus
-
----
-
-# 65. SPECIAL OBJECTS
-
-Approximately 4:
-
-- Cursed Relic
-- Hospital Access Key
-- Crypt Seal
-- Nightmare Sigil
-
----
-
-# 66. PROGRESSION
-
-Required progression:
-
-OVERWORLD
-→
-HAUNTED PORTAL
-→
-ENTRY AREA
-→
-EARLY HORROR
-→
-CURSED MATERIALS
-→
-SURVIVAL GEAR
-→
-DEEPER AREAS
-→
-ELITES
-→
-BOSS 1
-→
-ADVANCED EQUIPMENT
-→
-BOSS 2
-→
-NIGHTMARE ZONE
-→
-BOSS 3
-→
-LEGENDARY EQUIPMENT
-
----
-
-# 67. HORROR EVENTS
-
-Rare supported events may include:
-
-- distant scream
-- footsteps
-- shadow encounter
-- ghost appearance
-- environmental changes
-- hospital alarm
-- cemetery event
-- cursed room
-- boss warning
-
-Do not spam the player.
-
----
-
-# 68. AUDIO DESIGN
-
-Use ready-made, legally usable SFX.
-
-Suggested categories:
-
-WATCHER:
-- breathing
-- distant whisper
-- subtle movement
-- attack
-- hurt
-- death
-
-CRAWLER:
-- crawling
-- claw movement
-- wet movement
-- lunge
-- attack
-- death
-
-WAILER:
-- distant wail
-- crying
-- spectral hum
-- scream
-- death
-
-MORGUE WARDEN:
-- heavy movement
-- deep breathing
-- hospital machinery
-- roar
-- attack
-- phase transition
-- death
-
-LADY OF THE CRYPT:
-- female whisper
-- ghostly ambience
-- spectral attack
-- distant crying
-- scream
-- phase transition
-
-THE NIGHTMARE:
-- deep drone
-- creature movement
-- heavy impact
-- distorted vocal
-- phase transition
-- death
-
-PORTAL:
-- activation
-- charging
-- opening
-- ambient
-- teleport
-
-HOSPITAL:
-- electrical hum
-- ventilation
-- distant metal
-- doors
-- footsteps
-- machine sounds
-- distant scream
-
-CEMETERY:
-- wind
-- branches
-- distant crow
-- gravel footsteps
-- gate creak
-- spectral ambience
-
----
-
-# 69. SOUND SOURCE POLICY
-
-Potential legitimate sources:
-
-- Pixabay Sound Effects
-- Freesound
-- OpenGameArt
-- clearly licensed alternatives
-
-Before downloading:
-
-record source information.
-
-DOWNLOAD TO:
-
-/tmp/three_realms_workspace/sounds/
-
-Do NOT download directly into the project.
-
-After approval:
-
-copy only selected assets into:
-
-~/three_realms/RP/
-
-or the actual correct Resource Pack location.
-
----
-
-# 70. READY-MADE TEXTURE SEARCH
-
-When a texture is needed:
-
-SEARCH FIRST.
-
-Do not immediately generate a new texture.
-
-Potential sources:
-
-- open-source GitHub repositories
-- CC0
-- CC-BY
-- clearly licensed Bedrock packs
-- legitimate texture libraries
-
-All downloads first go to:
-
-/tmp/three_realms_workspace/textures/
-
-Inspect.
-
-Choose.
-
-Document.
-
-Then copy the original approved file into the project.
-
----
-
-# 71. READY-MADE MODEL SEARCH
-
-When a model is needed:
-
-SEARCH FIRST.
-
-Potential sources:
-
-- open-source Bedrock model repositories
-- Blockbench-compatible public assets
-- CC0/CC-BY model sources
-- technically convertible legal assets
-
-Downloads first go to:
-
-/tmp/three_realms_workspace/models/
-
-Then inspect.
-
-Then approve.
-
-Then copy.
-
-Do not modify the model artistically unless explicitly necessary.
-
----
-
-# 72. READY-MADE ASSET QUALITY RULE
-
-Never replace a high-quality existing asset with a worse generated asset.
-
-Compare:
-
-- resolution
-- details
-- silhouette
-- color
-- UV
-- geometry
-- readability
-- mobile cost
-
-Preserve the better asset.
-
----
-
-# 73. MODEL + TEXTURE MATCHING
-
-When a ready-made model and texture are used:
-
-check:
-
-- UV layout
-- texture resolution
-- material mapping
-- texture path
-- geometry identifier
-- animation compatibility
-
-If texture does not fit:
-
-FIRST try adapting the model UV/reference.
-
-Do NOT alter the source artwork unless explicitly authorized.
-
----
-
-# 74. ANIMATION POLICY
-
-Reuse ready-made animations where they are compatible and high quality.
-
-If a selected model already has:
-
-- idle
-- walk
-- attack
-- death
-
-preserve them.
-
-Only create missing animations.
-
-Do not replace working animations unnecessarily.
-
----
-
-# 75. IMAGE TO TEXTURE RULE
-
-If an image source must be used:
-
-DO NOT automatically treat it as the final Minecraft texture.
-
-Verify:
-
-- resolution
-- transparency
-- UV
-- pixel readability
-- Bedrock compatibility
-
-However:
-
-Do NOT artistically regenerate the image if the original asset
-is already good.
-
-Only do technical preparation required for integration.
-
----
-
-# 76. NO PYTHON ART GENERATION
-
-Python may be used for:
-
-- validation
-- file organization
-- checksums
-- file operations
-- build automation
-
-Python MUST NOT be the primary artistic generator for:
-
-- final textures
-- final concept art
-- final visual artwork
-
-Use ready-made assets first.
-
----
-
-# 77. VISUAL STYLE
-
-The Haunted Realm must remain:
-
-- oppressive
-- decayed
-- supernatural
-- disturbing
-- mysterious
-- dark
-
-Avoid:
-
-- generic Halloween
-- cartoon horror
-- excessive red
-- excessive neon
-- random blood
-- inconsistent art styles
-
----
-
-# 78. 3D STYLE
-
-Use:
-
-- low-poly
-- Minecraft-compatible proportions
-- strong silhouettes
-- efficient bones
-- efficient UV
-- mobile-friendly geometry
-
-Do not use unnecessary high-poly models.
-
----
-
-# 79. MOBILE PERFORMANCE
-
-Target:
-
-Android / iOS
-
-Audit:
-
-- entity count
-- model complexity
-- texture sizes
-- particle counts
-- script ticks
-- sound loops
-- structures
-- AI
-
-Avoid:
-
-- unbounded spawning
-- world-wide every-tick scans
-- excessive particles
-- huge textures
-- high-poly models
-- inefficient scripts
-
----
-
-# 80. FILE REFERENCE INTEGRITY
-
-For every important entity verify:
-
-Behavior Entity
-→
-Client Entity
-→
-Geometry
-→
-Texture
-→
-Animations
-→
-Animation Controller
-→
-Render Controller where required
-→
-Particles
-→
-Sounds
-
-Every reference must point to an actual file.
-
----
-
-# 81. UUID POLICY
-
-Every new UUID must be unique.
-
-Never reuse UUID accidentally.
-
-Before adding a new UUID:
-
-search the project.
-
-After adding it:
-
-validate duplicates.
-
----
-
-# 82. NAMESPACE POLICY
-
-Use:
-
-three_realms:haunted_*
-
-Examples:
-
-three_realms:haunted_portal
-three_realms:haunted_watcher
-three_realms:haunted_crawler
-three_realms:haunted_wailer
-three_realms:haunted_morgue_warden
-
-Do not create custom content under:
-
-minecraft:*
-
----
-
-# 83. CONTENT INDEX
-
-Maintain:
-
-CONTENT_INDEX.md
-
-Each gameplay asset must include:
-
-- identifier
-- display name
-- category
-- purpose
-- behavior path
-- resource path
-- texture
 - model
-- animation
-- controller
+- geometry
+- texture
+- client entity
+- render controller
+- animations
+- AI
+- multiple phases
+- audio
 - particles
-- sounds
-- source
-- license
-- status
+- loot
+- controlled encounter
 
-Counts must reflect actual files.
+Use full render/validation workflow.
 
----
+Run huge regression Task 1→12.
 
-# 84. DOCUMENTATION
+====================================================
+P. TASK 13 — LORE + ENVIRONMENTAL STORYTELLING
+====================================================
 
-Maintain:
+Only after Task 12 PASS.
 
-README.md
+Implement lightweight lore:
 
-docs/BASELINE_AUDIT.md
-docs/REFERENCE_ANALYSIS.md
-docs/ASSET_PROVENANCE.md
-docs/TEXTURE_SOURCES.md
-docs/MODEL_SOURCES.md
-docs/SOUND_SOURCES.md
-docs/TOOLS_USED.md
-docs/BEDROCK_126_COMPATIBILITY.md
-docs/TECHNICAL_LIMITATIONS.md
-docs/ASSET_PIPELINE.md
+- diaries
+- notes
+- patient records
+- laboratory notes
+- ritual documents
+- gravestones
+- hidden rooms
+- environmental clues
 
-World specific:
+Core narrative:
 
-docs/HAUNTED_IMPLEMENTATION.md
+Something happened.
 
-Portal:
+Someone opened something that should never have been opened.
 
-docs/HAUNTED_PORTAL_IMPLEMENTATION.md
-docs/HAUNTED_PORTAL_TESTS.md
+The ghosts are symptoms of a deeper supernatural problem.
 
----
+Haunted should contain clues connecting the future THREE REALMS worlds.
 
-# 85. TESTING POLICY
+Do not over-engineer a lore engine.
 
-After EVERY major task:
+Use lightweight Bedrock-compatible content.
 
-1. Validate.
-2. Test.
-3. Fix.
-4. Validate again.
-5. Update documentation.
-6. Update CONTENT_INDEX.
-7. Commit if appropriate.
+Test:
 
-Never accumulate many unvalidated systems.
+- references
+- placement
+- text content
+- package inclusion
+- regression
 
----
+Render structures/important visual scenes where supported.
 
-# 86. TASK EXECUTION MODEL
+Huge regression Task 1→13.
 
-Tasks must execute ONE AT A TIME.
+====================================================
+Q. TASK 14 — PROGRESSION + LOOT
+====================================================
 
-Never build:
+Only after Task 13 PASS.
 
-- portal
-- Watcher
-- Crawler
-- Wailer
+Implement:
 
-simultaneously.
-
-Instead:
-
-PORTAL
-→
-VALIDATE
-→
-TEST
-→
-COMMIT
-
-then:
-
-WATCHER
-→
-VALIDATE
-→
-TEST
-→
-COMMIT
-
-then:
-
-CRAWLER
-→
-VALIDATE
-→
-TEST
-→
-COMMIT
-
-etc.
-
----
-
-# 87. TASK COMPLETION REQUIREMENT
-
-A task is NOT complete just because files were created.
-
-The task is complete only when:
-
-- implementation exists
-- references work
-- validation passes
-- tests pass as far as possible
-- documentation is updated
-- no known critical errors remain
-
----
-
-# 88. BLOCKER POLICY
-
-When a feature is blocked:
-
-1. Inspect the error.
-2. Read official documentation.
-3. Check current target-version support.
-4. Search the official samples.
-5. Try the simplest supported implementation.
-6. If still blocked, document the exact limitation.
-7. Implement the best reliable alternative.
-8. Continue only when the current task is stable.
-
-Never invent APIs.
-
----
-
-# 89. INTERNET ACCESS POLICY
-
-Use the internet for:
-
-- official Minecraft documentation
-- GitHub references
-- legal asset sources
-- compatibility research
-- tool documentation
-- library documentation
-
-Every downloaded external file MUST first land in:
-
-/tmp/three_realms_workspace/
-
-Never directly download to:
-
-~/three_realms/
-
----
-
-# 90. DOWNLOAD VERIFICATION
-
-Before promoting a downloaded file from /tmp into the permanent project:
-
-verify:
-
-- source
-- URL
-- file type
-- file integrity
-- license
-- compatibility
-- purpose
-
-If the file is an archive:
-
-inspect contents before copying.
-
----
-
-# 91. DO NOT TRUST FILE NAMES
-
-Never assume an asset is:
-
-- Bedrock-compatible
-- licensed
-- safe
-- high quality
-- correct resolution
-
-based only on its filename.
-
-Inspect it.
-
----
-
-# 92. SOURCE CHECKSUMS
-
-For important external binary assets, consider recording:
-
-- SHA-256
-- original filename
-- source URL
-
-in:
-
-docs/ASSET_PROVENANCE.md
-
-This helps preserve reproducibility.
-
----
-
-# 93. CLEAN TEMPORARY FILES
-
-Temporary downloads may remain in:
-
-/tmp/three_realms_workspace/
-
-during active work.
-
-At the end of a task:
-
-clean only unnecessary temporary material.
-
-Do NOT delete anything that may be needed for an active build.
-
-Do NOT clean the permanent project's approved source assets.
-
----
-
-# 94. NO ACCIDENTAL HOME POLLUTION
-
-Do NOT create random files in:
-
-~/Downloads
-~/Desktop
-~/
-
-unless explicitly required.
-
-Use:
-
-/tmp/three_realms_workspace/
-
-for temporary downloads and processing.
-
-Use:
-
-~/three_realms/
-
-for permanent project content.
-
----
-
-# 95. BUILD ARTIFACTS
-
-Temporary build output should preferably live under:
-
-/tmp/three_realms_workspace/build/
-
-Final intentionally retained packages may live under:
-
-~/three_realms/build/
-
-or:
-
-~/three_realms/releases/
-
-Do not keep multiple random copies of the same package.
-
----
-
-# 96. FINAL .MCADDON POLICY
-
-The final package should contain:
-
-- Behavior Pack
-- Resource Pack
-- correct manifests
-- dependencies
-- required assets
-
-Validate archive integrity.
-
-If packaging tool exists:
-
-use it.
-
-Do not hand-create a fake archive without testing it.
-
----
-
-# 97. FINAL PACKAGE TEST
-
-After creating:
-
-THREE_REALMS_HAUNTED.mcaddon
-
-inspect its archive contents.
-
-Verify:
-
-- BP exists
-- RP exists
-- manifests exist
-- dependencies are valid
-- important assets exist
-- no placeholders remain
-
----
-
-# 98. NO PLACEHOLDERS
-
-Final production build must NOT contain:
-
-placeholder.png
-test_texture.png
-dummy_entity
-placeholder_model
-fake_animation
-TODO_ENTITY
-fake_sound
-unfinished_boss
-
-Prototype placeholders must be replaced.
-
----
-
-# 99. NO FAKE COMPLETION
-
-Never claim:
-
-"100 assets complete"
-
-unless they actually exist.
-
-Never claim:
-
-"portal working"
-
-unless it was actually tested or documented as untested.
-
-Never claim:
-
-"all 1.26.x compatible"
-
-unless evidence exists.
-
-Never claim:
-
-"texture source verified"
-
-unless provenance was checked.
-
-Never claim:
-
-"model ready"
-
-unless it actually loads/references correctly.
-
----
-
-# 100. PROGRESS FILE
-
-Maintain:
-
-docs/PROGRESS.md
-
-After each task:
-
-CURRENT TASK:
-STATUS:
-FILES CREATED:
-FILES MODIFIED:
-ASSETS ADDED:
-VALIDATION:
-TEST RESULTS:
-KNOWN LIMITATIONS:
-NEXT TASK:
-
-This file must allow another agent/session to resume work
-without repeating completed tasks.
-
----
-
-# 101. RESUME POLICY
-
-When starting a new session:
-
-FIRST read:
-
-AGENTS.md
-docs/PROGRESS.md
-CONTENT_INDEX.md
-docs/TECHNICAL_LIMITATIONS.md
-
-Then inspect current Git state.
-
-Do NOT repeat completed work.
-
-Do NOT regenerate approved assets.
-
-Continue from the first incomplete task.
-
----
-
-# 102. PORTAL FIRST
-
-The first production task is always:
-
-HAUNTED PORTAL
-
-Do not create monsters before the portal is stable.
-
----
-
-# 103. CREATURE ORDER
-
-After portal:
-
-1. Watcher
-2. Crawler
-3. Wailer
-4. Mourner
-5. Hollow Child
-6. Bloodless Doctor
-7. Patient
-8. Grave Hand
-9. Mimic
-10. Husher
-11. Ravening Shade
-12. Possessed
-13. Gravedigger
-14. Red Veil
-15. Pale Warden
-
-Then:
-
-16. Morgue Warden
-17. Lady of the Crypt
-18. The Nightmare
-
-Do not skip ahead unless a documented dependency requires it.
-
----
-
-# 104. ONE ASSET = ONE COMPLETE PIPELINE
-
-For each creature:
-
-RESEARCH
-→
-SELECT/CREATE DESIGN
-→
-MODEL
-→
-TEXTURE
-→
-UV
-→
-ANIMATION
-→
-BEHAVIOR
-→
-SOUND
-→
-PARTICLES
-→
-LOOT
-→
-SPAWN
-→
-INTEGRATE
-→
-VALIDATE
-→
-TEST
-→
-DOCUMENT
-
----
-
-# 105. READY-MADE ASSET PREFERENCE
-
-If a suitable ready-made asset exists:
-
-USE IT.
-
-Do not regenerate it.
-
-Do not modify it artistically.
-
-Only perform technical integration.
-
-If no suitable asset exists:
-
-evaluate whether a new asset must be generated.
-
----
-
-# 106. SOUND LAYERING
-
-Do not force one sound file to represent every event.
-
-Use separate sound assets when appropriate:
-
-- idle
-- attack
-- hurt
-- death
-- special
-- ambience
-
-Reuse a sound only when it remains appropriate.
-
----
-
-# 107. ANIMATION REUSE
-
-If a ready-made model contains high-quality animations
-that already match the creature:
-
-reuse them.
-
-If animations are missing:
-
-create only the missing animations.
-
----
-
-# 108. PARTICLE CONTROL
-
-Particles must be:
-
-- restrained
-- readable
-- mobile-safe
-
-Avoid full-screen spam.
-
----
-
-# 109. AUDIO CONTROL
-
-Avoid:
-
-- constant screaming
-- extremely loud ambience
-- repetitive loops every few seconds
-
-Use silence intentionally.
-
----
-
-# 110. HORROR DESIGN PRINCIPLE
-
-Fear should come from:
-
-- anticipation
-- silence
-- movement
-- sound
-- silhouette
-- uncertainty
-- environment
-
-Not just:
-
-- red textures
-- giant health bars
-- particle spam
-- constant jumpscares
-
----
-
-# 111. STRUCTURE QUALITY
-
-Every structure must have:
-
-- gameplay purpose
-- exploration
-- danger
-- reward
-- lore
-
-Do not create structure shells with no reason to enter them.
-
----
-
-# 112. PROGRESSION QUALITY
-
-Every powerful item should require meaningful progression.
-
-Do not allow:
-
-strongest gear
-←
-simple Overworld materials
-
----
-
-# 113. MULTIPLAYER
-
-Where applicable test:
-
-- multiple players
-- independent cooldowns
-- independent return positions
-- simultaneous entity interactions
-- boss targeting
-- portal usage
-
-If real multiplayer testing is unavailable:
-
-mark:
-
-NOT TESTED — CLIENT RUNTIME UNAVAILABLE
-
-Never pretend.
-
----
-
-# 114. SAVE / RELOAD
-
-Test persistence of:
-
-- portal state
-- player return data
 - progression
-- boss state if applicable
-- world structures where applicable
+- common loot
+- uncommon loot
+- rare loot
+- relics
+- legendary items
+- boss rewards
 
----
+Avoid power creep.
 
-# 115. CODE QUALITY
+Use existing validated content first.
 
-Prefer:
+Any new item must be a real Bedrock implementation.
 
-- modular code
-- readable names
-- reusable functions
-- bounded loops
-- event-driven logic
-- comments on non-obvious behavior
+Test:
 
-Avoid:
+- loot definitions
+- references
+- progression paths
+- item IDs
+- package inclusion
+- regression
 
-- giant scripts
-- duplicated logic
-- magic coordinates everywhere
-- uncontrolled tick loops
+Render item assets where relevant.
 
----
+Huge regression Task 1→14.
 
-# 116. ERROR HANDLING
+====================================================
+R. TASK 15 — WORLD / REGION INTEGRATION
+====================================================
 
-When a system fails:
+Only after Task 14 PASS.
 
-do not silently swallow errors.
+Improve:
+
+- region connectivity
+- structure relationships
+- encounter placement
+- boss location relationships
+- progression flow
+- lore flow
+
+Use real supported Bedrock/MCT structure/world capabilities.
+
+Do NOT claim automatic procedural worldgen unless runtime proves it.
+
+Use:
+
+- structure build/preview
+- renderstructure
+- other actual MCT world tools
+
+where available.
+
+Render each region/structure where possible.
+
+Use batch render where supported.
+
+Huge regression Task 1→15.
+
+====================================================
+S. TASK 16 — SPECIAL OBJECTS + FUNCTIONAL HORROR SYSTEMS
+====================================================
+
+Only after Task 15 PASS.
+
+Implement remaining functional Haunted Realm objects/systems.
+
+Examples:
+
+- cursed interactive objects
+- ritual mechanisms
+- special environmental devices
+- functional horror interactions
+- progression-gated objects
+
+Do not invent unsupported APIs.
+
+Prefer simple, reliable Bedrock mechanics.
+
+Test:
+
+- behavior
+- references
+- functions
+- entities
+- blocks/items
+- scripts
+- performance
+
+Huge regression Task 1→16.
+
+====================================================
+T. TASK 17 — GLOBAL INTEGRATION + MOBILE PERFORMANCE
+====================================================
+
+Only after Task 16 PASS.
+
+Full-project review.
+
+Analyze:
+
+ENTITIES
+- count
+- complexity
+- tick behavior
+- spawn pressure
+- AI
+
+MODELS
+- geometry complexity
+- material count
+- texture count
+
+TEXTURES
+- resolution
+- package size
+- duplicates
+
+SCRIPTS/FUNCTIONS
+- loops
+- scans
+- command frequency
+- unnecessary repetition
+
+AUDIO
+- frequency
+- package size
+- duplicate assets
+
+PARTICLES
+- frequency
+- spam risks
+
+WORLD
+- structure size
+- density
+- command cost
+
+BOSSES
+- AI
+- pathfinding
+- phase transitions
+
+Do NOT reduce visual quality as the default optimization.
+
+Huge regression Task 1→17.
+
+====================================================
+U. TASK 18 — FINAL MCT VALIDATION + MASS RENDER
+====================================================
+
+Only after Task 17 PASS.
+
+Run every actually supported MCT validation capability.
+
+Possible scopes:
+
+main
+currentplatform
+addon
+all
+default
+
+Use only what the installed MCT really provides.
+
+Run the broadest meaningful static validation.
+
+Then mass-render:
+
+- horror mobs
+- all bosses
+- weapons
+- blocks
+- important items
+- structures
+- region references
+
+Use batch rendering wherever supported.
+
+Examples:
+
+mob identifier list
+weapon identifier list
+structure list
+
+Create:
+
+~/three_realms_workspace/render_reports/final/
 
 Record:
 
-- system
-- error
-- probable cause
-- attempted fix
-- final result
+- render command
+- input list
+- output list
+- failures
+- skipped assets
+- visual findings
 
----
+Do not call this runtime testing.
 
-# 117. DOCUMENTATION AFTER CHANGES
+Huge regression Task 1→18.
 
-Any change to:
+====================================================
+V. TASK 19 — FINAL PACKAGE QA
+====================================================
 
-- entity
-- portal
-- dimension
-- Script API
-- animation
-- assets
-- pack dependencies
+Only after Task 18 PASS.
 
-must be reflected in the appropriate documentation.
+Build final production package.
 
----
+Extract it.
 
-# 118. VISUAL CONSISTENCY
+Audit every package entry.
 
-The Haunted Realm must feel like one game.
+Verify:
 
-Do not allow:
+- BP manifest
+- RP manifest
+- scripts
+- entities
+- client entities
+- geometry
+- textures
+- animations
+- animation controllers
+- render controllers
+- sounds
+- sound definitions
+- particles
+- loot
+- spawn
+- functions
+- blocks
+- items
+- weapons
+- bosses
+- structures
+- lore
+- special systems
 
-- one hyper-realistic model
-- one cartoon model
-- one low-quality texture
-- one bright neon creature
+Verify absence of:
 
-without deliberate design reason.
+- staging
+- temporary workspace
+- downloaded archives
+- credentials
+- secrets
+- duplicate manifests
+- broken references
 
----
+Produce:
 
-# 119. FINAL QUALITY STANDARD
+~/three_realms_workspace/TASK19_FINAL_PACKAGE_AUDIT.md
 
-The final result should resemble a professional
-Minecraft Bedrock survival-horror expansion.
+Huge regression Task 1→19.
 
-It should feel:
+====================================================
+W. TASK 20 — REAL RUNTIME + MOBILE QA
+====================================================
 
-- cohesive
-- polished
-- original
-- frightening
-- playable
-- mobile-friendly
+Only when an ACTUAL Minecraft Bedrock runtime is available.
 
----
+First verify the runtime.
 
-# 120. FINAL DEFINITION OF DONE
+If runtime is still unavailable:
 
-The complete Haunted Realm is done only when:
+mark:
 
-- target 1.26.x is documented
-- official documentation was used
-- baseline project was audited
-- external references were documented
-- external assets have provenance
-- portal works
-- portal is physical
-- portal is not time/day based
-- Haunted travel works according to verified Bedrock capability
-- 15 original mobs are implemented
-- 3 bosses are implemented
-- blocks exist
-- items exist
-- weapons exist
-- tools exist
-- armor exists
-- structures exist
-- regions exist
-- crafting exists
-- loot exists
-- horror events exist
-- models exist where required
-- textures exist
-- animations exist
-- sounds exist
-- particles exist
-- mobile performance was reviewed
-- validation was run
-- tests were performed
-- documentation is complete
-- CONTENT_INDEX matches reality
-- final .mcaddon has been inspected
+TASK 20:
+NOT TESTED — ENVIRONMENT LIMITATION
 
----
+and do not fake runtime evidence.
 
-# 121. FIRST ACTION ON ANY NEW SESSION
+When available:
 
-Do NOT immediately modify the project.
+PORTAL TEST:
 
-First:
+- activation
+- charging
+- opening
+- active state
+- physical entry
+- teleport
+- cooldown
+- reload/rejoin
 
-1. Read AGENTS.md.
-2. Read docs/PROGRESS.md if it exists.
-3. Read CONTENT_INDEX.md if it exists.
-4. Inspect Git status.
-5. Inspect existing files.
-6. Determine current task.
-7. Inspect only the references/tools needed for that task.
-8. Use /tmp/three_realms_workspace/ for ALL downloads.
-9. Work only on the permanent project under ~/three_realms/.
-10. Validate before proceeding.
+MOBS:
 
----
+- spawn
+- render
+- AI
+- targeting
+- combat
+- death
+- loot
 
-# 122. FINAL OPERATING PRINCIPLE
+STRUCTURES:
 
-The agent must behave like:
+- actual placement
+- traversal
+- collision
+- encounters
 
-A careful Minecraft Bedrock engineer working with a real existing
-project.
+AUDIO:
 
-NOT like:
+- playback
+- encounter cues
+- silence/ambience
 
-A chatbot generating random files.
+BOSSES:
 
-The priority order is:
+- spawn
+- combat
+- phase 1
+- phase 2
+- phase 3
+- navigation
+- death
+- loot
 
-1. Existing project integrity
-2. Bedrock compatibility
-3. Correct technical implementation
-4. Asset quality
-5. Gameplay quality
-6. Mobile performance
-7. Documentation
-8. Content quantity
+MOBILE:
 
-When in doubt:
+- FPS
+- memory
+- stability
+- rendering
+- audio
+- command behavior
 
-PRESERVE
-→
-VERIFY
-→
-TEST
-→
-THEN MODIFY
+Only runtime evidence may upgrade:
 
-Never:
+NOT TESTED
 
-DOWNLOAD DIRECTLY INTO HOME
-Never:
-DESTROY THE BASELINE
-Never:
-INVENT BEDROCK APIS
-Never:
-REGENERATE GOOD EXISTING ASSETS UNNECESSARILY
-Never:
-CLAIM UNTESTED FEATURES WORK
-Never:
-MOVE ON FROM A BROKEN TASK
+to:
 
-============================================================
-END OF AGENTS.md
-============================================================
+PASS
 
+====================================================
+X. MASSIVE END-TO-END TEST MODEL
+====================================================
+
+The following testing model is mandatory.
+
+At the start of each Task:
+
+RUN:
+HISTORICAL REGRESSION
+
+Example for Task 10:
+
+TASK 1
+Portal
+
+TASK 3
+SCP mobs
+
+TASK 4
+Blocks/items
+
+TASK 5
+Weapons
+
+TASK 6
+Structures
+
+TASK 7
+Regions
+
+TASK 8
+Encounters
+
+TASK 9
+Audio
+
+Then:
+TASK 10 implementation.
+
+After implementation:
+
+RUN:
+CURRENT-TASK VALIDATION
+
+Then:
+
+RUN:
+FULL REGRESSION TASK 1→10
+
+Repeat for every later task.
+
+This means Task 17 does NOT only test Task 17.
+It tests:
+
+Task 1
+Task 3
+Task 4
+Task 5
+Task 6
+Task 7
+Task 8
+Task 9
+Task 10
+Task 11
+Task 12
+Task 13
+Task 14
+Task 15
+Task 16
+Task 17
+
+====================================================
+Y. EXAMPLE REGRESSION TESTS
+====================================================
+
+These are examples of the kind of evidence expected.
+
+--------------------------------------------------
+PORTAL
+--------------------------------------------------
+
+Verify:
+
+three_realms:haunted_portal
+three_realms:cursed_gate_core
+three_realms:soul_igniter
+
+Confirm:
+
+- files exist
+- references resolve
+- portal sounds remain
+- scripts remain
+- namespace remains
+- no unrelated overwrites
+
+--------------------------------------------------
+MOB
+--------------------------------------------------
+
+For example SCP-939:
+
+verify:
+
+BP entity
++
+client entity
++
+geometry
++
+texture
++
+animation
++
+controller
++
+render controller
++
+sound
++
+loot
++
+spawn/dependencies
+
+--------------------------------------------------
+WEAPON
+--------------------------------------------------
+
+For example:
+
+three_realms:fire_blade
+
+verify:
+
+BP item definition
++
+texture
++
+mapping
++
+namespace
++
+package inclusion
+
+--------------------------------------------------
+STRUCTURE
+--------------------------------------------------
+
+For example:
+
+Abandoned Hospital
+
+verify:
+
+function
++
+block IDs
++
+entity IDs
++
+loot
++
+required dependencies
+
+--------------------------------------------------
+ENCOUNTER
+--------------------------------------------------
+
+For example Dead Forest:
+
+verify:
+
+- correct function
+- correct mob
+- unless-entity
+- 24 block radius
+- one entity maximum
+- no global scan
+- no global tick loop
+
+--------------------------------------------------
+AUDIO
+--------------------------------------------------
+
+Verify:
+
+- sound_definitions.json
+- portal entries
+- encounter entries
+- actual OGG paths
+
+--------------------------------------------------
+BOSS
+--------------------------------------------------
+
+For Morgue Warden:
+
+verify:
+
+BP
++
+client
++
+geometry
++
+texture
++
+animations
++
+controllers
++
+AI
++
+loot
++
+sounds
++
+spawn encounter
+
+====================================================
+Z. PERFORMANCE EXAMPLES
+====================================================
+
+Preferred:
+
+event-driven logic
+
+guarded encounter functions
+
+limited scans
+
+existing assets
+
+controlled encounters
+
+Avoid:
+
+global tick scans
+
+unlimited loops
+
+repeated command spam
+
+constant particles
+
+constant sounds
+
+large-scale unnecessary entity spawning
+
+====================================================
+AA. FAILURE HANDLING
+====================================================
+
+When something fails:
+
+DO NOT immediately rewrite the project.
+
+First classify:
+
+1. Real production bug
+2. Missing dependency
+3. Validator scope problem
+4. Environment limitation
+5. Tooling problem
+6. Test fixture issue
+7. Packaging problem
+8. Unsupported Bedrock feature
+
+Then fix only the relevant layer.
+
+Example:
+
+If:
+
+mct validate all
+
+fails because backup archives are recursively scanned:
+
+Do NOT delete backups.
+
+Classify:
+
+SCOPE-LIMITED
+
+Then use isolated production validation if supported.
+
+Example:
+
+If render command does not exist in installed MCT:
+
+Do NOT invent a replacement command.
+
+Record:
+
+RENDER CAPABILITY UNAVAILABLE
+
+and use another supported inspection method.
+
+====================================================
+AB. DOCUMENTATION FILES
+====================================================
+
+Maintain:
+
+~/three_realms_workspace/
+
+with:
+
+MCT_CAPABILITIES_CURRENT.md
+
+TASK10_PRE_AUDIT.md
+TASK10_BASELINE_REGRESSION.md
+TASK10_ASSET_AUDIT.md
+TASK10_BOSS_DEPENDENCY_MANIFEST.md
+TASK10_REGRESSION.md
+TASK10_MORGUE_WARDEN_REPORT.md
+
+and analogous reports for future tasks.
+
+At final:
+
+FINAL_THREE_REALMS_QA_REPORT.md
+
+====================================================
+AC. GIT CHECKPOINT POLICY
+====================================================
+
+Each successful task:
+
+- verify diff
+- commit only intended production changes
+- verify commit
+- verify working tree
+- do not include temporary files
+- do not include secrets
+
+Push ONLY if explicitly authorized.
+
+====================================================
+AD. FINAL PRODUCT PRINCIPLES
+====================================================
+
+The final Haunted Realm should feel:
+
+- oppressive
+- lonely
+- decayed
+- supernatural
+- mysterious
+- dangerous
+- unpredictable
+
+Fear should rely on:
+
+- silence
+- anticipation
+- sound
+- silhouette
+- movement
+- uncertainty
+- environment
+- rare encounters
+
+Avoid:
+
+- cute Halloween
+- cartoon horror
+- excessive red
+- excessive neon
+- constant jumpscares
+- random blood spam
+- constant loud audio
+
+====================================================
+AE. FINAL STOP RULE
+====================================================
+
+Never skip a failed gate.
+
+Never silently downgrade:
+
+BLOCKED
+to
+PASS
+
+Never silently convert:
+
+NOT TESTED
+to
+PASS
+
+Never claim:
+
+BUILD PASS
+=
+RUNTIME PASS
+
+Never claim:
+
+PACKAGE PASS
+=
+GAMEPLAY PASS
+
+Never claim:
+
+RENDER PASS
+=
+RUNTIME PASS
+
+Only evidence can upgrade a status.
+
+====================================================
+AF. START NOW
+====================================================
+
+START WITH TASK 10.
+
+FIRST:
+
+1. Audit ~/three_realms_task10/
+2. Verify Git state.
+3. Read all existing task reports.
+4. Run MASSIVE REGRESSION TASK 1→9.
+5. Discover the ACTUAL installed Minecraft Creator Tools version.
+6. Discover all ACTUAL supported MCT commands/options.
+7. Discover actual render capabilities.
+8. Verify whether batch rendering is supported.
+9. Write MCT_CAPABILITIES_CURRENT.md.
+10. Write TASK10_BASELINE_REGRESSION.md.
+11. Only then begin Morgue Warden asset search/audit.
+
+DO NOT begin Task 11.
+
+DO NOT push.
+
+DO NOT modify the protected ~/three_realms/ reference copy.
+
+STOP at the TASK 10 final gate.
+
+Final Task 10 output must clearly state:
+
+TASK 10:
+PASS / PARTIAL / BLOCKED
+
+MCT:
+PASS / PARTIAL / SCOPE-LIMITED / UNAVAILABLE
+
+Render:
+PASS / PARTIAL / UNAVAILABLE
+
+Build:
+PASS / FAIL
+
+Package:
+PASS / FAIL
+
+Regression:
+PASS / FAIL
+
+Runtime:
+NOT TESTED — ENVIRONMENT LIMITATION
+
+Git:
+commit SHA if authorized
+
+List every blocker and every unverified claim.
+
+====================================================
+END OF MASTER EXECUTION INSTRUCTIONS
+====================================================
