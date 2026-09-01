@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.three_realms.lady_of_the_crypt": {
+      "geometry": "geometry.three_realms.lady_of_the_crypt",
+      "materials": [
+        { "*": "entity_alphablend" }
+      ],
+      "textures": [
+        "textures/entity/three_realms/lady_of_the_crypt"
+      ]
+    }
+  }
+}

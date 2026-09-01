@@ -80,6 +80,38 @@
           "pitch": 0.45
         }
       ]
+    },
+    "three_realms.lady_of_the_crypt.ambient": {
+      "category": "hostile",
+      "max_distance": 28.0,
+      "sounds": [
+        {
+          "name": "sounds/doors/door1_close3",
+          "volume": 0.25,
+          "pitch": 0.45
+        },
+        {
+          "name": "sounds/doors/door1_close2",
+          "volume": 0.25,
+          "pitch": 0.50
+        }
+      ]
+    },
+    "three_realms.lady_of_the_crypt.scream": {
+      "category": "hostile",
+      "max_distance": 32.0,
+      "sounds": [
+        {
+          "name": "sounds/doors/door1_open1",
+          "volume": 0.45,
+          "pitch": 0.35
+        },
+        {
+          "name": "sounds/doors/door1_open2",
+          "volume": 0.45,
+          "pitch": 0.40
+        }
+      ]
     }
   }
 }

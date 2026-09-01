@@ -1,0 +1,87 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.three_realms.lady_of_the_crypt": {
+      "initial_state": "phase1_idle",
+      "states": {
+        "phase1_idle": {
+          "transitions": [
+            { "drift": "query.modified_move_speed > 0.1" },
+            { "reach": "query.is_delayed_attacking" },
+            { "hurt": "query.hurt_time > 0" },
+            { "death": "query.health <= 0" },
+            { "phase2": "query.mark_variant == 1" },
+            { "phase3": "query.mark_variant == 2" }
+          ],
+          "animations": [
+            "idle"
+          ]
+        },
+        "drift": {
+          "transitions": [
+            { "phase1_idle": "query.modified_move_speed <= 0.1" },
+            { "reach": "query.is_delayed_attacking" },
+            { "hurt": "query.hurt_time > 0" },
+            { "death": "query.health <= 0" },
+            { "phase2": "query.mark_variant == 1" },
+            { "phase3": "query.mark_variant == 2" }
+          ],
+          "animations": [
+            "drift"
+          ]
+        },
+        "reach": {
+          "transitions": [
+            { "phase1_idle": "query.all_animations_finished" },
+            { "drift": "query.all_animations_finished" },
+            { "death": "query.health <= 0" }
+          ],
+          "animations": [
+            "reach"
+          ]
+        },
+        "hurt": {
+          "transitions": [
+            { "phase1_idle": "query.hurt_time <= 0" },
+            { "death": "query.health <= 0" }
+          ],
+          "animations": [
+            "hurt"
+          ]
+        },
+        "phase2": {
+          "transitions": [
+            { "drift": "query.modified_move_speed > 0.1" },
+            { "reach": "query.is_delayed_attacking" },
+            { "hurt": "query.hurt_time > 0" },
+            { "death": "query.health <= 0" },
+            { "phase1_idle": "query.mark_variant == 0" },
+            { "phase3": "query.mark_variant == 2" }
+          ],
+          "animations": [
+            "enraged"
+          ]
+        },
+        "phase3": {
+          "transitions": [
+            { "drift": "query.modified_move_speed > 0.1" },
+            { "reach": "query.is_delayed_attacking" },
+            { "hurt": "query.hurt_time > 0" },
+            { "death": "query.health <= 0" },
+            { "phase1_idle": "query.mark_variant == 0" },
+            { "phase2": "query.mark_variant == 1" }
+          ],
+          "animations": [
+            "enraged"
+          ]
+        },
+        "death": {
+          "transitions": [],
+          "animations": [
+            "death"
+          ]
+        }
+      }
+    }
+  }
+}

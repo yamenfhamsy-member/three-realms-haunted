@@ -1,0 +1,193 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.three_realms.lady_of_the_crypt.idle": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "position": [0, "1.2 + math.sin(query.life_time * 50) * 0.8", "math.sin(query.life_time * 30) * 0.3"],
+          "rotation": ["math.sin(query.life_time * 40) * 2.0", "math.sin(query.life_time * 25) * 3.0", "math.sin(query.life_time * 35) * 2.0"]
+        },
+        "body": {
+          "rotation": ["2.0 + math.sin(query.life_time * 50) * 1.5", 0, "math.sin(query.life_time * 40) * 1.5"]
+        },
+        "chest": {
+          "rotation": ["1.0 + math.sin(query.life_time * 50) * 1.0", "math.sin(query.life_time * 30) * 2.0", 0]
+        },
+        "head": {
+          "rotation": ["8.0 + math.sin(query.life_time * 35) * 3.0", "math.sin(query.life_time * 20) * 4.0", "math.sin(query.life_time * 25) * 2.5"]
+        },
+        "hair": {
+          "rotation": ["-10.0 + math.sin(query.life_time * 45) * 4.0", "math.sin(query.life_time * 30) * 3.0", "math.sin(query.life_time * 35) * 3.0"]
+        },
+        "leftArm": {
+          "rotation": ["-15.0 + math.sin(query.life_time * 40) * 4.0", 0, "-12.0 + math.sin(query.life_time * 50) * 3.0"]
+        },
+        "rightArm": {
+          "rotation": ["-15.0 + math.sin(query.life_time * -40) * 4.0", 0, "12.0 + math.sin(query.life_time * -50) * 3.0"]
+        },
+        "leftForearm": {
+          "rotation": ["-20.0 + math.sin(query.life_time * 45) * 3.0", 0, 0]
+        },
+        "rightForearm": {
+          "rotation": ["-20.0 + math.sin(query.life_time * -45) * 3.0", 0, 0]
+        },
+        "ribbon_back1": {
+          "rotation": ["15.0 + math.sin(query.life_time * 40) * 6.0", "math.sin(query.life_time * 30) * 4.0", 0]
+        },
+        "ribbon_l1": {
+          "rotation": ["10.0 + math.sin(query.life_time * 45) * 5.0", 0, "math.sin(query.life_time * 35) * 5.0"]
+        },
+        "ribbon_r1": {
+          "rotation": ["10.0 + math.sin(query.life_time * -45) * 5.0", 0, "math.sin(query.life_time * -35) * 5.0"]
+        }
+      }
+    },
+    "animation.three_realms.lady_of_the_crypt.drift": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "position": [0, "1.5 + math.sin(query.life_time * 80) * 1.0", 0],
+          "rotation": ["12.0 + math.sin(query.life_time * 60) * 3.0", "math.sin(query.life_time * 40) * 5.0", "math.sin(query.life_time * 50) * 3.0"]
+        },
+        "chest": {
+          "rotation": ["8.0 + math.sin(query.life_time * 70) * 2.0", 0, 0]
+        },
+        "head": {
+          "rotation": ["5.0 + math.sin(query.life_time * 40) * 4.0", "math.sin(query.life_time * 30) * 6.0", 0]
+        },
+        "hair": {
+          "rotation": ["-25.0 + math.sin(query.life_time * 70) * 8.0", "math.sin(query.life_time * 40) * 5.0", 0]
+        },
+        "leftArm": {
+          "rotation": ["-35.0 + math.sin(query.life_time * 60) * 8.0", 0, "-20.0"]
+        },
+        "rightArm": {
+          "rotation": ["-35.0 + math.sin(query.life_time * -60) * 8.0", 0, "20.0"]
+        },
+        "leftForearm": {
+          "rotation": ["-30.0 + math.sin(query.life_time * 60) * 5.0", 0, 0]
+        },
+        "rightForearm": {
+          "rotation": ["-30.0 + math.sin(query.life_time * -60) * 5.0", 0, 0]
+        },
+        "ribbon_back1": {
+          "rotation": ["35.0 + math.sin(query.life_time * 80) * 12.0", "math.sin(query.life_time * 50) * 8.0", 0]
+        },
+        "ribbon_l1": {
+          "rotation": ["25.0 + math.sin(query.life_time * 70) * 10.0", 0, "-10.0"]
+        },
+        "ribbon_r1": {
+          "rotation": ["25.0 + math.sin(query.life_time * -70) * 10.0", 0, "10.0"]
+        }
+      }
+    },
+    "animation.three_realms.lady_of_the_crypt.reach": {
+      "animation_length": 1.2,
+      "bones": {
+        "root": {
+          "position": [0, "1.0 + math.sin(query.normalized_animation_progress * 180) * 1.5", "-math.sin(query.normalized_animation_progress * 180) * 2.0"],
+          "rotation": ["20.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+        },
+        "body": {
+          "rotation": ["15.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+        },
+        "chest": {
+          "rotation": ["10.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+        },
+        "head": {
+          "rotation": ["-15.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+        },
+        "leftArm": {
+          "rotation": ["-85.0 * math.sin(query.normalized_animation_progress * 180)", 0, "-10.0"]
+        },
+        "rightArm": {
+          "rotation": ["-85.0 * math.sin(query.normalized_animation_progress * 180)", 0, "10.0"]
+        },
+        "leftForearm": {
+          "rotation": ["-40.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+        },
+        "rightForearm": {
+          "rotation": ["-40.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+        },
+        "leftHand": {
+          "rotation": ["-20.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+        },
+        "rightHand": {
+          "rotation": ["-20.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+        },
+        "ribbon_back1": {
+          "rotation": ["45.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+        }
+      }
+    },
+    "animation.three_realms.lady_of_the_crypt.hurt": {
+      "animation_length": 0.4,
+      "bones": {
+        "root": {
+          "rotation": ["-15.0 * math.sin(query.normalized_animation_progress * 180)", "math.sin(query.normalized_animation_progress * 360) * 10.0", 0]
+        },
+        "head": {
+          "rotation": ["-25.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+        },
+        "leftArm": {
+          "rotation": ["-40.0 * math.sin(query.normalized_animation_progress * 180)", 0, "-30.0"]
+        },
+        "rightArm": {
+          "rotation": ["-40.0 * math.sin(query.normalized_animation_progress * 180)", 0, "30.0"]
+        }
+      }
+    },
+    "animation.three_realms.lady_of_the_crypt.death": {
+      "animation_length": 3.0,
+      "bones": {
+        "root": {
+          "position": [0, "-3.0 * math.sin(query.normalized_animation_progress * 90)", 0],
+          "rotation": ["-40.0 * math.sin(query.normalized_animation_progress * 90)", "math.sin(query.normalized_animation_progress * 180) * 20.0", "15.0 * math.sin(query.normalized_animation_progress * 90)"]
+        },
+        "chest": {
+          "rotation": ["-20.0 * math.sin(query.normalized_animation_progress * 90)", 0, 0]
+        },
+        "head": {
+          "rotation": ["-45.0 * math.sin(query.normalized_animation_progress * 90)", 0, 0]
+        },
+        "hair": {
+          "rotation": ["-40.0 * math.sin(query.normalized_animation_progress * 90)", 0, 0]
+        },
+        "leftArm": {
+          "rotation": ["-60.0 * math.sin(query.normalized_animation_progress * 90)", 0, "-45.0"]
+        },
+        "rightArm": {
+          "rotation": ["-60.0 * math.sin(query.normalized_animation_progress * 90)", 0, "45.0"]
+        },
+        "ribbon_back1": {
+          "rotation": ["60.0 * math.sin(query.normalized_animation_progress * 90)", 0, 0]
+        }
+      }
+    },
+    "animation.three_realms.lady_of_the_crypt.enraged": {
+      "loop": true,
+      "bones": {
+        "root": {
+          "position": [0, "1.8 + math.sin(query.life_time * 120) * 1.2", 0],
+          "rotation": ["8.0 + math.sin(query.life_time * 100) * 4.0", "math.sin(query.life_time * 70) * 8.0", "math.sin(query.life_time * 90) * 4.0"]
+        },
+        "head": {
+          "rotation": ["12.0 + math.sin(query.life_time * 80) * 6.0", "math.sin(query.life_time * 50) * 10.0", 0]
+        },
+        "hair": {
+          "rotation": ["-30.0 + math.sin(query.life_time * 110) * 12.0", "math.sin(query.life_time * 70) * 8.0", 0]
+        },
+        "leftArm": {
+          "rotation": ["-45.0 + math.sin(query.life_time * 90) * 10.0", 0, "-25.0"]
+        },
+        "rightArm": {
+          "rotation": ["-45.0 + math.sin(query.life_time * -90) * 10.0", 0, "25.0"]
+        },
+        "ribbon_back1": {
+          "rotation": ["40.0 + math.sin(query.life_time * 120) * 15.0", 0, 0]
+        }
+      }
+    }
+  }
+}

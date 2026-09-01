@@ -8,3 +8,8 @@
 # Encounter policy: one mob max inside radius 24 at this anchor; no per-tick loop.
 
 execute positioned ~12 ~1 ~7 unless entity @e[type=three_realms:scp439,r=24] run summon three_realms:scp439 ~ ~ ~
+
+# TASK 11 ADDITIVE NOTE — Lady of the Crypt boss encounter
+# The Lady of the Crypt boss is summoned via the dedicated function:
+# /function encounters/crypt_depths_lady_of_the_crypt
+# The scp439 guard above is preserved exactly.

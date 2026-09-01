@@ -1,0 +1,32 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "three_realms:lady_of_the_crypt",
+      "materials": {
+        "default": "entity_alphablend"
+      },
+      "textures": {
+        "default": "textures/entity/three_realms/lady_of_the_crypt"
+      },
+      "geometry": "geometry.three_realms.lady_of_the_crypt",
+      "render_controllers": [
+        "controller.render.three_realms.lady_of_the_crypt"
+      ],
+      "animations": {
+        "idle": "animation.three_realms.lady_of_the_crypt.idle",
+        "drift": "animation.three_realms.lady_of_the_crypt.drift",
+        "reach": "animation.three_realms.lady_of_the_crypt.reach",
+        "hurt": "animation.three_realms.lady_of_the_crypt.hurt",
+        "death": "animation.three_realms.lady_of_the_crypt.death",
+        "enraged": "animation.three_realms.lady_of_the_crypt.enraged",
+        "controller": "controller.animation.three_realms.lady_of_the_crypt"
+      },
+      "scripts": {
+        "initialize": [
+          "variable.idle_speed = 2.0;"
+        ]
+      }
+    }
+  }
+}
