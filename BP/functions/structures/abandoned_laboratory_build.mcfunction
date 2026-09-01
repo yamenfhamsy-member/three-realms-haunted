@@ -28,5 +28,6 @@ fill ~-1 ~-4 ~9 ~1 ~-1 ~9 minecraft:air
 setblock ~0 ~-1 ~9 minecraft:chest
 loot insert ~0 ~-1 ~9 slot.container 0 loot "loot_tables/entities/scpdt/scp131"
 loot insert ~0 ~-1 ~9 slot.container 1 loot "loot_tables/lore/lab_project_anima"
+loot insert ~0 ~-1 ~9 slot.container 2 loot "loot_tables/chests/uncommon_rewards"
 setblock ~-9 ~2 ~5 three_realms:obsidilith_rune
 summon three_realms:scp191 ~7 ~2 ~5

@@ -29,6 +29,7 @@ fill ~-2 ~-4 ~10 ~2 ~-1 ~12 minecraft:deepslate_bricks
 fill ~-1 ~-3 ~11 ~1 ~-1 ~11 minecraft:air
 setblock ~0 ~-1 ~11 minecraft:chest
 loot insert ~0 ~-1 ~11 slot.container 0 loot "loot_tables/entities/scpdt/scp939"
+loot insert ~0 ~-1 ~11 slot.container 1 loot "loot_tables/chests/common_rewards"
 setblock ~-12 ~1 ~5 minecraft:sculk_catalyst
 setblock ~12 ~1 ~5 minecraft:sculk_catalyst
 summon three_realms:scp106 ~0 ~2 ~7

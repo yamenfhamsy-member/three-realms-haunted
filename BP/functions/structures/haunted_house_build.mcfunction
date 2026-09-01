@@ -31,5 +31,6 @@ fill ~-7 ~-4 ~2 ~7 ~-1 ~9 minecraft:deepslate_bricks
 fill ~-6 ~-3 ~3 ~6 ~-1 ~8 minecraft:air
 setblock ~0 ~-1 ~5 minecraft:chest
 loot insert ~0 ~-1 ~5 slot.container 0 loot "loot_tables/entities/scpdt/scp939"
+loot insert ~0 ~-1 ~5 slot.container 1 loot "loot_tables/chests/common_rewards"
 setblock ~6 ~1 ~5 minecraft:sculk_catalyst
 summon three_realms:haunted_watcher ~5 ~2 ~-6
