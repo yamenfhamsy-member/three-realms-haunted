@@ -1,0 +1,66 @@
+{
+  "audit_only": true,
+  "source": "/home/ubuntu/three_realms_workspace/armor_weapons/forg-cleannrooster-assets",
+  "source_sha256": "9fd79dfe42f7eb23259081c0b8366b91a24b1d505c3690c878a72634f08af732-cd147ac9a3e4a50c2baeca42fc62b9ed65718237d72fd3b8ae71aa7ea7734a8e",
+  "target": "Minecraft Bedrock 1.26.x only",
+  "selected_assets": [
+    "armor/spellblade/runeblaze_layer_1.png",
+    "armor/spellblade/runeblaze_layer_2.png",
+    "armor/spellblade/runefrost_layer_1.png",
+    "armor/spellblade/runefrost_layer_2.png",
+    "armor/spellblade/runegleam_layer_1.png",
+    "armor/spellblade/runegleam_layer_2.png",
+    "item/spellblade/arcane_blade.png",
+    "item/spellblade/fire_blade.png",
+    "item/spellblade/frost_blade.png",
+    "item/spellblade/hexblade.png",
+    "item/spellblade/rifle.png"
+  ],
+  "candidate_count": 138,
+  "selected_count": 11,
+  "resource_counts": {
+    "armor_texture_files": 6,
+    "item_png_files": 132,
+    "blockbench_files": 26,
+    "blender_files": 14,
+    "animation_json_files": 31,
+    "animation_preview_files": 16,
+    "spell_icon_files": 260,
+    "item_definition_files": 0,
+    "attachable_files": 0,
+    "recipe_files": 0,
+    "script_files": 0,
+    "particle_files": 0,
+    "sound_files": 0
+  },
+  "available_dependency_classes": {
+    "item_definitions": 0,
+    "attachables": 0,
+    "recipes": 0,
+    "scripts": 0,
+    "particles": 0,
+    "sounds": 0
+  },
+  "status_counts": {
+    "C — technically convertible but dependency-heavy (requires Bedrock item/attachable/render wiring)": 11,
+    "E — not an actual armor/weapon gameplay asset in this source": 127
+  },
+  "blocked_assets": [],
+  "dependency_heavy_assets": [
+    "armor/spellblade/runeblaze_layer_1.png",
+    "armor/spellblade/runeblaze_layer_2.png",
+    "armor/spellblade/runefrost_layer_1.png",
+    "armor/spellblade/runefrost_layer_2.png",
+    "armor/spellblade/runegleam_layer_1.png",
+    "armor/spellblade/runegleam_layer_2.png",
+    "item/spellblade/arcane_blade.png",
+    "item/spellblade/fire_blade.png",
+    "item/spellblade/frost_blade.png",
+    "item/spellblade/hexblade.png",
+    "item/spellblade/rifle.png"
+  ],
+  "conversion_performed": false,
+  "production_modified": false,
+  "source_modified": false,
+  "recommendation": "Task 5 Part 2 may select the 3 Spellblade armor colorways and 5 weapon-like icons only after Bedrock item definitions, attachables/render setup, namespace mapping, and any required behavior are designed and validated."
+}
