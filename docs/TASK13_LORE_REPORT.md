@@ -34,6 +34,8 @@ The four lore books form one continuous narrative across four regions:
 | `BP/functions/structures/abandoned_laboratory_build.mcfunction` | +1 `loot insert` line |
 | `BP/functions/structures/crypt_build.mcfunction` | +1 chest +1 `loot insert` line |
 | `BP/functions/structures/nightmare_mansion_build.mcfunction` | +1 `loot insert` line |
+| `BP/functions/load_scoreboards.mcfunction` | Creates the 3 boss kill-flag objectives on world load |
+| `BP/functions/load.json` | Bedrock auto-run entry point for the scoreboard init |
 
 ## 3. Design rules respected
 
@@ -56,6 +58,7 @@ The four lore books form one continuous narrative across four regions:
 | Extracted package: 4/4 lore books + all 8 structure functions present | PASS |
 | Existing slot-0 loot lines untouched (diff = additive lines only) | PASS |
 | No loops / no scans added | PASS |
+| Scoreboard init function wired via `load.json` (fixes pre-existing gap) | PASS |
 
 ## 5. Package
 

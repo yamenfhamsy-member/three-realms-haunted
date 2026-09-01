@@ -1,0 +1,6 @@
+{
+  "type": "commands",
+  "commands": [
+    "load_scoreboards"
+  ]
+}
