@@ -277,7 +277,7 @@
       },
       "minecraft:leashable": {
         "soft_distance": 3.0,
-        "hard_distance": 4.0,
+        "hard_distance": 3.8,
         "max_distance": 3.8
       },
       "minecraft:movement": {

@@ -224,14 +224,14 @@ if os.path.exists(pkg):
         names = z.namelist()
         files = [n for n in names if not n.endswith("/")]
         test("package: archive opens + has file entries", len(files) > 400, str(len(files)))
-        test("package: has BP_bp and RP_rp roots",
-             any(n.startswith("BP_bp/") for n in files) and any(n.startswith("RP_rp/") for n in files))
+        test("package: has BP and RP roots",
+             any(n.startswith("BP/") for n in files) and any(n.startswith("RP/") for n in files))
         for needle in ("morgue_warden", "lady_of_the_crypt", "the_nightmare"):
             test(f"package: contains {needle} entries",
                  any(needle in n for n in files))
         # manifests inside package
-        test("package: BP manifest present", any(n == "BP_bp/manifest.json" for n in files))
-        test("package: RP manifest present", any(n == "RP_rp/manifest.json" for n in files))
+        test("package: BP manifest present", any(n == "BP/manifest.json" for n in files))
+        test("package: RP manifest present", any(n == "RP/manifest.json" for n in files))
         # no staging/workspace leakage
         leaked = [n for n in files if "staging" in n or "workspace" in n or n.endswith((".zip", ".mcaddon"))]
         test("package: no staging/temp leakage", not leaked, str(leaked[:3]))

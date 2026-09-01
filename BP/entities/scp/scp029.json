@@ -68,11 +68,6 @@
           "minecraft:glow_ink_sac"
         ]
       },
-      "minecraft:can_have_equipment": {
-        "minecraft:equipment": {
-          "table": "loot_tables/entities/zombie_equipment.json"
-        }
-      },
       "minecraft:shareables": {
         "items": [
           {

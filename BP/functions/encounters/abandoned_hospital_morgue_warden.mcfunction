@@ -14,5 +14,5 @@
 
 execute positioned ~0 ~2 ~0 unless entity @e[type=three_realms:morgue_warden,r=32] unless score @p three_realms.morgue_warden_killed matches 1.. run playsound three_realms.morgue_warden.breath @a ~ ~ ~ 0.35 0.50 0.05
 
-execute positioned ~0 ~2 ~0 unless entity @e[type=three_realms:morgue_warden,r=32] unless score @p three_realms.morgue_warden_killed matches 1.. run summon three_realms:morgue_warden ~ ~ ~ three_realms:morgue_warden_active
+execute positioned ~0 ~2 ~0 unless entity @e[type=three_realms:morgue_warden,r=32] unless score @p three_realms.morgue_warden_killed matches 1.. run summon three_realms:morgue_warden ~ ~ ~
 execute positioned ~0 ~2 ~0 unless entity @e[type=three_realms:morgue_warden,r=32] unless score @p three_realms.morgue_warden_killed matches 1.. run tag @e[type=three_realms:morgue_warden,r=5] add three_realms.morgue_warden_active

@@ -38,16 +38,6 @@
       }
     },
     "components": {
-      "scpdt:sliding_door": {
-        "openSound": {
-          "id": "three_realms.scpdt.door1.open",
-          "volume": 1.1
-        },
-        "closeSound": {
-          "id": "three_realms.scpdt.door1.close",
-          "volume": 1.1
-        }
-      },
       "minecraft:geometry": {
         "identifier": "geometry.three_realms.dt_sliding_door",
         "bone_visibility": {

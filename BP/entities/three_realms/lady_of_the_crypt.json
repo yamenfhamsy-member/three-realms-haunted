@@ -17,22 +17,34 @@
     },
     "component_groups": {
       "three_realms:phase1": {
-        "minecraft:mark_variant": { "value": 0 },
-        "minecraft:movement": { "value": 0.22 },
+        "minecraft:mark_variant": {
+          "value": 0
+        },
+        "minecraft:movement": {
+          "value": 0.22
+        },
         "minecraft:attack": {
           "damage": 7
         }
       },
       "three_realms:phase2": {
-        "minecraft:mark_variant": { "value": 1 },
-        "minecraft:movement": { "value": 0.30 },
+        "minecraft:mark_variant": {
+          "value": 1
+        },
+        "minecraft:movement": {
+          "value": 0.3
+        },
         "minecraft:attack": {
           "damage": 10
         }
       },
       "three_realms:phase3": {
-        "minecraft:mark_variant": { "value": 2 },
-        "minecraft:movement": { "value": 0.38 },
+        "minecraft:mark_variant": {
+          "value": 2
+        },
+        "minecraft:movement": {
+          "value": 0.38
+        },
         "minecraft:attack": {
           "damage": 14
         },
@@ -42,19 +54,26 @@
           "cause": "entity_attack",
           "entity_filter": {
             "any_of": [
-              { "test": "is_family", "subject": "other", "value": "player" }
+              {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+              }
             ]
           }
         }
       },
       "three_realms:death_state": {
-        "minecraft:mark_variant": { "value": 99 },
-        "minecraft:movement": { "value": 0 },
-        "minecraft:can_be_attacked": { "value": false },
+        "minecraft:mark_variant": {
+          "value": 99
+        },
+        "minecraft:movement": {
+          "value": 0
+        },
         "minecraft:damage_sensor": {
           "triggers": {
             "cause": "all",
-            "deals_damage": false
+            "deals_damage": "no"
           }
         }
       }
@@ -84,7 +103,9 @@
       "minecraft:knockback_resistance": {
         "value": 0.0
       },
-      "minecraft:push_through": { "value": 1 },
+      "minecraft:push_through": {
+        "value": 1
+      },
       "minecraft:navigation.walk": {
         "can_path_over_water": true,
         "avoid_water": false,
@@ -117,7 +138,11 @@
           {
             "filters": {
               "any_of": [
-                { "test": "is_family", "subject": "other", "value": "player" }
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "player"
+                }
               ]
             },
             "max_dist": 32
@@ -170,7 +195,7 @@
         }
       },
       "three_realms:on_target_acquired": {
-        "run_command": {
+        "queue_command": {
           "command": [
             "playsound three_realms.lady_of_the_crypt.ambient @a ~ ~ ~ 0.25 0.50 0.04"
           ]
@@ -181,13 +206,30 @@
           {
             "filters": {
               "all_of": [
-                { "test": "is_mark_variant", "subject": "self", "value": 0 },
-                { "test": "has_damage", "subject": "self", "operator": ">=", "value": 100 }
+                {
+                  "test": "is_mark_variant",
+                  "subject": "self",
+                  "value": 0
+                },
+                {
+                  "test": "has_damage",
+                  "subject": "self",
+                  "operator": ">=",
+                  "value": 100
+                }
               ]
             },
-            "remove": { "component_groups": [ "three_realms:phase1" ] },
-            "add": { "component_groups": [ "three_realms:phase2" ] },
-            "run_command": {
+            "remove": {
+              "component_groups": [
+                "three_realms:phase1"
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "three_realms:phase2"
+              ]
+            },
+            "queue_command": {
               "command": [
                 "playsound three_realms.lady_of_the_crypt.scream @a ~ ~ ~ 0.45 0.60 0.06"
               ]
@@ -196,20 +238,37 @@
           {
             "filters": {
               "all_of": [
-                { "test": "is_mark_variant", "subject": "self", "value": 1 },
-                { "test": "has_damage", "subject": "self", "operator": ">=", "value": 130 }
+                {
+                  "test": "is_mark_variant",
+                  "subject": "self",
+                  "value": 1
+                },
+                {
+                  "test": "has_damage",
+                  "subject": "self",
+                  "operator": ">=",
+                  "value": 130
+                }
               ]
             },
-            "remove": { "component_groups": [ "three_realms:phase2" ] },
-            "add": { "component_groups": [ "three_realms:phase3" ] },
-            "run_command": {
+            "remove": {
+              "component_groups": [
+                "three_realms:phase2"
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "three_realms:phase3"
+              ]
+            },
+            "queue_command": {
               "command": [
                 "playsound three_realms.lady_of_the_crypt.scream @a ~ ~ ~ 0.55 0.40 0.08"
               ]
             }
           },
           {
-            "run_command": {
+            "queue_command": {
               "command": [
                 "playsound three_realms.lady_of_the_crypt.ambient @a ~ ~ ~ 0.30 0.55 0.05"
               ]
@@ -230,7 +289,7 @@
             "three_realms:death_state"
           ]
         },
-        "run_command": {
+        "queue_command": {
           "command": [
             "playsound three_realms.lady_of_the_crypt.scream @a ~ ~ ~ 0.40 0.30 0.06",
             "scoreboard players set @p three_realms.lady_of_the_crypt_killed 1"

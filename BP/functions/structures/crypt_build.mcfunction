@@ -28,8 +28,8 @@ fill ~-1 ~-6 ~11 ~1 ~-1 ~13 minecraft:deepslate_bricks
 fill ~0 ~-5 ~12 ~0 ~-1 ~12 minecraft:air
 setblock ~0 ~-1 ~12 three_realms:obsidilith_rune
 setblock ~-1 ~-1 ~12 minecraft:chest
-loot insert ~-1 ~-1 ~12 slot.container 0 loot "loot_tables/lore/crypt_ritual_note"
-loot insert ~-1 ~-1 ~12 slot.container 1 loot "loot_tables/chests/rare_rewards"
+loot insert ~-1 ~-1 ~12 loot "loot_tables/lore/crypt_ritual_note"
+loot insert ~-1 ~-1 ~12 loot "loot_tables/chests/rare_rewards"
 setblock ~-7 ~2 ~4 minecraft:sculk_catalyst
 setblock ~7 ~2 ~4 minecraft:sculk_catalyst
 summon three_realms:scp439 ~0 ~2 ~0

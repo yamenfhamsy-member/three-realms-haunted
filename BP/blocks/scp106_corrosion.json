@@ -16,10 +16,6 @@
       }
     },
     "components": {
-      "scpdt:legacy_placement_state": {
-        "facingDirectionState": "facing:direction",
-        "facingDirectionReverse": true
-      },
       "minecraft:material_instances": {
         "*": {
           "texture": "dt_scp106_corrosion",

@@ -8,35 +8,90 @@
       "is_experimental": false
     },
     "components": {
-      "minecraft:type_family": { "family": ["haunted_watcher", "monster", "mob"] },
-      "minecraft:health": { "value": 34, "max": 34 },
-      "minecraft:collision_box": { "width": 0.65, "height": 3.8 },
-      "minecraft:physics": { "has_gravity": true, "has_collision": true },
-      "minecraft:movement": { "value": 0.16 },
-      "minecraft:navigation.walk": { "can_path_over_water": false, "avoid_damage_blocks": true, "avoid_portals": false },
+      "minecraft:type_family": {
+        "family": [
+          "haunted_watcher",
+          "monster",
+          "mob"
+        ]
+      },
+      "minecraft:health": {
+        "value": 34,
+        "max": 34
+      },
+      "minecraft:collision_box": {
+        "width": 0.65,
+        "height": 3.8
+      },
+      "minecraft:physics": {
+        "has_gravity": true,
+        "has_collision": true
+      },
+      "minecraft:movement": {
+        "value": 0.16
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": false,
+        "avoid_damage_blocks": true,
+        "avoid_portals": false
+      },
       "minecraft:movement.basic": {},
       "minecraft:jump.static": {},
-      "minecraft:follow_range": { "value": 28 },
-      "minecraft:attack": { "damage": 6 },
-      "minecraft:behavior.float": { "priority": 0 },
-      "minecraft:behavior.hurt_by_target": { "priority": 1 },
+      "minecraft:follow_range": {
+        "value": 28
+      },
+      "minecraft:attack": {
+        "damage": 6
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1
+      },
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 2,
         "must_see": true,
         "reselect_targets": true,
         "within_radius": 24,
         "entity_types": [
-          { "filters": { "test": "is_family", "subject": "other", "value": "player" }, "max_dist": 24 }
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "player"
+            },
+            "max_dist": 24
+          }
         ]
       },
-      "minecraft:behavior.melee_attack": { "priority": 3, "track_target": true, "speed_multiplier": 1.15, "cooldown_time": 1.2 },
-      "minecraft:behavior.random_stroll": { "priority": 6, "speed_multiplier": 0.55 },
-      "minecraft:behavior.look_at_player": { "priority": 7, "look_distance": 20, "probability": 0.08 },
-      "minecraft:behavior.random_look_around": { "priority": 8 },
-      "minecraft:loot": { "table": "loot_tables/entities/haunted_watcher.json" },
+      "minecraft:behavior.melee_attack": {
+        "priority": 3,
+        "track_target": true,
+        "speed_multiplier": 1.15,
+        "cooldown_time": 1.2
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 6,
+        "speed_multiplier": 0.55
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 7,
+        "look_distance": 20,
+        "probability": 0.08
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 8
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/haunted_watcher.json"
+      },
       "minecraft:damage_sensor": {
         "triggers": [
-          { "cause": "fall", "deals_damage": false }
+          {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
         ]
       }
     }

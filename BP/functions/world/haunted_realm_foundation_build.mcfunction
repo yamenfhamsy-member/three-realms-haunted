@@ -29,7 +29,7 @@ fill ~40 ~1 ~-8 ~40 ~6 ~-8 minecraft:dark_oak_log
 fill ~55 ~1 ~5 ~55 ~5 ~5 minecraft:dark_oak_log
 setblock ~40 ~7 ~-8 minecraft:dark_oak_leaves
 setblock ~55 ~6 ~5 minecraft:dark_oak_leaves
-setblock ~51 ~2 ~-5 minecraft:cobweb
+setblock ~51 ~2 ~-5 minecraft:web
 # Structure mapping: existing regional environment only
 # Static mob intent: three_realms:scp939 — documentation intent only; no spawn-rule changes.
 
