@@ -7,6 +7,9 @@
 # Anchor-relative spawn point: (10, 1, 0)
 # Encounter policy: one mob max inside radius 24 at this anchor; no per-tick loop.
 # Audio policy: one short, quiet existing door cue before the guarded summon; no loop.
-execute positioned ~0 ~0 ~0 unless entity @e[type=three_realms:haunted_watcher,r=24] run playsound three_realms.scpdt.door1.close @a ~ ~ ~ 0.18 0.65 0.02
+# DEACTIVATED (Task 16 Issue #1): execute positioned ~0 ~0 ~0 unless entity @e[type=three_realms:haunted_watcher,r=24] run playsound three_realms.scpdt.door1.close @a ~ ~ ~ 0.18 0.65 0.02
 
-execute positioned ~10 ~1 ~0 unless entity @e[type=three_realms:haunted_watcher,r=24] run summon three_realms:haunted_watcher ~ ~ ~
+# DEACTIVATED (Task 16 Issue #1): execute positioned ~10 ~1 ~0 unless entity @e[type=three_realms:haunted_watcher,r=24] run summon three_realms:haunted_watcher ~ ~ ~
+
+# NOTE (Task 16): watcher encounter DEACTIVATED — no verified production-ready visual asset.
+# See docs/TASK16_DEEP_REPAIR_REPORT.md Issue #1 (BLOCKED).
