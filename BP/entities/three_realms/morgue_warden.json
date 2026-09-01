@@ -1,0 +1,236 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "three_realms:morgue_warden",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+        "animate": [
+          "controller"
+        ]
+      },
+      "animations": {
+        "controller": "controller.animation.three_realms.morgue_warden"
+      }
+    },
+    "component_groups": {
+      "three_realms:phase1": {
+        "minecraft:variant": { "value": 0 },
+        "minecraft:movement": { "value": 0.18 },
+        "minecraft:attack": {
+          "damage": 6
+        }
+      },
+      "three_realms:phase2": {
+        "minecraft:variant": { "value": 1 },
+        "minecraft:movement": { "value": 0.26 },
+        "minecraft:attack": {
+          "damage": 9
+        }
+      },
+      "three_realms:phase3": {
+        "minecraft:variant": { "value": 2 },
+        "minecraft:movement": { "value": 0.34 },
+        "minecraft:attack": {
+          "damage": 13
+        },
+        "minecraft:area_attack": {
+          "damage_range": 1.5,
+          "damage_per_tick": 2,
+          "cause": "entity_attack",
+          "entity_filter": {
+            "any_of": [
+              { "test": "is_family", "subject": "other", "value": "player" }
+            ]
+          }
+        }
+      },
+      "three_realms:death_state": {
+        "minecraft:mark_variant": { "value": 99 },
+        "minecraft:movement": { "value": 0 },
+        "minecraft:can_be_attacked": { "value": false },
+        "minecraft:damage_sensor": {
+          "triggers": {
+            "cause": "all",
+            "deals_damage": false
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:health": {
+        "value": 200,
+        "max": 200
+      },
+      "minecraft:type_family": {
+        "family": [
+          "three_realms_morgue_warden",
+          "morgue_warden",
+          "boss",
+          "monster",
+          "mob"
+        ]
+      },
+      "minecraft:nameable": {},
+      "minecraft:collision_box": {
+        "width": 1.4,
+        "height": 4.2
+      },
+      "minecraft:scale": {
+        "value": 1.6
+      },
+      "minecraft:knockback_resistance": {
+        "value": 0.85
+      },
+      "minecraft:push_through": { "value": 1 },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": false,
+        "avoid_water": true,
+        "avoid_damage_blocks": true,
+        "can_break_doors": true,
+        "can_open_doors": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/three_realms_morgue_warden.json"
+      },
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:behavior.nearest_attackable_target": {
+        "priority": 2,
+        "within_radius": 32.0,
+        "entity_types": [
+          {
+            "filters": {
+              "any_of": [
+                { "test": "is_family", "subject": "other", "value": "player" }
+              ]
+            },
+            "max_dist": 32
+          }
+        ]
+      },
+      "minecraft:behavior.melee_attack": {
+        "priority": 3,
+        "speed_multiplier": 1.0,
+        "track_target": true,
+        "reach_multiplier": 2.4,
+        "attack_once": false
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 5,
+        "speed_multiplier": 0.6
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 7,
+        "look_distance": 16.0,
+        "probability": 0.04
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 8
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_entity": true
+      },
+      "minecraft:on_target_acquired": {
+        "event": "three_realms:on_target_acquired",
+        "target": "self"
+      },
+      "minecraft:on_hurt": {
+        "event": "three_realms:on_hurt",
+        "target": "self"
+      },
+      "minecraft:on_death": {
+        "event": "three_realms:on_death",
+        "target": "self"
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "three_realms:phase1"
+          ]
+        }
+      },
+      "three_realms:on_target_acquired": {
+        "run_command": {
+          "command": [
+            "playsound three_realms.morgue_warden.breath @a ~ ~ ~ 0.32 0.45 0.04"
+          ]
+        }
+      },
+      "three_realms:on_hurt": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "has_component",
+              "subject": "self",
+              "operator": "not",
+              "value": "minecraft:variant"
+            },
+            "add": { "component_groups": [ "three_realms:phase1" ] }
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "is_mark_variant", "subject": "self", "value": 0 },
+                { "test": "has_damage", "subject": "self", "operator": ">=", "value": 70 }
+              ]
+            },
+            "remove": { "component_groups": [ "three_realms:phase1" ] },
+            "add": { "component_groups": [ "three_realms:phase2" ] }
+          },
+          {
+            "filters": {
+              "all_of": [
+                { "test": "is_mark_variant", "subject": "self", "value": 1 },
+                { "test": "has_damage", "subject": "self", "operator": ">=", "value": 150 }
+              ]
+            },
+            "remove": { "component_groups": [ "three_realms:phase2" ] },
+            "add": { "component_groups": [ "three_realms:phase3" ] }
+          },
+          {
+            "run_command": {
+              "command": [
+                "playsound three_realms.morgue_warden.breath @a ~ ~ ~ 0.35 0.55 0.05"
+              ]
+            }
+          }
+        ]
+      },
+      "three_realms:on_death": {
+        "remove": {
+          "component_groups": [
+            "three_realms:phase1",
+            "three_realms:phase2",
+            "three_realms:phase3"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "three_realms:death_state"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "playsound three_realms.morgue_warden.attack @a ~ ~ ~ 0.40 0.35 0.06",
+            "scoreboard players set @p three_realms.morgue_warden_killed 1"
+          ]
+        }
+      }
+    }
+  }
+}

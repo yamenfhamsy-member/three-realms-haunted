@@ -48,6 +48,38 @@
           "name": "sounds/doors/door1_open3"
         }
       ]
+    },
+    "three_realms.morgue_warden.breath": {
+      "category": "hostile",
+      "max_distance": 24.0,
+      "sounds": [
+        {
+          "name": "sounds/doors/door1_close1",
+          "volume": 0.4,
+          "pitch": 0.55
+        },
+        {
+          "name": "sounds/doors/door1_close2",
+          "volume": 0.4,
+          "pitch": 0.6
+        }
+      ]
+    },
+    "three_realms.morgue_warden.attack": {
+      "category": "hostile",
+      "max_distance": 28.0,
+      "sounds": [
+        {
+          "name": "sounds/doors/door1_open2",
+          "volume": 0.45,
+          "pitch": 0.4
+        },
+        {
+          "name": "sounds/doors/door1_open3",
+          "volume": 0.45,
+          "pitch": 0.45
+        }
+      ]
     }
   }
 }

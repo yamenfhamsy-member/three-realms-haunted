@@ -1,0 +1,45 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "three_realms:morgue_warden",
+      "materials": {
+        "default": "entity_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/entity/three_realms/morgue_warden"
+      },
+      "geometry": {
+        "default": "geometry.three_realms.morgue_warden"
+      },
+      "animations": {
+        "idle": "animation.three_realms.morgue_warden.idle",
+        "breathing": "animation.three_realms.morgue_warden.breathing",
+        "head": "animation.three_realms.morgue_warden.head",
+        "walk": "animation.three_realms.morgue_warden.walk",
+        "attack": "animation.three_realms.morgue_warden.attack",
+        "hurt": "animation.three_realms.morgue_warden.hurt",
+        "death": "animation.three_realms.morgue_warden.death",
+        "enraged": "animation.three_realms.morgue_warden.enraged",
+        "stalking": "animation.three_realms.morgue_warden.stalking",
+        "controller": "controller.animation.three_realms.morgue_warden"
+      },
+      "scripts": {
+        "animate": [
+          "controller"
+        ],
+        "pre_animation": [
+          "variable.gliding_speed_value = (query.modified_distance_moved > 0 ? 11.0 : 1.0);",
+          "variable.breathe = query.life_time;"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.three_realms.morgue_warden"
+      ],
+      "spawn_egg": {
+        "base_color": "#C8C8C8",
+        "overlay_color": "#5C7080"
+      }
+    }
+  }
+}
