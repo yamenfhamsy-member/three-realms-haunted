@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.three_realms.the_nightmare": {
+      "geometry": "geometry.three_realms.the_nightmare",
+      "materials": [
+        { "*": "entity_emissive_alpha" }
+      ],
+      "textures": [
+        "textures/entity/three_realms/the_nightmare"
+      ]
+    }
+  }
+}

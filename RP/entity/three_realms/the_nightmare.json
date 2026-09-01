@@ -1,0 +1,41 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "three_realms:the_nightmare",
+      "materials": {
+        "default": "entity_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/entity/three_realms/the_nightmare"
+      },
+      "geometry": {
+        "default": "geometry.three_realms.the_nightmare"
+      },
+      "animations": {
+        "idle": "animation.three_realms.the_nightmare.idle",
+        "prowl": "animation.three_realms.the_nightmare.prowl",
+        "strike": "animation.three_realms.the_nightmare.strike",
+        "hurt": "animation.three_realms.the_nightmare.hurt",
+        "death": "animation.three_realms.the_nightmare.death",
+        "enraged": "animation.three_realms.the_nightmare.enraged",
+        "controller": "controller.animation.three_realms.the_nightmare"
+      },
+      "scripts": {
+        "animate": [
+          "controller"
+        ],
+        "pre_animation": [
+          "variable.breathe = query.life_time;"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.three_realms.the_nightmare"
+      ],
+      "spawn_egg": {
+        "base_color": "#2A2A2E",
+        "overlay_color": "#00E5FF"
+      }
+    }
+  }
+}

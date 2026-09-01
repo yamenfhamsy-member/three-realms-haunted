@@ -112,6 +112,38 @@
           "pitch": 0.40
         }
       ]
+    },
+    "three_realms.the_nightmare.whisper": {
+      "category": "hostile",
+      "max_distance": 28.0,
+      "sounds": [
+        {
+          "name": "sounds/doors/door1_close1",
+          "volume": 0.30,
+          "pitch": 0.30
+        },
+        {
+          "name": "sounds/doors/door1_close3",
+          "volume": 0.30,
+          "pitch": 0.35
+        }
+      ]
+    },
+    "three_realms.the_nightmare.roar": {
+      "category": "hostile",
+      "max_distance": 32.0,
+      "sounds": [
+        {
+          "name": "sounds/doors/door1_open2",
+          "volume": 0.50,
+          "pitch": 0.28
+        },
+        {
+          "name": "sounds/doors/door1_open3",
+          "volume": 0.50,
+          "pitch": 0.32
+        }
+      ]
     }
   }
 }
