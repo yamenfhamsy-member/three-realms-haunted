@@ -1,7 +1,7 @@
 # TASK 13 — LORE + ENVIRONMENTAL STORYTELLING REPORT
 
 **Date:** 2026-09-01
-**Method:** Written books placed via `loot insert` into existing structure chests — no new items, no scripts, no dialogue engine. Lightweight Bedrock-compatible content per spec.
+**Method:** Written books placed via `loot insert` into existing structure chests (no new items, no scripts, no dialogue engine).
 
 ## 1. Core story thread
 
