@@ -31,6 +31,16 @@
       "textures": [
         "textures/bomd/obsidilith/blocks/obsidilith_rune"
       ]
+    },
+    "dt_door1": {
+      "textures": [
+        "textures/blocks/doors/dt_door1"
+      ]
+    },
+    "dt_scp106_corrosion": {
+      "textures": [
+        "textures/blocks/dt_scp106_corrosion"
+      ]
     }
   }
 }
