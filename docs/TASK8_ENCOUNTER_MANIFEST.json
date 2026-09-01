@@ -1,0 +1,94 @@
+{
+  "mechanism": "manual/structure-triggered deterministic functions with local radius cap",
+  "automatic_spawn_rules": "not added; no proven biome/runtime pipeline",
+  "safety": {
+    "max_entities_per_anchor": 1,
+    "radius_blocks": 24,
+    "spawn_on_player": false,
+    "tick_loop": false,
+    "particles_or_sounds_added": false
+  },
+  "regions": {
+    "abandoned_outskirts": {
+      "region": "Abandoned Outskirts",
+      "mob": "three_realms:haunted_watcher",
+      "spawn_relative": [
+        10,
+        1,
+        0
+      ],
+      "intent": "low/medium threat; distant approach"
+    },
+    "dead_forest": {
+      "region": "Dead Forest",
+      "mob": "three_realms:scp939",
+      "spawn_relative": [
+        11,
+        1,
+        4
+      ],
+      "intent": "stalker/crawler uncertainty; sparse"
+    },
+    "cemetery_district": {
+      "region": "Cemetery District",
+      "mob": "three_realms:scp106",
+      "spawn_relative": [
+        10,
+        1,
+        -4
+      ],
+      "intent": "spectral/horror near graves"
+    },
+    "abandoned_hospital": {
+      "region": "Abandoned Hospital",
+      "mob": "three_realms:scp939",
+      "spawn_relative": [
+        12,
+        2,
+        -8
+      ],
+      "intent": "corridor-compatible sparse encounter"
+    },
+    "cursed_village": {
+      "region": "Cursed Village",
+      "mob": "three_realms:scp966",
+      "spawn_relative": [
+        10,
+        1,
+        6
+      ],
+      "intent": "roaming/ambush potential; empty space preserved"
+    },
+    "old_laboratory": {
+      "region": "Old Laboratory",
+      "mob": "three_realms:scp035_scientist",
+      "spawn_relative": [
+        12,
+        2,
+        4
+      ],
+      "intent": "experimental/unnatural higher threat"
+    },
+    "crypt_depths": {
+      "region": "Crypt Depths",
+      "mob": "three_realms:scp439",
+      "spawn_relative": [
+        12,
+        1,
+        7
+      ],
+      "intent": "deeper horror; one rare controlled encounter"
+    },
+    "nightmare_zone": {
+      "region": "Nightmare Zone",
+      "mob": "three_realms:scp096",
+      "spawn_relative": [
+        14,
+        2,
+        8
+      ],
+      "intent": "highest-threat existing pool; rare and distant"
+    }
+  },
+  "runtime": "NOT TESTED \u2014 ENVIRONMENT LIMITATION"
+}

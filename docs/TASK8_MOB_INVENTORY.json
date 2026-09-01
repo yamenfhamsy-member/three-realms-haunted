@@ -1,0 +1,3290 @@
+{
+  "source": "actual BP/RP files",
+  "count": 55,
+  "mobs": [
+    {
+      "identifier": "three_realms:chaos_scp049_2",
+      "behavior_definition": "BP/entities/scp049_2/scp049_2 (chaos).json",
+      "client_entity_files": [
+        "RP/entity/scp049_2/scp049_2 (chaos).json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp049_2 (chaos).json",
+        "BP/spawn_rules/scp049_2 (chaos).json"
+      ],
+      "components": [
+        "minecraft:attack",
+        "minecraft:behavior.delayed_attack",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "chaos"
+      ],
+      "families": [
+        "zombie",
+        "scp049",
+        "scp049_2",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.delayed_attack"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:class_d_scp049_2",
+      "behavior_definition": "BP/entities/scp049_2/scp049_2 (class_d).json",
+      "client_entity_files": [
+        "RP/entity/scp049_2/scp049_2 (class_d).json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp049_2 (class d).json",
+        "BP/spawn_rules/scp049_2.json",
+        "BP/spawn_rules/scp049_2 (class d).json",
+        "BP/spawn_rules/scp049_2.json"
+      ],
+      "components": [
+        "minecraft:attack",
+        "minecraft:behavior.delayed_attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "d1",
+        "d2",
+        "d3",
+        "d4"
+      ],
+      "families": [
+        "zombie",
+        "scp049",
+        "scp049_2",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.delayed_attack"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:field_doctor_scp049_2",
+      "behavior_definition": "BP/entities/scp049_2/scp049_2 (field doctor).json",
+      "client_entity_files": [
+        "RP/entity/scp049_2/scp049_2 (field doctor).json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:attack",
+        "minecraft:behavior.delayed_attack",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "field_doctor"
+      ],
+      "families": [
+        "zombie",
+        "scp049",
+        "scp049_2",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.delayed_attack"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:haunted_watcher",
+      "behavior_definition": "BP/entities/haunted_watcher.json",
+      "client_entity_files": [],
+      "spawn_rule_files": [
+        "BP/spawn_rules/haunted_watcher.json",
+        "BP/spawn_rules/haunted_watcher.json"
+      ],
+      "components": [
+        "minecraft:attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.look_at_player",
+        "minecraft:behavior.melee_attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:collision_box",
+        "minecraft:damage_sensor",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:jump.static",
+        "minecraft:loot",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:type_family"
+      ],
+      "component_groups": [],
+      "families": [
+        "haunted_watcher",
+        "monster",
+        "mob"
+      ],
+      "collision_box": {
+        "width": 0.65,
+        "height": 3.8
+      },
+      "movement_capability": [
+        "minecraft:movement",
+        "minecraft:movement.basic"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.melee_attack"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": false,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:janitor_scp049_2",
+      "behavior_definition": "BP/entities/scp049_2/scp049_2 (janitor).json",
+      "client_entity_files": [
+        "RP/entity/scp049_2/scp049_2 (janitor).json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:attack",
+        "minecraft:behavior.delayed_attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [],
+      "families": [
+        "zombie",
+        "scp049",
+        "scp049_2",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.delayed_attack"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:mp5a3_bullet",
+      "behavior_definition": "BP/entities/projectile/mp5a3.json",
+      "client_entity_files": [
+        "RP/entity/projectile/mp5a3_bullet.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:break_blocks",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:despawn",
+        "minecraft:physics",
+        "minecraft:projectile",
+        "minecraft:timer",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "despawning",
+        "minecraft:exploding"
+      ],
+      "families": [
+        "bullet",
+        "projectile"
+      ],
+      "collision_box": {
+        "width": 0.01,
+        "height": 0.01
+      },
+      "movement_capability": [],
+      "attack_capability": [],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:mtf_scp049_2",
+      "behavior_definition": "BP/entities/scp049_2/scp049_2 (mtf).json",
+      "client_entity_files": [
+        "RP/entity/scp049_2/scp049_2 (mtf).json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp049_2 (mtf).json",
+        "BP/spawn_rules/scp049_2 (mtf).json"
+      ],
+      "components": [
+        "minecraft:attack",
+        "minecraft:behavior.delayed_attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "hammerdown",
+        "ntf",
+        "sne"
+      ],
+      "families": [
+        "zombie",
+        "scp049",
+        "scp049_2",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.delayed_attack"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:officer_scp049_2",
+      "behavior_definition": "BP/entities/scp049_2/scp049_2 (officer).json",
+      "client_entity_files": [
+        "RP/entity/scp049_2/scp049_2 (officer).json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp049_2 (officer).json",
+        "BP/spawn_rules/scp049_2 (officer).json"
+      ],
+      "components": [
+        "minecraft:attack",
+        "minecraft:behavior.delayed_attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "officer"
+      ],
+      "families": [
+        "zombie",
+        "scp049",
+        "scp049_2",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.delayed_attack"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scientist_scp049_2",
+      "behavior_definition": "BP/entities/scp049_2/scp049_2 (scientist).json",
+      "client_entity_files": [
+        "RP/entity/scp049_2/scp049_2 (scientist).json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp049_2 (scientist).json",
+        "BP/spawn_rules/scp049_2 (scientist).json"
+      ],
+      "components": [
+        "minecraft:attack",
+        "minecraft:behavior.delayed_attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "bb607",
+        "d1",
+        "d2",
+        "d3",
+        "kaiboi39",
+        "lc",
+        "rian"
+      ],
+      "families": [
+        "zombie",
+        "scp049",
+        "scp049_2",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.delayed_attack"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scp001_gg",
+      "behavior_definition": "BP/entities/scp/scp001_gg.json",
+      "client_entity_files": [
+        "RP/entity/scp001_gg.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:area_attack",
+        "minecraft:attack",
+        "minecraft:behavior.delayed_attack",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.restrict_open_door",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:interact",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:scale",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "despawn"
+      ],
+      "families": [
+        "scp",
+        "scp001_gg",
+        "scp001"
+      ],
+      "collision_box": {
+        "width": 1.2,
+        "height": 6.5
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:area_attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.delayed_attack"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp007",
+      "behavior_definition": "BP/entities/scp/scp007.json",
+      "client_entity_files": [
+        "RP/entity/scp007.json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp007.json",
+        "BP/spawn_rules/scp007.json"
+      ],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:behavior.avoid_mob_type",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.look_at_player",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.random_stroll",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [],
+      "families": [
+        "scp007"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scp029",
+      "behavior_definition": "BP/entities/scp/scp029.json",
+      "client_entity_files": [
+        "RP/entity/scp029.json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp029.json",
+        "BP/spawn_rules/scp029.json"
+      ],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.look_at_player",
+        "minecraft:behavior.melee_attack",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.open_door",
+        "minecraft:behavior.pickup_items",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:behavior.restrict_open_door",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:can_have_equipment",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:despawn",
+        "minecraft:equip_item",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:shareables",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "angry",
+        "calm"
+      ],
+      "families": [
+        "scp029"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:attack",
+        "minecraft:behavior.melee_attack"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scp035_scientist",
+      "behavior_definition": "BP/entities/scp/scp035_scientist.json",
+      "client_entity_files": [
+        "RP/entity/scp035_scientist.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.melee_attack",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.open_door",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:behavior.restrict_open_door",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "angry",
+        "calm"
+      ],
+      "families": [
+        "scp",
+        "scp035",
+        "monster",
+        "mob"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.melee_attack"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp035_tentacle",
+      "behavior_definition": "BP/entities/scp/scp035_tentacle.json",
+      "client_entity_files": [
+        "RP/entity/scp035_tentacle.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:attack",
+        "minecraft:behavior.delayed_attack",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.open_door",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.restrict_open_door",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "despawn",
+        "despawn_timer"
+      ],
+      "families": [
+        "scp",
+        "scp035",
+        "monster",
+        "mob"
+      ],
+      "collision_box": {
+        "width": 0.73,
+        "height": 2.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.delayed_attack"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp049",
+      "behavior_definition": "BP/entities/scp/scp049.json",
+      "client_entity_files": [
+        "RP/entity/scp049.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:attack",
+        "minecraft:behavior.delayed_attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.open_door",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:behavior.restrict_open_door",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:experience_reward",
+        "minecraft:health",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable"
+      ],
+      "component_groups": [
+        "docile",
+        "hostile"
+      ],
+      "families": [],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.delayed_attack"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp058",
+      "behavior_definition": "BP/entities/scp/scp058.json",
+      "client_entity_files": [
+        "RP/entity/scp058.json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp058.json",
+        "BP/spawn_rules/scp058.json"
+      ],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.melee_attack",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:follow_range",
+        "minecraft:hurt_on_condition",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:loot",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "big",
+        "normal"
+      ],
+      "families": [
+        "scp",
+        "scp058",
+        "mob",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.7,
+        "height": 1.4
+      },
+      "movement_capability": [
+        "minecraft:movement.basic"
+      ],
+      "attack_capability": [
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.melee_attack"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scp066",
+      "behavior_definition": "BP/entities/scp/scp066.json",
+      "client_entity_files": [
+        "RP/entity/scp066.json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp066.json",
+        "BP/spawn_rules/scp066.json"
+      ],
+      "components": [
+        "minecraft:behavior.look_at_player",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable"
+      ],
+      "component_groups": [
+        "default",
+        "earrape",
+        "earrape_timer"
+      ],
+      "families": [],
+      "collision_box": {
+        "width": 0.5,
+        "height": 0.8
+      },
+      "movement_capability": [
+        "minecraft:movement.basic"
+      ],
+      "attack_capability": [],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scp087_1",
+      "behavior_definition": "BP/entities/scp/scp087_1.json",
+      "client_entity_files": [
+        "RP/entity/scp087_1.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:attack",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.melee_attack",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.open_door",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.restrict_open_door",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [],
+      "families": [
+        "scp",
+        "scp087",
+        "scp087_1",
+        "mob",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.melee_attack"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp096",
+      "behavior_definition": "BP/entities/scp/scp096.json",
+      "client_entity_files": [
+        "RP/entity/scp096 (new)/scp096.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:annotation.break_door",
+        "minecraft:attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.look_at_player",
+        "minecraft:behavior.mount_pathing",
+        "minecraft:behavior.random_look_around",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:leashable",
+        "minecraft:movement.generic",
+        "minecraft:nameable",
+        "minecraft:navigation.climb",
+        "minecraft:physics",
+        "minecraft:pushable"
+      ],
+      "component_groups": [
+        "angry",
+        "calm",
+        "chasing_target",
+        "legacy",
+        "look_at_target_first",
+        "roaring",
+        "still_angry",
+        "triggered",
+        "with_bag",
+        "without_bag"
+      ],
+      "families": [],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.generic"
+      ],
+      "attack_capability": [
+        "minecraft:attack"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp096_legacy",
+      "behavior_definition": "BP/entities/scp/scp096legacy.json",
+      "client_entity_files": [
+        "RP/entity/scp096 (new)/scp096_legacy.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:annotation.break_door",
+        "minecraft:attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.look_at_player",
+        "minecraft:behavior.mount_pathing",
+        "minecraft:behavior.random_look_around",
+        "minecraft:breathable",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:leashable",
+        "minecraft:movement.generic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable"
+      ],
+      "component_groups": [
+        "angry",
+        "calm",
+        "chasing_target",
+        "still_angry",
+        "triggered",
+        "with_bag",
+        "without_bag"
+      ],
+      "families": [],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.generic"
+      ],
+      "attack_capability": [
+        "minecraft:attack"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp098",
+      "behavior_definition": "BP/entities/scp/scp098.json",
+      "client_entity_files": [
+        "RP/entity/scp098.json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp098.json",
+        "BP/spawn_rules/scp098.json"
+      ],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:attack",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.melee_attack",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.open_door",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "scp098:adult",
+        "scp098:baby"
+      ],
+      "families": [
+        "scp",
+        "scp087",
+        "scp098",
+        "mob",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.9,
+        "height": 0.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.melee_attack"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scp1000",
+      "behavior_definition": "BP/entities/scp/scp1000.json",
+      "client_entity_files": [
+        "RP/entity/scp1000.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.look_at_player",
+        "minecraft:behavior.random_look_around",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:leashable",
+        "minecraft:loot",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable"
+      ],
+      "component_groups": [
+        "angry",
+        "becoming_angry",
+        "no_target_but_still_angry",
+        "normal"
+      ],
+      "families": [],
+      "collision_box": {
+        "width": 0.8,
+        "height": 2.9
+      },
+      "movement_capability": [
+        "minecraft:movement",
+        "minecraft:movement.basic"
+      ],
+      "attack_capability": [
+        "minecraft:attack"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp106",
+      "behavior_definition": "BP/entities/scp/scp106.json",
+      "client_entity_files": [
+        "RP/entity/scp106.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.look_at_entity",
+        "minecraft:behavior.look_at_player",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:experience_reward",
+        "minecraft:fall_damage",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:trail",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "can_send_pd",
+        "melee",
+        "send_pd",
+        "spawning"
+      ],
+      "families": [
+        "mob",
+        "monster",
+        "scp",
+        "scp106"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp131",
+      "behavior_definition": "BP/entities/scp/scp131.json",
+      "client_entity_files": [
+        "RP/entity/scp131.json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp131.json",
+        "BP/spawn_rules/scp131.json"
+      ],
+      "components": [
+        "minecraft:behavior.look_at_entity",
+        "minecraft:behavior.look_at_player",
+        "minecraft:behavior.random_stroll",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:loot",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:tameable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "blue",
+        "darkside",
+        "lime",
+        "minecraft:in_caravan",
+        "orange",
+        "pink",
+        "tamed",
+        "white",
+        "yellow"
+      ],
+      "families": [
+        "scp131",
+        "friendly"
+      ],
+      "collision_box": {
+        "width": 0.5,
+        "height": 0.7
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scp191",
+      "behavior_definition": "BP/entities/scp/scp191.json",
+      "client_entity_files": [
+        "RP/entity/scp191.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:behavior.float",
+        "minecraft:behavior.look_at_player",
+        "minecraft:behavior.open_door",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.restrict_open_door",
+        "minecraft:behavior.stay_while_sitting",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:experience_reward",
+        "minecraft:healable",
+        "minecraft:health",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:tameable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "normal_move",
+        "stay",
+        "tamed"
+      ],
+      "families": [
+        "scp191"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic"
+      ],
+      "attack_capability": [],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp280",
+      "behavior_definition": "BP/entities/scp/scp280.json",
+      "client_entity_files": [
+        "RP/entity/scp280.json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp087_1.json",
+        "BP/spawn_rules/scp280.json",
+        "BP/spawn_rules/scp087_1.json",
+        "BP/spawn_rules/scp280.json"
+      ],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:attack",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.melee_attack",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.open_door",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:behavior.restrict_open_door",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "dark",
+        "light"
+      ],
+      "families": [
+        "scp",
+        "scp280",
+        "mob",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.melee_attack"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scp3199",
+      "behavior_definition": "BP/entities/scp/scp3199.json",
+      "client_entity_files": [
+        "RP/entity/scp3199.json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp3199.json",
+        "BP/spawn_rules/scp3199.json"
+      ],
+      "components": [
+        "minecraft:attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.move_to_land",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:despawn",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "adult",
+        "angry_injected",
+        "baby",
+        "default_variant",
+        "dont_move",
+        "egg_spit_timer",
+        "egg_spit_timer_stopped",
+        "egg_spitting",
+        "injected",
+        "move"
+      ],
+      "families": [
+        "scp3199",
+        "scp",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.8,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scp3199_egg",
+      "behavior_definition": "BP/entities/scp/scp3199_egg.json",
+      "client_entity_files": [
+        "RP/entity/scp3199_egg.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:experience_reward",
+        "minecraft:health",
+        "minecraft:interact",
+        "minecraft:knockback_resistance",
+        "minecraft:nameable",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:timer",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "hatch",
+        "pick"
+      ],
+      "families": [
+        "scp3199",
+        "scp",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.3,
+        "height": 0.3
+      },
+      "movement_capability": [],
+      "attack_capability": [],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp3998",
+      "behavior_definition": "BP/entities/scp/scp3998.json",
+      "client_entity_files": [
+        "RP/entity/scp3998.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:fire_immune",
+        "minecraft:health",
+        "minecraft:knockback_resistance",
+        "minecraft:nameable",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "daytime",
+        "night"
+      ],
+      "families": [
+        "inanimate",
+        "scp3998"
+      ],
+      "collision_box": {
+        "width": 0.5,
+        "height": 1.9
+      },
+      "movement_capability": [],
+      "attack_capability": [],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp439",
+      "behavior_definition": "BP/entities/scp/scp439.json",
+      "client_entity_files": [
+        "RP/entity/scp439.json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp439.json",
+        "BP/spawn_rules/scp439.json"
+      ],
+      "components": [
+        "minecraft:attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.melee_attack",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [],
+      "families": [
+        "scp439",
+        "scp"
+      ],
+      "collision_box": {
+        "width": 0.56,
+        "height": 0.46
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.melee_attack"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scp457",
+      "behavior_definition": "BP/entities/scp/scp457.json",
+      "client_entity_files": [
+        "RP/entity/scp457.json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp457.json",
+        "BP/spawn_rules/scp457.json"
+      ],
+      "components": [
+        "breakable_blocks",
+        "minecraft:annotation.break_door",
+        "minecraft:attack",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.look_at_player",
+        "minecraft:behavior.melee_box_attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_stroll",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:fire_immune",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:trail",
+        "minecraft:type_family"
+      ],
+      "component_groups": [],
+      "families": [
+        "scp",
+        "scp457",
+        "mob",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.melee_box_attack"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scp4959",
+      "behavior_definition": "BP/entities/scp/scp4959.json",
+      "client_entity_files": [
+        "RP/entity/scp4959.json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp4959.json",
+        "BP/spawn_rules/scp4959.json"
+      ],
+      "components": [
+        "minecraft:annotation.break_door",
+        "minecraft:attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.melee_attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:loot",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [],
+      "families": [
+        "scp",
+        "scp4959",
+        "monster",
+        "mob"
+      ],
+      "collision_box": {
+        "width": 0.9,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.melee_attack"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scp5167",
+      "behavior_definition": "BP/entities/scp5167/scp5167.json",
+      "client_entity_files": [
+        "RP/entity/scp5167/scp5167.json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp5167.json",
+        "BP/spawn_rules/scp5167.json"
+      ],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.open_door",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:behavior.restrict_open_door",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:loot",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "explode",
+        "mad",
+        "normal_attack",
+        "tiny"
+      ],
+      "families": [
+        "scp",
+        "scp5167",
+        "sus",
+        "mob",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.6
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scp5167_boss",
+      "behavior_definition": "BP/entities/scp5167/scp5167_boss.json",
+      "client_entity_files": [
+        "RP/entity/scp5167/scp5167_boss.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.open_door",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:behavior.restrict_open_door",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:jump.static",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "angry",
+        "dead",
+        "normal",
+        "stronger"
+      ],
+      "families": [
+        "scp",
+        "scp5167",
+        "sus",
+        "mob",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.9,
+        "height": 2.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic"
+      ],
+      "attack_capability": [
+        "minecraft:behavior.nearest_attackable_target"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp5167_boss_dead",
+      "behavior_definition": "BP/entities/scp5167/scp5167_boss_dead.json",
+      "client_entity_files": [
+        "RP/entity/scp5167/scp5167_boss_dead.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:collision_box",
+        "minecraft:damage_sensor",
+        "minecraft:experience_reward",
+        "minecraft:health",
+        "minecraft:loot",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "despawn",
+        "despawn_timer"
+      ],
+      "families": [
+        "dead_body"
+      ],
+      "collision_box": {
+        "width": 0.9,
+        "height": 2.9
+      },
+      "movement_capability": [],
+      "attack_capability": [],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp5167_dragon",
+      "behavior_definition": "BP/entities/scp5167/scp5167_dragon.json",
+      "client_entity_files": [
+        "RP/entity/scp5167/scp5167_dragon.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:behavior.float",
+        "minecraft:behavior.float_wander",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.mount_pathing",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.restrict_open_door",
+        "minecraft:behavior.summon_entity",
+        "minecraft:boss",
+        "minecraft:can_fly",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:fire_immune",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:navigation.float",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "angry",
+        "dead",
+        "normal",
+        "stronger"
+      ],
+      "families": [
+        "scp",
+        "scp5167",
+        "sus",
+        "mob",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 3.5,
+        "height": 3.8
+      },
+      "movement_capability": [],
+      "attack_capability": [
+        "minecraft:behavior.nearest_attackable_target"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp5167_dragon_dead",
+      "behavior_definition": "BP/entities/scp5167/scp5167_dragon_dead.json",
+      "client_entity_files": [
+        "RP/entity/scp5167/scp5167_dragon_dead.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:collision_box",
+        "minecraft:damage_sensor",
+        "minecraft:experience_reward",
+        "minecraft:health",
+        "minecraft:loot",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "despawn",
+        "despawn_timer"
+      ],
+      "families": [
+        "dead_body"
+      ],
+      "collision_box": {
+        "width": 0.9,
+        "height": 2.9
+      },
+      "movement_capability": [],
+      "attack_capability": [],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp5167_dragon_shot",
+      "behavior_definition": "BP/entities/projectile/scp5167_dragon_shot.json",
+      "client_entity_files": [
+        "RP/entity/projectile/scp5167_dragon_shot.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:break_blocks",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:despawn",
+        "minecraft:mob_effect",
+        "minecraft:physics",
+        "minecraft:projectile",
+        "minecraft:spawn_entity",
+        "minecraft:timer",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "despawning",
+        "minecraft:exploding"
+      ],
+      "families": [
+        "bullet",
+        "projectile",
+        "sus"
+      ],
+      "collision_box": {
+        "width": 0.05,
+        "height": 0.05
+      },
+      "movement_capability": [],
+      "attack_capability": [],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp5167_dragon_shot_fire",
+      "behavior_definition": "BP/entities/projectile/scp5167_dragon_shot_fire.json",
+      "client_entity_files": [
+        "RP/entity/projectile/scp5167_dragon_shot_fire.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:break_blocks",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:despawn",
+        "minecraft:mob_effect",
+        "minecraft:physics",
+        "minecraft:projectile",
+        "minecraft:spawn_entity",
+        "minecraft:timer",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "despawning",
+        "minecraft:exploding"
+      ],
+      "families": [
+        "bullet",
+        "projectile",
+        "sus"
+      ],
+      "collision_box": {
+        "width": 0.05,
+        "height": 0.05
+      },
+      "movement_capability": [],
+      "attack_capability": [],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp5167_dragon_son",
+      "behavior_definition": "BP/entities/scp5167/scp5167_dragon_son.json",
+      "client_entity_files": [
+        "RP/entity/scp5167/scp5167_dragon_son.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:area_attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.float_wander",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.mount_pathing",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.ranged_attack",
+        "minecraft:can_fly",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement",
+        "minecraft:navigation.float",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:shooter",
+        "minecraft:type_family"
+      ],
+      "component_groups": [],
+      "families": [
+        "scp",
+        "scp5167",
+        "sus",
+        "mob",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 2.3,
+        "height": 2.7
+      },
+      "movement_capability": [
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:behavior.ranged_attack",
+        "minecraft:area_attack",
+        "minecraft:behavior.nearest_attackable_target"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp5167_dragon_son_shot",
+      "behavior_definition": "BP/entities/projectile/scp5167_dragon_son_shot.json",
+      "client_entity_files": [
+        "RP/entity/projectile/scp5167_dragon_son_shot.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:break_blocks",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:despawn",
+        "minecraft:physics",
+        "minecraft:projectile",
+        "minecraft:spawn_entity",
+        "minecraft:timer",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "despawning",
+        "transform",
+        "transform_solidier",
+        "transform_solidier_explode"
+      ],
+      "families": [
+        "bullet",
+        "projectile",
+        "sus"
+      ],
+      "collision_box": {
+        "width": 0.02,
+        "height": 0.02
+      },
+      "movement_capability": [],
+      "attack_capability": [],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp5167_soldier",
+      "behavior_definition": "BP/entities/scp5167/scp5167_soldier.json",
+      "client_entity_files": [
+        "RP/entity/scp5167/scp5167_soldier.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.open_door",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:behavior.restrict_open_door",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:fire_immune",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:loot",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "angry",
+        "calm",
+        "minecraft:exploding",
+        "ranged",
+        "run",
+        "tamed"
+      ],
+      "families": [
+        "scp",
+        "scp5167",
+        "sus",
+        "mob",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp5535",
+      "behavior_definition": "BP/entities/scp/scp5535.json",
+      "client_entity_files": [
+        "RP/entity/scp5535.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.melee_attack",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.open_door",
+        "minecraft:behavior.restrict_open_door",
+        "minecraft:breathable",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:physics",
+        "minecraft:pushable"
+      ],
+      "component_groups": [
+        "default",
+        "mark_variant0",
+        "mark_variant1",
+        "melee",
+        "vibe",
+        "vibe_attack"
+      ],
+      "families": [],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.melee_attack"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp577",
+      "behavior_definition": "BP/entities/scp/scp577.json",
+      "client_entity_files": [
+        "RP/entity/scp577.json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp577.json",
+        "BP/spawn_rules/scp577.json"
+      ],
+      "components": [
+        "minecraft:annotation.break_door",
+        "minecraft:attack",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.look_at_player",
+        "minecraft:behavior.melee_attack",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_stroll",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "angry",
+        "calm",
+        "spawn_explosion"
+      ],
+      "families": [
+        "scp",
+        "scp577",
+        "mob",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.4,
+        "height": 0.7
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.melee_attack",
+        "minecraft:behavior.nearest_attackable_target"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scp577_explode",
+      "behavior_definition": "BP/entities/scp/scp577_explode.json",
+      "client_entity_files": [],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:collision_box",
+        "minecraft:damage_sensor",
+        "minecraft:explode",
+        "minecraft:health",
+        "minecraft:knockback_resistance",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [],
+      "families": [
+        "inanimate",
+        "scp577"
+      ],
+      "collision_box": {
+        "width": 0.1,
+        "height": 0.1
+      },
+      "movement_capability": [],
+      "attack_capability": [],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": false,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp610",
+      "behavior_definition": "BP/entities/scp610/scp610.json",
+      "client_entity_files": [
+        "RP/entity/scp610/scp610.json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp610.json",
+        "BP/spawn_rules/scp610.json"
+      ],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.open_door",
+        "minecraft:behavior.restrict_open_door",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:hurt_on_condition",
+        "minecraft:jump.static",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "angry",
+        "calm",
+        "death",
+        "type1",
+        "type2",
+        "type3",
+        "type4"
+      ],
+      "families": [
+        "scp",
+        "scp610",
+        "mob",
+        "monster"
+      ],
+      "collision_box": {},
+      "movement_capability": [
+        "minecraft:movement.basic"
+      ],
+      "attack_capability": [
+        "minecraft:behavior.nearest_attackable_target"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scp610_dead",
+      "behavior_definition": "BP/entities/scp610/scp610_dead.json",
+      "client_entity_files": [
+        "RP/entity/scp610/scp610_dead.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:collision_box",
+        "minecraft:experience_reward",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:knockback_resistance",
+        "minecraft:loot",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "respawn",
+        "respawn_timer"
+      ],
+      "families": [
+        "monster",
+        "scp610",
+        "scp",
+        "mob",
+        "dead"
+      ],
+      "collision_box": {
+        "width": 0.7,
+        "height": 0.9
+      },
+      "movement_capability": [],
+      "attack_capability": [],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp682",
+      "behavior_definition": "BP/entities/scp/scp682.json",
+      "client_entity_files": [
+        "RP/entity/scp682.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:area_attack",
+        "minecraft:behavior.delayed_attack",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:behavior.restrict_open_door",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:fire_immune",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:interact",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family",
+        "minecraft:underwater_movement"
+      ],
+      "component_groups": [
+        "despawn",
+        "size0",
+        "size1",
+        "size2",
+        "size3",
+        "size4",
+        "size5"
+      ],
+      "families": [
+        "scp",
+        "scp682",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.9,
+        "height": 1.1
+      },
+      "movement_capability": [
+        "minecraft:movement.basic"
+      ],
+      "attack_capability": [
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.delayed_attack",
+        "minecraft:area_attack"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp734",
+      "behavior_definition": "BP/entities/scp/scp734.json",
+      "client_entity_files": [
+        "RP/entity/scp734.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:annotation.break_door",
+        "minecraft:attack",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.look_at_player",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.random_stroll",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:mob_effect",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [],
+      "families": [
+        "scp",
+        "scp457",
+        "mob",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.5,
+        "height": 1.0
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp939",
+      "behavior_definition": "BP/entities/scp/scp939.json",
+      "client_entity_files": [
+        "RP/entity/scp939.json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp939.json",
+        "BP/spawn_rules/scp939.json"
+      ],
+      "components": [
+        "minecraft:annotation.break_door",
+        "minecraft:attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.melee_attack",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:loot",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "angry",
+        "calm",
+        "giant",
+        "scp939:adult",
+        "scp939:baby"
+      ],
+      "families": [
+        "scp",
+        "scp939",
+        "monster",
+        "mob"
+      ],
+      "collision_box": {
+        "width": 0.9,
+        "height": 1.2
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:attack",
+        "minecraft:behavior.melee_attack"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    },
+    {
+      "identifier": "three_realms:scp939_dog",
+      "behavior_definition": "BP/entities/scp/scp939_dog.json",
+      "client_entity_files": [
+        "RP/entity/scp939_dog.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:annotation.break_door",
+        "minecraft:attack",
+        "minecraft:behavior.beg",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.look_at_player",
+        "minecraft:behavior.melee_attack",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:leashable",
+        "minecraft:loot",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "scp939:adult",
+        "scp939:baby",
+        "tamed",
+        "wild"
+      ],
+      "families": [
+        "dog",
+        "doggo",
+        "mob"
+      ],
+      "collision_box": {
+        "width": 0.9,
+        "height": 1.2
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.melee_attack"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp966",
+      "behavior_definition": "BP/entities/scp/scp966.json",
+      "client_entity_files": [
+        "RP/entity/scp966.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:annotation.open_door",
+        "minecraft:attack",
+        "minecraft:behavior.float",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.look_at_player",
+        "minecraft:behavior.melee_attack",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.open_door",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:behavior.restrict_open_door",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:loot",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "invisible",
+        "visible"
+      ],
+      "families": [
+        "scp",
+        "scp966",
+        "monster",
+        "mob"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.melee_attack"
+      ],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp999",
+      "behavior_definition": "BP/entities/scp/scp999.json",
+      "client_entity_files": [
+        "RP/entity/scp999.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:behavior.look_at_player",
+        "minecraft:behavior.move_indoors",
+        "minecraft:behavior.move_towards_restriction",
+        "minecraft:behavior.random_stroll",
+        "minecraft:behavior.stay_while_sitting",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:experience_reward",
+        "minecraft:healable",
+        "minecraft:health",
+        "minecraft:is_hidden_when_invisible",
+        "minecraft:jump.static",
+        "minecraft:mob_effect",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:tameable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "tamed"
+      ],
+      "families": [
+        "scp999"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:scp_redacted",
+      "behavior_definition": "BP/entities/scp/scp_redacted.json",
+      "client_entity_files": [
+        "RP/entity/scp_redacted.json"
+      ],
+      "spawn_rule_files": [],
+      "components": [
+        "minecraft:collision_box",
+        "minecraft:experience_reward",
+        "minecraft:knockback_resistance",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "spawning",
+        "stage1_died",
+        "stage1_humanoid",
+        "stage2_monster"
+      ],
+      "families": [
+        "inanimate"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [],
+      "attack_capability": [],
+      "current_spawn_mechanism": "manual/function/unknown",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": false
+      }
+    },
+    {
+      "identifier": "three_realms:tro_scp049_2",
+      "behavior_definition": "BP/entities/scp049_2/scp049_2 (tro).json",
+      "client_entity_files": [
+        "RP/entity/scp049_2/scp049_2 (tro).json"
+      ],
+      "spawn_rule_files": [
+        "BP/spawn_rules/scp049_2 (tro).json",
+        "BP/spawn_rules/scp049_2 (tro).json"
+      ],
+      "components": [
+        "minecraft:attack",
+        "minecraft:behavior.delayed_attack",
+        "minecraft:behavior.hurt_by_target",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.random_look_around",
+        "minecraft:behavior.random_stroll",
+        "minecraft:breathable",
+        "minecraft:can_climb",
+        "minecraft:collision_box",
+        "minecraft:conditional_bandwidth_optimization",
+        "minecraft:damage_sensor",
+        "minecraft:despawn",
+        "minecraft:experience_reward",
+        "minecraft:follow_range",
+        "minecraft:health",
+        "minecraft:hurt_on_condition",
+        "minecraft:jump.static",
+        "minecraft:knockback_resistance",
+        "minecraft:movement",
+        "minecraft:movement.basic",
+        "minecraft:nameable",
+        "minecraft:navigation.walk",
+        "minecraft:physics",
+        "minecraft:pushable",
+        "minecraft:type_family"
+      ],
+      "component_groups": [
+        "tro"
+      ],
+      "families": [
+        "zombie",
+        "scp049",
+        "scp049_2",
+        "monster"
+      ],
+      "collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "movement_capability": [
+        "minecraft:movement.basic",
+        "minecraft:movement"
+      ],
+      "attack_capability": [
+        "minecraft:attack",
+        "minecraft:behavior.nearest_attackable_target",
+        "minecraft:behavior.delayed_attack"
+      ],
+      "current_spawn_mechanism": "spawn_rule",
+      "dependencies": {
+        "behavior_json": true,
+        "client_json": true,
+        "spawn_rule": true
+      }
+    }
+  ]
+}
