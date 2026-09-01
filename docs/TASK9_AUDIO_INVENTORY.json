@@ -1,0 +1,259 @@
+{
+  "audio_files": [
+    {
+      "path": "RP/sounds/doors/door1_close1.ogg",
+      "bytes": 23415,
+      "format": "ogg",
+      "duration_seconds": 2.940952,
+      "sample_rates": [
+        "44100"
+      ],
+      "channels": [
+        2
+      ]
+    },
+    {
+      "path": "RP/sounds/doors/door1_close2.ogg",
+      "bytes": 23030,
+      "format": "ogg",
+      "duration_seconds": 2.81542,
+      "sample_rates": [
+        "44100"
+      ],
+      "channels": [
+        2
+      ]
+    },
+    {
+      "path": "RP/sounds/doors/door1_close3.ogg",
+      "bytes": 23608,
+      "format": "ogg",
+      "duration_seconds": 2.867664,
+      "sample_rates": [
+        "44100"
+      ],
+      "channels": [
+        2
+      ]
+    },
+    {
+      "path": "RP/sounds/doors/door1_open1.ogg",
+      "bytes": 18983,
+      "format": "ogg",
+      "duration_seconds": 2.247619,
+      "sample_rates": [
+        "44100"
+      ],
+      "channels": [
+        2
+      ]
+    },
+    {
+      "path": "RP/sounds/doors/door1_open2.ogg",
+      "bytes": 19128,
+      "format": "ogg",
+      "duration_seconds": 2.247619,
+      "sample_rates": [
+        "44100"
+      ],
+      "channels": [
+        2
+      ]
+    },
+    {
+      "path": "RP/sounds/doors/door1_open3.ogg",
+      "bytes": 19534,
+      "format": "ogg",
+      "duration_seconds": 2.293855,
+      "sample_rates": [
+        "44100"
+      ],
+      "channels": [
+        2
+      ]
+    },
+    {
+      "path": "RP/sounds/haunted_activate.ogg",
+      "bytes": 6344,
+      "format": "ogg",
+      "duration_seconds": 0.626939,
+      "sample_rates": [
+        "22050"
+      ],
+      "channels": [
+        1
+      ]
+    },
+    {
+      "path": "RP/sounds/haunted_teleport.ogg",
+      "bytes": 14131,
+      "format": "ogg",
+      "duration_seconds": 3.250023,
+      "sample_rates": [
+        "22050"
+      ],
+      "channels": [
+        1
+      ]
+    }
+  ],
+  "audio_count": 8,
+  "sound_definitions_count": 4,
+  "sound_definitions": [
+    {
+      "identifier": "three_realms.haunted_activate",
+      "raw": {
+        "category": "ambient",
+        "sounds": [
+          {
+            "name": "sounds/haunted_activate",
+            "volume": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "identifier": "three_realms.haunted_teleport",
+      "raw": {
+        "category": "ambient",
+        "sounds": [
+          {
+            "name": "sounds/haunted_teleport",
+            "volume": 0.75
+          }
+        ]
+      }
+    },
+    {
+      "identifier": "three_realms.scpdt.door1.close",
+      "raw": {
+        "category": "neutral",
+        "max_distance": 9.0,
+        "sounds": [
+          {
+            "name": "sounds/doors/door1_close1"
+          },
+          {
+            "name": "sounds/doors/door1_close2"
+          },
+          {
+            "name": "sounds/doors/door1_close3"
+          }
+        ]
+      }
+    },
+    {
+      "identifier": "three_realms.scpdt.door1.open",
+      "raw": {
+        "category": "neutral",
+        "max_distance": 9.0,
+        "sounds": [
+          {
+            "name": "sounds/doors/door1_open1"
+          },
+          {
+            "name": "sounds/doors/door1_open2"
+          },
+          {
+            "name": "sounds/doors/door1_open3"
+          }
+        ]
+      }
+    }
+  ],
+  "reference_snippets": {
+    "BP/scripts/main.js": [
+      "playSound(dimension, soundId, location, options) {",
+      "playSound(soundId, location, options);",
+      "sound ${soundId} failed: ${String(error)}`);",
+      "playSound(target, \"three_realms.haunted_teleport\", destination, { volume: 0.75, pitch: 1 });",
+      "playSound(dimension, \"three_realms.haunted_activate\", coreLocation(origin), { volume: 0.8, pitch: 0.8 });"
+    ],
+    "BP/scripts/main.ts": [
+      "playSound(dimension: Dimension, soundId: string, location: Vector3, options: any): void { try { dimension.playSound(soundId, location, options); } catch (error) { consol",
+      "sound ${soundId} failed: ${String(error)}`); } }",
+      "playSound(target, \"three_realms.haunted_teleport\", destination, { volume: 0.75, pitch: 1 });",
+      "playSound(dimension, \"three_realms.haunted_activate\", coreLocation(origin), { volume: 0.8, pitch: 0.8 });"
+    ],
+    "BP/blocks/door/door1_v2.json": [
+      "Sound\": {",
+      "Sound\": {"
+    ],
+    "BP/entities/scp/scp577.json": [
+      "sound\": \"plop\","
+    ],
+    "BP/entities/scp/scp049.json": [
+      "sounds\": \"scp049_docile\","
+    ],
+    "BP/entities/scp/scp035_scientist.json": [
+      "sound_event\": \"cast.spell\",",
+      "sound_event\": \"prepare.attack\""
+    ],
+    "BP/entities/scp/scp3199_egg.json": [
+      "sound\": \"plop\",",
+      "sound\": \"remedy\","
+    ],
+    "BP/entities/scp/scp096legacy.json": [
+      "sounds\": \"armor.equip_leather\",",
+      "sounds\": \"armor.equip_leather\","
+    ],
+    "BP/entities/scp/scp096.json": [
+      "sounds\": \"armor.equip_leather\",",
+      "sounds\": \"armor.equip_leather\","
+    ],
+    "BP/entities/projectile/mp5a3.json": [
+      "sound\": \"gun.hit\","
+    ],
+    "BP/entities/projectile/scp5167_dragon_son_shot.json": [
+      "sound\": \"purr\",",
+      "sound\": \"explode\",",
+      "sound\": \"bow.hit\","
+    ],
+    "BP/entities/projectile/scp5167_dragon_shot.json": [
+      "sound\": \"purr\","
+    ],
+    "BP/entities/projectile/scp5167_dragon_shot_fire.json": [
+      "sound\": \"purr\","
+    ],
+    "BP/entities/scp5167/scp5167_dragon.json": [
+      "sound_event\": \"prepare.summon\""
+    ],
+    "RP/blocks.json": [
+      "sound\": \"stone\" },",
+      "sound\": \"glass\" }"
+    ],
+    "RP/manifest.json": [
+      "sounds, and client resources.\","
+    ],
+    "RP/sounds/sound_definitions.json": [
+      "sound_definitions\": {",
+      "sounds\": [",
+      "sounds/haunted_activate\",",
+      "sounds\": [",
+      "sounds/haunted_teleport\",",
+      "sounds\": [",
+      "sounds/doors/door1_close1\"",
+      "sounds/doors/door1_close2\"",
+      "sounds/doors/door1_close3\"",
+      "sounds\": [",
+      "sounds/doors/door1_open1\"",
+      "sounds/doors/door1_open2\"",
+      "sounds/doors/door1_open3\""
+    ],
+    "RP/animations/scp/dt_scp096_new.animation.json": [
+      "sound_effects\": {"
+    ],
+    "RP/animations/scp/dt_scp106.animation.json": [
+      "sound_effects\": {}"
+    ],
+    "RP/animations/scp/dt_scp3199.animation.json": [
+      "sound_effects\": {"
+    ],
+    "RP/animation_controllers/scp/scp066.json": [
+      "sound\": \"query.mark_variant == 1\"",
+      "sound\": {"
+    ]
+  },
+  "duplicate_hash_groups": [],
+  "missing_definition_paths": []
+}

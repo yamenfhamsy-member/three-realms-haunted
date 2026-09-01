@@ -6,5 +6,7 @@
 # Mob intent: three_realms:scp966
 # Anchor-relative spawn point: (10, 1, 6)
 # Encounter policy: one mob max inside radius 24 at this anchor; no per-tick loop.
+# Audio policy: one short, quiet existing door cue before the guarded summon; no loop.
+execute positioned ~0 ~0 ~0 unless entity @e[type=three_realms:scp966,r=24] run playsound three_realms.scpdt.door1.close @a ~ ~ ~ 0.12 0.58 0.02
 
 execute positioned ~10 ~1 ~6 unless entity @e[type=three_realms:scp966,r=24] run summon three_realms:scp966 ~ ~ ~

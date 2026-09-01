@@ -1,0 +1,46 @@
+{
+  "audio_assets_added": [],
+  "sound_definitions_modified": false,
+  "reused_definitions": [
+    "three_realms.scpdt.door1.close"
+  ],
+  "portal_definitions_preserved": [
+    "three_realms.haunted_activate",
+    "three_realms.haunted_teleport",
+    "three_realms.scpdt.door1.close",
+    "three_realms.scpdt.door1.open"
+  ],
+  "encounter_cues": {
+    "abandoned_outskirts": {
+      "sound": "three_realms.scpdt.door1.close @a ~ ~ ~ 0.18 0.65 0.02",
+      "max_per_invocation": 1,
+      "loop": false
+    },
+    "cemetery_district": {
+      "sound": "three_realms.scpdt.door1.close @a ~ ~ ~ 0.14 0.55 0.02",
+      "max_per_invocation": 1,
+      "loop": false
+    },
+    "abandoned_hospital": {
+      "sound": "three_realms.scpdt.door1.close @a ~ ~ ~ 0.16 0.60 0.02",
+      "max_per_invocation": 1,
+      "loop": false
+    },
+    "cursed_village": {
+      "sound": "three_realms.scpdt.door1.close @a ~ ~ ~ 0.12 0.58 0.02",
+      "max_per_invocation": 1,
+      "loop": false
+    },
+    "old_laboratory": {
+      "sound": "three_realms.scpdt.door1.close @a ~ ~ ~ 0.12 0.62 0.02",
+      "max_per_invocation": 1,
+      "loop": false
+    }
+  },
+  "silent_regions": [
+    "Dead Forest",
+    "Crypt Depths",
+    "Nightmare Zone"
+  ],
+  "runtime": "NOT TESTED \u2014 ENVIRONMENT LIMITATION"
+}
