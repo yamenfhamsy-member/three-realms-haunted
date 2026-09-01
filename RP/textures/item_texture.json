@@ -26,6 +26,26 @@
       "textures": [
         "textures/bomd/night_lich/items/ancient_anima"
       ]
+    },
+    "three_realms:arcane_blade": {
+      "textures": [
+        "textures/three_realms/armor_weapons/arcane_blade"
+      ]
+    },
+    "three_realms:fire_blade": {
+      "textures": [
+        "textures/three_realms/armor_weapons/fire_blade"
+      ]
+    },
+    "three_realms:frost_blade": {
+      "textures": [
+        "textures/three_realms/armor_weapons/frost_blade"
+      ]
+    },
+    "three_realms:hexblade": {
+      "textures": [
+        "textures/three_realms/armor_weapons/hexblade"
+      ]
     }
   }
 }
