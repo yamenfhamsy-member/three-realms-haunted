@@ -4,7 +4,7 @@
     "controller.render.three_realms.lady_of_the_crypt": {
       "geometry": "geometry.three_realms.lady_of_the_crypt",
       "materials": [
-        { "*": "entity_alphablend" }
+        { "*": "Material.default" }
       ],
       "textures": [
         "textures/entity/three_realms/lady_of_the_crypt"

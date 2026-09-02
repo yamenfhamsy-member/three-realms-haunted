@@ -3,10 +3,7 @@
   "render_controllers": {
     "controller.render.three_realms.the_nightmare": {
       "geometry": "geometry.three_realms.the_nightmare",
-      "materials": [
-        {
-          "*": "entity_alphatest"
-        }
+      "materials": [{ "*": "Material.default" }
       ],
       "textures": [
         "textures/entity/three_realms/the_nightmare"

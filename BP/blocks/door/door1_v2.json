@@ -39,7 +39,7 @@
     },
     "components": {
       "minecraft:geometry": {
-        "identifier": "geometry.three_realms.dt_sliding_door",
+        "identifier": "geometry.dt_sliding_door",
         "bone_visibility": {
           "bottom_step_0": "q.block_state('three_realms:is_bottom_part') && q.block_state('three_realms:step_major') == 0 && q.block_state('three_realms:step_minor') == 0",
           "bottom_step_1": "q.block_state('three_realms:is_bottom_part') && q.block_state('three_realms:step_major') == 0 && q.block_state('three_realms:step_minor') == 1",
@@ -76,7 +76,7 @@
         }
       },
       "minecraft:item_visual": {
-        "geometry": "geometry.three_realms.dt_sliding_door_item_visual",
+        "geometry": "geometry.dt_sliding_door_item_visual",
         "material_instances": {
           "*": {
             "texture": "dt_door1",

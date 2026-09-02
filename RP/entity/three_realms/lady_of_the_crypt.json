@@ -4,12 +4,14 @@
     "description": {
       "identifier": "three_realms:lady_of_the_crypt",
       "materials": {
-        "default": "entity_alphablend"
+        "default": "entity"
       },
       "textures": {
         "default": "textures/entity/three_realms/lady_of_the_crypt"
       },
-      "geometry": "geometry.three_realms.lady_of_the_crypt",
+      "geometry": {
+        "default": "geometry.three_realms.lady_of_the_crypt"
+      },
       "render_controllers": [
         "controller.render.three_realms.lady_of_the_crypt"
       ],
