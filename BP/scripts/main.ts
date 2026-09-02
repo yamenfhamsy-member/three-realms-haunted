@@ -1,4 +1,4 @@
-import { world, system, Player, BlockPermutation, Dimension, Vector3, StartupEvent } from "@minecraft/server";
+import { world, system, Player, BlockPermutation, Dimension, Vector3 } from "@minecraft/server";
 
 const PORTAL_DIMENSION_ID = "three_realms:haunted";
 const OVERWORLD_DIMENSION_ID = "minecraft:overworld";
@@ -23,7 +23,9 @@ type PortalState = "INACTIVE" | "ACTIVATING" | "CHARGING" | "OPENING" | "ACTIVE"
 interface PortalRecord { origin: Vector3; dimensionId: string; state: PortalState; changedAt: number; }
 const portals = new Map<string, PortalRecord>();
 const cooldowns = new Map<string, number>();
-let customDimensionReady = false;
+// Bedrock 1.26.0 / @minecraft/server 2.5.0 has no DimensionRegistry.
+// Keep the portal script loadable; custom-dimension setup is unavailable at this baseline.
+const customDimensionReady = false;
 let returnGatePromise: Promise<void> | undefined;
 
 function portalKey(dimensionId: string, origin: Vector3): string { return `${dimensionId}:${Math.floor(origin.x)},${Math.floor(origin.y)},${Math.floor(origin.z)}`; }
@@ -116,7 +118,6 @@ async function ensureReturnGate(): Promise<void> {
   return returnGatePromise;
 }
 
-system.beforeEvents.startup.subscribe((event: StartupEvent) => { try { event.dimensionRegistry.registerCustomDimension(PORTAL_DIMENSION_ID); customDimensionReady = true; } catch (error) { console.warn(`[three_realms] custom dimension registration failed: ${String(error)}`); } });
 world.afterEvents.worldLoad.subscribe(() => { if (customDimensionReady) void ensureReturnGate(); });
 world.afterEvents.itemStartUseOn.subscribe((event) => { const player = event.source; const item = event.itemStack; if (!(player instanceof Player) || !item || item.typeId !== IGNITER_ID) return; const origin = findPortalOrigin(event.block.dimension, event.block.location); if (!origin) { notify(player, "§7The Soul Igniter needs a complete Haunted Gate frame nearby."); return; } activatePortal(player, event.block.dimension, origin); });
 

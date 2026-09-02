@@ -2,11 +2,11 @@
   "format_version": "1.10.0",
   "render_controllers": {
     "controller.render.three_realms.morgue_warden": {
-      "geometry": "geometry.three_realms.morgue_warden",
+      "geometry": "Geometry.default",
       "materials": [{ "*": "Material.default" }
       ],
       "textures": [
-        "textures/entity/three_realms/morgue_warden"
+        "Texture.default"
       ]
     }
   }

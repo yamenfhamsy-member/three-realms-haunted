@@ -21,7 +21,9 @@ const RETURN_GATE_AREA_ID = "three_realms:haunted_return_gate";
 
 const portals = new Map();
 const cooldowns = new Map();
-let customDimensionReady = false;
+// Bedrock 1.26.0 / @minecraft/server 2.5.0 has no DimensionRegistry.
+// Keep the portal script loadable; custom-dimension setup is unavailable at this baseline.
+const customDimensionReady = false;
 let returnGatePromise;
 
 function portalKey(dimensionId, origin) {
@@ -277,15 +279,6 @@ async function ensureReturnGate() {
   });
   return returnGatePromise;
 }
-
-system.beforeEvents.startup.subscribe((event) => {
-  try {
-    event.dimensionRegistry.registerCustomDimension(PORTAL_DIMENSION_ID);
-    customDimensionReady = true;
-  } catch (error) {
-    console.warn(`[three_realms] custom dimension registration failed: ${String(error)}`);
-  }
-});
 
 world.afterEvents.worldLoad.subscribe(() => {
   if (customDimensionReady) void ensureReturnGate();
