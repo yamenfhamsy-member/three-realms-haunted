@@ -4,7 +4,9 @@
     "controller.render.three_realms.morgue_warden": {
       "geometry": "geometry.three_realms.morgue_warden",
       "materials": [
-        { "*": "entity_emissive_alpha" }
+        {
+          "*": "entity_alphatest"
+        }
       ],
       "textures": [
         "textures/entity/three_realms/morgue_warden"

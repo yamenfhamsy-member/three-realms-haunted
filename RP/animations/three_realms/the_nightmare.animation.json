@@ -77,38 +77,38 @@
       "animation_length": 1.0,
       "bones": {
         "root": {
-          "position": [0, "0.6 + math.sin(query.normalized_animation_progress * 180) * 1.2", "-math.sin(query.normalized_animation_progress * 180) * 2.5"],
-          "rotation": ["18.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+          "position": [0, "0.6 + math.sin(query.anim_time * 180) * 1.2", "-math.sin(query.anim_time * 180) * 2.5"],
+          "rotation": ["18.0 * math.sin(query.anim_time * 180)", 0, 0]
         },
         "chest": {
-          "rotation": ["12.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+          "rotation": ["12.0 * math.sin(query.anim_time * 180)", 0, 0]
         },
         "core": {
-          "scale": ["1.0 + math.sin(query.normalized_animation_progress * 180) * 0.25", "1.0 + math.sin(query.normalized_animation_progress * 180) * 0.25", "1.0 + math.sin(query.normalized_animation_progress * 180) * 0.25"]
+          "scale": ["1.0 + math.sin(query.anim_time * 180) * 0.25", "1.0 + math.sin(query.anim_time * 180) * 0.25", "1.0 + math.sin(query.anim_time * 180) * 0.25"]
         },
         "head": {
-          "rotation": ["-12.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+          "rotation": ["-12.0 * math.sin(query.anim_time * 180)", 0, 0]
         },
         "leftArm": {
-          "rotation": ["-90.0 * math.sin(query.normalized_animation_progress * 180)", 0, "-8.0"]
+          "rotation": ["-90.0 * math.sin(query.anim_time * 180)", 0, "-8.0"]
         },
         "rightArm": {
-          "rotation": ["-90.0 * math.sin(query.normalized_animation_progress * 180)", 0, "8.0"]
+          "rotation": ["-90.0 * math.sin(query.anim_time * 180)", 0, "8.0"]
         },
         "leftForearm": {
-          "rotation": ["-45.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+          "rotation": ["-45.0 * math.sin(query.anim_time * 180)", 0, 0]
         },
         "rightForearm": {
-          "rotation": ["-45.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+          "rotation": ["-45.0 * math.sin(query.anim_time * 180)", 0, 0]
         },
         "leftHand": {
-          "rotation": ["-25.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+          "rotation": ["-25.0 * math.sin(query.anim_time * 180)", 0, 0]
         },
         "rightHand": {
-          "rotation": ["-25.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+          "rotation": ["-25.0 * math.sin(query.anim_time * 180)", 0, 0]
         },
         "shroud": {
-          "rotation": ["40.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+          "rotation": ["40.0 * math.sin(query.anim_time * 180)", 0, 0]
         }
       }
     },
@@ -116,16 +116,16 @@
       "animation_length": 0.4,
       "bones": {
         "root": {
-          "rotation": ["-14.0 * math.sin(query.normalized_animation_progress * 180)", "math.sin(query.normalized_animation_progress * 360) * 9.0", 0]
+          "rotation": ["-14.0 * math.sin(query.anim_time * 180)", "math.sin(query.anim_time * 360) * 9.0", 0]
         },
         "head": {
-          "rotation": ["-22.0 * math.sin(query.normalized_animation_progress * 180)", 0, 0]
+          "rotation": ["-22.0 * math.sin(query.anim_time * 180)", 0, 0]
         },
         "leftArm": {
-          "rotation": ["-35.0 * math.sin(query.normalized_animation_progress * 180)", 0, "-28.0"]
+          "rotation": ["-35.0 * math.sin(query.anim_time * 180)", 0, "-28.0"]
         },
         "rightArm": {
-          "rotation": ["-35.0 * math.sin(query.normalized_animation_progress * 180)", 0, "28.0"]
+          "rotation": ["-35.0 * math.sin(query.anim_time * 180)", 0, "28.0"]
         }
       }
     },
@@ -133,29 +133,29 @@
       "animation_length": 3.2,
       "bones": {
         "root": {
-          "position": [0, "-3.5 * math.sin(query.normalized_animation_progress * 90)", 0],
-          "rotation": ["-35.0 * math.sin(query.normalized_animation_progress * 90)", "math.sin(query.normalized_animation_progress * 180) * 18.0", "12.0 * math.sin(query.normalized_animation_progress * 90)"]
+          "position": [0, "-3.5 * math.sin(query.anim_time * 90)", 0],
+          "rotation": ["-35.0 * math.sin(query.anim_time * 90)", "math.sin(query.anim_time * 180) * 18.0", "12.0 * math.sin(query.anim_time * 90)"]
         },
         "chest": {
-          "rotation": ["-18.0 * math.sin(query.normalized_animation_progress * 90)", 0, 0]
+          "rotation": ["-18.0 * math.sin(query.anim_time * 90)", 0, 0]
         },
         "core": {
-          "scale": ["1.0 - query.normalized_animation_progress * 0.6", "1.0 - query.normalized_animation_progress * 0.6", "1.0 - query.normalized_animation_progress * 0.6"]
+          "scale": ["1.0 - query.anim_time * 0.6", "1.0 - query.anim_time * 0.6", "1.0 - query.anim_time * 0.6"]
         },
         "head": {
-          "rotation": ["-40.0 * math.sin(query.normalized_animation_progress * 90)", 0, 0]
+          "rotation": ["-40.0 * math.sin(query.anim_time * 90)", 0, 0]
         },
         "hood": {
-          "rotation": ["-30.0 * math.sin(query.normalized_animation_progress * 90)", 0, 0]
+          "rotation": ["-30.0 * math.sin(query.anim_time * 90)", 0, 0]
         },
         "leftArm": {
-          "rotation": ["-55.0 * math.sin(query.normalized_animation_progress * 90)", 0, "-40.0"]
+          "rotation": ["-55.0 * math.sin(query.anim_time * 90)", 0, "-40.0"]
         },
         "rightArm": {
-          "rotation": ["-55.0 * math.sin(query.normalized_animation_progress * 90)", 0, "40.0"]
+          "rotation": ["-55.0 * math.sin(query.anim_time * 90)", 0, "40.0"]
         },
         "shroud": {
-          "rotation": ["55.0 * math.sin(query.normalized_animation_progress * 90)", 0, 0]
+          "rotation": ["55.0 * math.sin(query.anim_time * 90)", 0, 0]
         }
       }
     },

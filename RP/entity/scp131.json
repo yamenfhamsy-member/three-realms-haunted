@@ -1,10 +1,10 @@
 {
-  "format_version": "1.26.40",
+  "format_version": "1.26.0",
   "minecraft:client_entity": {
     "description": {
       "identifier": "three_realms:scp131",
       "materials": {
-        "default": "entity_emissive_alpha"
+        "default": "entity_alphatest"
       },
       "textures": {
         "orange": "textures/entity/scp131/dt_scp131_orange",

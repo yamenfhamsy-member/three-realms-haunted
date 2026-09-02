@@ -1,5 +1,5 @@
 {
-  "format_version": "1.26.40",
+  "format_version": "1.26.0",
   "minecraft:client_entity": {
     "description": {
       "identifier": "three_realms:scp577",

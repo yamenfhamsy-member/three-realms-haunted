@@ -10,8 +10,6 @@ item.three_realms:obsidian_heart.name=Obsidian Heart
 tile.three_realms:void_blossom_healer.name=Healing Void Blossom
 tile.three_realms:vine_wall.name=Vine Wall
 tile.three_realms:obsidilith_rune.name=Obsidilith Rune
-#
-# Task 16 — item display names (Issue #5 + #8)
 item.three_realms.arcane_blade=Arcane Blade
 item.three_realms.fire_blade=Fire Blade
 item.three_realms.frost_blade=Frost Blade

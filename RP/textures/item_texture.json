@@ -46,6 +46,81 @@
       "textures": [
         "textures/three_realms/armor_weapons/hexblade"
       ]
+    },
+    "dt_scp096_bag": {
+      "textures": [
+        "textures/items/dt_scp096_bag"
+      ]
+    },
+    "dt_scp1023_arc": {
+      "textures": [
+        "textures/items/dt_scp1023_arc"
+      ]
+    },
+    "dt_scp3199_egg": {
+      "textures": [
+        "textures/items/dt_scp3199_egg"
+      ]
+    },
+    "dt_scp5167_sword": {
+      "textures": [
+        "textures/items/dt_scp5167_sword"
+      ]
+    },
+    "dt_scp939_flesh": {
+      "textures": [
+        "textures/items/dt_scp939_flesh"
+      ]
+    },
+    "dt_scp939_tooth": {
+      "textures": [
+        "textures/items/dt_scp939_tooth"
+      ]
+    },
+    "dt_scp058_body_scrap": {
+      "textures": [
+        "textures/items/dt_scp058_body_scrap"
+      ]
+    },
+    "dt_imposter_totem": {
+      "textures": [
+        "textures/items/dt_imposter_totem"
+      ]
+    },
+    "dt_mystery_syringe": {
+      "textures": [
+        "textures/items/dt_mystery_syringe"
+      ]
+    },
+    "dt_dtrifle_ammo": {
+      "textures": [
+        "textures/items/ammo/dt_dtrifle_ammo"
+      ]
+    },
+    "dt_scramble_icon": {
+      "textures": [
+        "textures/items/new_armors/dt_scramble"
+      ]
+    },
+    "dt_scp5167_mask_icon": {
+      "textures": [
+        "textures/items/dt_scp5167_mask"
+      ]
+    },
+    "dt_nvg_icon": {
+      "textures": [
+        "textures/items/new_armors/dt_nvg"
+      ]
+    },
+    "dt_scp5167_cannon_icon": {
+      "textures": [
+        "textures/items/gun_icon/dt_scp5167_cannon"
+      ]
+    },
+    "dt_dtrifle_icon": {
+      "textures": [
+        "textures/items/gun_icon/dt_dtrifle_icon"
+      ]
     }
   }
 }
